@@ -2,3 +2,6 @@
 	path = public
 	url = git@github.com:osmin625/osmin625.github.io.git
 	branch = main
+[submodule "themes/book"]
+	path = themes/book
+	url = https://github.com/osmin625/hugo-book.git
