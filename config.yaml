@@ -16,24 +16,6 @@ markup:
   tableOfContents:
     startLevel: 1
 
-# Multi-lingual mode config
-# There are different options to translate files
-# See https://gohugo.io/content-management/multilingual/#translation-by-filename
-# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-# languages:
-#   en:
-#     languageName: English
-#     contentDir: content.en
-#     weight: 1
-#   ru:
-#     languageName: Russian
-#     contentDir: content.ru
-#     weight: 2
-#   zh:
-#     languageName: Chinese
-#     contentDir: content.zh
-#     weight: 3
-
 menu:
   # before: []
   after:
@@ -66,7 +48,7 @@ params:
   # (Optional, default docs) Specify root page to render child pages as menu.
   # Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
   # For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
-  BookSection: docs
+  BookSection: blog
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
@@ -92,13 +74,13 @@ params:
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
   # Configuration for indexing can be adjusted in i18n folder per language.
-  BookSearch: true
+  BookSearch: false
 
   # (Optional, default true) Enables comments template on pages
   # By default partals/docs/comments.html includes Disqus template
   # See https://gohugo.io/content-management/comments/#configure-disqus
   # Can be overwritten by same param in page frontmatter
-  BookComments: true
+  BookComments: false
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
@@ -108,7 +90,7 @@ params:
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
-  BookServiceWorker: true
+  BookServiceWorker: false
 
   # /!\ This is an experimental feature, might be removed or changed at any time
   # (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.
