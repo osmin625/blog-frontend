@@ -28,7 +28,7 @@ SVM과 MF의 장점을 결합할 수 없을까? ⇒ FM 탄생.
 
 $X:$ (유저, 아이템) → $Y:$ (rating)으로 이루어진 데이터에 대해서만 적용이 가능하다.
 
-![FM](/assets/post_imgs/FM_5.png)
+![FM](/imgs/FM_5.png)
 
 1. 일반적인 데이터셋에 바로 적용 불가능
 2. User-Item 행렬 외의 정보를 활용하기 어렵다.
@@ -54,7 +54,7 @@ $$
     $$
     
 
-![FM](/assets/post_imgs/FM_1.png)
+![FM](/imgs/FM_1.png)
 
 - Logistic Regression에 두 Feature의 상호작용을 나타내는 Term이 추가된 형태
     - Logistic Regression
@@ -72,7 +72,7 @@ $$
         \hat y(x)=\left(w_0+\sum_{i=1}^n w_i x_i{+\sum_{i=1}^n \sum_{j=i+1}^n w_{i j} x_i x_j}\right), \quad w_i, w_{i j} \in \mathbb{R}
         $$
         
-        ![FM](/assets/post_imgs/FM_2.png)
+        ![FM](/imgs/FM_2.png)
         
     - $x_ix_j$의 상호작용을 하나의 파라미터$(w_{ij})$로 나타낸 Polynomial에 비해, 
     $\left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle$의 k차원의 Factorization 파라미터로 나타내 더욱 일반화시켰다.
@@ -93,7 +93,7 @@ $$
 
 ex) 유저 수가 $U$명, 영화의 수가 $M$개일 때
 
-![FM](/assets/post_imgs/FM_3.png)
+![FM](/imgs/FM_3.png)
 
 ---
 
@@ -107,7 +107,7 @@ ex) 유저 수가 $U$명, 영화의 수가 $M$개일 때
     
     $V_A$ — 유저 B,C가 유저 A와 공유하는 영화 SW의 평점 데이터를 통해 학습한다.
     
-    ![FM](/assets/post_imgs/FM_4.png)
+    ![FM](/imgs/FM_4.png)
     
 
 **FM의 장점**

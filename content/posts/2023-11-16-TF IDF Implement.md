@@ -4,7 +4,7 @@ date: 2022-03-01-12:37:00 +0900
 categories: [Data, Information Retrieval]
 tags: [TF-IDF, Ranked Retrieval, Konlpy, ]
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 
 우선, 시작하기에 앞서 corpus 구성을 확인했다. 

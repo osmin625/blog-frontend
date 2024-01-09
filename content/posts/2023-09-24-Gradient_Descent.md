@@ -4,7 +4,7 @@ date: 2022-04-22-23:21:00 +0900
 categories: ['AI Knowledge', 'Loss Function' ]
 tags: ['Loss Function', 'Gradient Descent', 'Stochastic Gradient Descent','Batch Mode','Mini Batch Mode','Pattern Mode' ]
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 
 > 손실 함수, 확률적 경사 하강법, 수치 미분, 배치 모드, 미니 배치 모드, 패턴 모드, Local Minima, Global Minima, Optimizer

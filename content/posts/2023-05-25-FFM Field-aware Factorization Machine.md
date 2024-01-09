@@ -58,7 +58,7 @@ $$
 
 $$
 
-![FFM](/assets/post_imgs/FFM1.png)
+![FFM](/imgs/FFM1.png)
 
 <details>
 <summary>
@@ -113,11 +113,11 @@ ex) 광고 클릭 데이터가 존재하고 사용할 수 있는 feature가 총 
 
 FM
 
-![FFM](/assets/post_imgs/FFM2.png)
+![FFM](/imgs/FFM2.png)
 
 FFM
 
-![FFM](/assets/post_imgs/FFM3.png)
+![FFM](/imgs/FFM3.png)
 
 ### Numerical Feature
 
@@ -127,7 +127,7 @@ FFM
     
     numeric feature 한 개당 하나의 필드에 할당하고 실수 값을 사용
     
-    ![FFM](/assets/post_imgs/FFM4.png)
+    ![FFM](/imgs/FFM4.png)
     
     field가 크게 의미를 갖지 않는다.
     
@@ -135,13 +135,13 @@ FFM
     
     numeric feature를 n개의 구간으로 나누어 이진 값을 사용하고, n개의 변수를 하나의 필드에 할당한다.
     
-    ![FFM](/assets/post_imgs/FFM5.png)
+    ![FFM](/imgs/FFM5.png)
     
 
 ## FM / FFM 성능 비교
 
 LR에 비해 FM, FFM의 성능이 더 낫다.
 
-![FFM](/assets/post_imgs/FFM6.png)
+![FFM](/imgs/FFM6.png)
 
 필드를 사용하는 것이 적절하지 않은 데이터셋의 경우 FFM보다 FM이 성능이 더 잘나온다.

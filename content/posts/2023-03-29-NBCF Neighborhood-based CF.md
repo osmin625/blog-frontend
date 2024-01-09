@@ -51,7 +51,7 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
 
 - ex) 영화 평점
     
-    ![NBCF](/assets/post_imgs/NBCF1.png)
+    ![NBCF](/imgs/NBCF1.png)
     
     - User A가 User B와 선호도가 비슷하므로, User B의 스타워즈 평점은 높을 것이라고 예상한다.
 
@@ -83,7 +83,7 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
     
     - ex) 유저 B의 스타워즈에 대한 예측 평점
         
-        ![NBCF](/assets/post_imgs/NBCF2.png)
+        ![NBCF](/imgs/NBCF2.png)
         
         예측 Deviation = 0.23
         
@@ -108,7 +108,7 @@ User based CF에 비해 계산량이 적다.
 
 - ex) 영화 평점
     
-    ![NBCF](/assets/post_imgs/NBCF3.png)
+    ![NBCF](/imgs/NBCF3.png)
     
     - 헐크와 스타워즈의 유저별 평점 분포가 비슷하므로, 유저 B의 스타워즈 평점이 높을 것이라 예측한다.
 
@@ -131,7 +131,7 @@ User based CF에 비해 계산량이 적다.
     
     - ex) 유저 B의 스타워즈에 대한 예측 평점
         
-        ![NBCF](/assets/post_imgs/NBCF4.png)
+        ![NBCF](/imgs/NBCF4.png)
         코사인 유사도 사용. 2-NN 기준 아이언맨 0.9, 헐크 0.95, 스타워즈 평균 3.0
 
         

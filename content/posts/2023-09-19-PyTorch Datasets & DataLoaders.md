@@ -6,7 +6,7 @@ tags: [Dataset, DataLoader, PyTorch]
 ---
 모델에 데이터를 먹이는 방법
 
-![dataset](/assets/post_imgs/dataset_dataloader.png)
+![dataset](/imgs/dataset_dataloader.png)
 
 ### 1. Dataset
 

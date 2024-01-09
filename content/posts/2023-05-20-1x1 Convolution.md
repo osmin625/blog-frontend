@@ -11,17 +11,17 @@ tags: ['Convolution Neural Network', 'Bottle-neck']
 
 **다만, 1 * 1 Convolution을 이용하여 기존 Spatial Dimension을 그대로 유지한 채, 채널의 개수를 128개에서 32개로 줄인다.** 
 
-![1x1 Conv_1](/assets/post_imgs/1x1 Conv_1.png)
+![1x1 Conv_1](/imgs/1x1 Conv_1.png)
 
 이를 통해 NN의 층을 더 깊게 쌓으면서도, 채널의 수를 줄여서 파라미터의 수를 줄일 수 있다.
 
 - 1 * 1 Convolution을 사용하지 않는 경우
     
-    ![1x1 Conv_2](/assets/post_imgs/1x1 Conv_2.png)
+    ![1x1 Conv_2](/imgs/1x1 Conv_2.png)
     
 - 1 * 1 Convolution을 사용한 경우
     
-    ![1x1 Conv_3](/assets/post_imgs/1x1 Conv_3.png)
+    ![1x1 Conv_3](/imgs/1x1 Conv_3.png)
     
 
 파라미터 수를 147,456개에서 40,960개로 효과적으로 줄일 수 있다.

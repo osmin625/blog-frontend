@@ -4,7 +4,7 @@ date: 2022-11-19-00:04:00 +0900
 categories: ['AI Knowledge', 'Loss Function' ]
 tags: ['Loss Function', 'MAE', 'MSE', 'RMSE', 'Cross-Entropy', 'Regression','Classification']
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 > ✔️ 간단 요약  
 > 신경망의 학습 중 받는 벌점의 기준  

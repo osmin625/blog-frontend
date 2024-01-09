@@ -58,7 +58,7 @@ P \rightarrow |U| \times k\\
 Q \rightarrow |I| \times k
 $$
 
-![MF](/assets/post_imgs/Matrix Factorization.png)
+![MF](/imgs/Matrix Factorization.png)
 
 ## Objective Function
 

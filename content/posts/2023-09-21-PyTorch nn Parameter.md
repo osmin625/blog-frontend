@@ -4,7 +4,7 @@ date: 2023-03-13-22:09:00 +0900
 categories: [DL Framework, PyTorch]
 tags: [PyTorch, Parameter, weight]
 math: true
-# img_path: /assets/post_imgs/
+# img_path: /imgs/
 # image:lqip: image_filename
 ---
 > 간단 요약  

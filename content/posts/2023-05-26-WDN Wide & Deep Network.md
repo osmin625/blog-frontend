@@ -47,7 +47,7 @@ $**\tt y = w^Tx + b**$
 - $\tt x = [x_1,...,x_n]$
 - $b \in \R$
 
-![WDN](/assets/post_imgs/WDN1.png)
+![WDN](/imgs/WDN1.png)
 
 이와 같은 구조만으로는 두 변수의 관계를 파악할 수 없다.
 
@@ -84,7 +84,7 @@ $$
     연속형 변수는 그대로 사용하고, 카테고리형 변수는 피쳐 임베딩 후 사용
     
 
-![WDN](/assets/post_imgs/WDN2.png)
+![WDN](/imgs/WDN2.png)
 
 ### **전체 구조 및 손실 함수**
 
@@ -96,7 +96,7 @@ $\tt x:$ 주어진 n개의 변수
 
 $\tt \phi(x):$ n개 변수간의 상호작용(Cross-Product)
 
-![WDN](/assets/post_imgs/WDN3.png)
+![WDN](/imgs/WDN3.png)
 
 위에서 언급한 것처럼, [사용자가 과거에 설치한 앱]과 [사용자가 현재 CTR을 예측할 앱]의 상호작용만 반영한다.
 
@@ -105,4 +105,4 @@ $\tt \phi(x):$ n개 변수간의 상호작용(Cross-Product)
 Baseline인 Wide 모델과 Deep 모델은 각각 Offline, Online에서 서로 다른 양상을 보이지만,
 두 개 모델을 결합하여 만든 Wide & Deep 모델은 모두 좋은 성능을 보였다.
 
-![WDN](/assets/post_imgs/WDN4.png)
+![WDN](/imgs/WDN4.png)

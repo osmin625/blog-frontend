@@ -4,7 +4,7 @@ date: 2022-04-22-23:21:00 +0900
 categories: ['AI Knowledge', 'Loss Function' ]
 tags: ['Loss Function', 'Gradient Descent', 'Back Propagation']
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 **이 알고리즘으로 인해 ML Network에서의 학습이 가능하다는 것이 알려져, 암흑기에 있던 신경망 학계가 다시 관심을 받게 되었다.**
 

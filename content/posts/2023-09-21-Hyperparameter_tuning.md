@@ -4,7 +4,7 @@ date: 2023-03-13-09:58:00 +0900
 categories: [AI Knowledge, Hyperparameter]
 tags: [Hyperparameter Tuning]
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 
 **하이퍼 파라미터**

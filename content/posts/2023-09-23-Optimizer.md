@@ -4,7 +4,7 @@ date: 2022-12-03-13:05:00 +0900
 categories: ['AI Knowledge', 'Optimizer' ]
 tags: ['Optimizer', 'Adam', 'Local minima', 'Saddle point','Gradient Descent']
 math: true
-img_path: /assets/post_imgs/
+img_path: /imgs/
 ---
 > **간단 요약**  
 > Loss의 미분값을 파라미터에 어떻게 반영할 지에 대한 방법  

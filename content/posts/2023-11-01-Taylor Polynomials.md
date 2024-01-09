@@ -3,7 +3,7 @@ title: Taylor polynomials
 date: 2023-11-11-18:04:00 +0900
 categories: [AI Math, Numerical Analysis]
 tags: [Taylor Approximation, Polynomial Form]
-img_path: /assets/post_imgs/
+img_path: /imgs/
 math: true
 ---
 
