@@ -1,10 +1,15 @@
 ---
 title: 'NBCF: Neighborhood-based CF(이웃 기반 협업 필터링)'
-date: 2023-03-29-14:03:00 +0900
-categories: [DL Algorithm, Recommendation System]
+description: '이웃 기반 협업 필터링'
+date: 2023-03-29T14:03:00+09:00
+type: post
+# categories: [DL Algorithm, Recommendation System]
+weight: 25
 tags: [NBCF,UBCF, IBCF, Collaborative Filtering]
 math: true
+showTableOfContents: true
 ---
+
 Neighborhood-based CF 혹은 Memory Based CF라고 부르기도 한다.
 
 사용자 또는 아이템 간의 similarity 값을 계산하고 이를 rating prediction 또는 top-K ranking에 활용하는 방법
