@@ -4,7 +4,7 @@ description: '이웃 기반 협업 필터링'
 date: 2023-03-29T14:03:00+09:00
 type: post
 # categories: [DL Algorithm, Recommendation System]
-weight: 25
+# weight: 25
 tags: [NBCF,UBCF, IBCF, Collaborative Filtering]
 math: true
 showTableOfContents: true
