@@ -10,10 +10,10 @@ enableRobotsTXT = true
 pygmentsStyle = "monokai"
 
 [params]
-  footer = "The Marauders"
-  description = "Sky above, sand below and peace within"
-  avatarURL = "/images/avatar.webp"
-  AvatarAltText = "avatar"
+  footer = "OMIN"
+  description = "ML Engineer, Data Science"
+  avatarURL = "/images/from_scratch.jpg"
+  AvatarAltText = "OMIN"
   avatarSize = "size-m"
   ShowBackToTopButton = true # true or false for "back to top" button on posts
   customHeadHTML = """
