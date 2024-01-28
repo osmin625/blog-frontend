@@ -21,8 +21,7 @@ This is the default blog post type which will be shown in your "Posts" section a
 ```markdown
 ---
 title: "Hello, world!"
-date: 2021-01-01
-description: "A blog post"
+date: 2021-01-01Tdescription: "A blog post"
 image: "/path/to/image.png"
 type: "post"
 tags: ["blog"]
