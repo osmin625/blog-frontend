@@ -74,7 +74,7 @@
         {{ .Site.Params.CustomCommentHTML | safeHTML }}
     </div>
     {{ end }}
-    {{ if .Params.mathjax }}
+    {{ if .Site.Params.mathjax }}
     <div id="tex">
         {{ partial "mathjax_support.html" . }}
     </div>
