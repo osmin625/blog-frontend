@@ -59,19 +59,19 @@ $$
     모두 다 대입하면 아래와 같이 방데르몽드 행렬식 형태를 얻을 수 있다.
     
     $$
-    \begin{array}{cc}p\left(x_0\right)=f\left(x_0\right) & a_0+a_1 x_0+a_2 x_0^2+\cdots+a_n x_0^n=f\left(x_0\right)\\
-    p\left(x_1\right)=f\left(x_1\right) & a_0+a_1 x_1+a_2 x_1^2+\cdots+a_n x_1^n=f\left(x_1\right)\\
-    \vdots & \vdots \\
+    \begin{array}{cc}p\left(x_0\right)=f\left(x_0\right) & a_0+a_1 x_0+a_2 x_0^2+\cdots+a_n x_0^n=f\left(x_0\right)\\\\\\
+    p\left(x_1\right)=f\left(x_1\right) & a_0+a_1 x_1+a_2 x_1^2+\cdots+a_n x_1^n=f\left(x_1\right)\\\\\\
+    \vdots & \vdots \\\\\\
     p\left(x_n\right)=f\left(x_n\right) & a_0+a_1 x_n+a_2 x_n^2+\cdots+a_n x_n^n+\left(x_n\right)\end{array}
     $$
     
     $$
-    \left[\begin{array}{ccccc}1 & x_0 & x_0^2 & \cdots & x_0^n \\
-    1 & x 1 & x_1^2 & \cdots & x_1^n \\
-    & & & \cdots & \\
-    1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\a 1 \\
-    \cdots \\a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\f\left(x_1\right) \\
-    \cdots \\
+    \left[\begin{array}{ccccc}1 & x_0 & x_0^2 & \cdots & x_0^n \\\\\\
+    1 & x 1 & x_1^2 & \cdots & x_1^n \\\\\\
+    & & & \cdots & \\\\\\
+    1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\a 1 \\\\\\
+    \cdots \\a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\f\left(x_1\right) \\\\\\
+    \cdots \\\\\\
     f\left(x_n\right)\end{array}\right]
     $$
     
@@ -110,7 +110,7 @@ $$
 세 점$(x_0, y_0), (x_1, y_1), (x_2, y_2)$이 주어진 경우
 
 $$
-y=\left(\frac{\left(x-x_1\right)\left(x-x_2\right)}{\left(x_0-x_1\right)\left(x_0-x_2\right)}\right) y_0+\left(\frac{\left(x-x_2\right)\left(x-x_0\right)}{\left(x_1-x_2\right)\left(x_1-x_0\right)}\right) y_1\\
+y=\left(\frac{\left(x-x_1\right)\left(x-x_2\right)}{\left(x_0-x_1\right)\left(x_0-x_2\right)}\right) y_0+\left(\frac{\left(x-x_2\right)\left(x-x_0\right)}{\left(x_1-x_2\right)\left(x_1-x_0\right)}\right) y_1\\\\\\
 +\left(\frac{\left(x-x_0\right)\left(x-x_1\right)}{\left(x_2-x_0\right)\left(x_2-x_1\right)}\right) y_2
 $$
 
@@ -123,9 +123,9 @@ $$
 네 점이 주어진 경우
 
 $$
-y=\left(\frac{\left(x-x_1\right)\left(x-x_2\right)\left(x-x_3\right)}{\left(x_0-x_1\right)\left(x_0-x_2\right)\left(x_0-x_3\right)}\right) y_0\\
-+\left(\frac{\left(x-x_2\right)\left(x-x_3\right)\left(x-x_0\right)}{\left(x_1-x_2\right)\left(x_1-x_3\right)\left(x_1-x_0\right)}\right) y_1\\
-+\left(\frac{\left(x-x_0\right)\left(x-x_1\right)\left(x-x_3\right)}{\left(x_2-x_0\right)\left(x_2-x_1\right)\left(x_2-x_3\right)}\right) y_2\\
+y=\left(\frac{\left(x-x_1\right)\left(x-x_2\right)\left(x-x_3\right)}{\left(x_0-x_1\right)\left(x_0-x_2\right)\left(x_0-x_3\right)}\right) y_0\\\\\\
++\left(\frac{\left(x-x_2\right)\left(x-x_3\right)\left(x-x_0\right)}{\left(x_1-x_2\right)\left(x_1-x_3\right)\left(x_1-x_0\right)}\right) y_1\\\\\\
++\left(\frac{\left(x-x_0\right)\left(x-x_1\right)\left(x-x_3\right)}{\left(x_2-x_0\right)\left(x_2-x_1\right)\left(x_2-x_3\right)}\right) y_2\\\\\\
 +\left(\frac{\left(x-x_0\right)\left(x-x_1\right)\left(x-x_2\right)}{\left(x_3-x_0\right)\left(x_3-x_1\right)\left(x_3-x_2\right)}\right) y_3
 $$
 
@@ -138,7 +138,7 @@ $$
 위의 식은 곧 $x_i$를 넣었을 때 $y_i$가 나온다는 것을 의미한다.
 
 $$
-\begin{matrix}P_n(x)&=&L_0(x) f\left(x_0\right)+L_1(x) f\left(x_1\right)+\cdots L_n(x) f\left(x_n\right)\\\\
+\begin{matrix}P_n(x)&=&L_0(x) f\left(x_0\right)+L_1(x) f\left(x_1\right)+\cdots L_n(x) f\left(x_n\right)\\\\\\
 &=&\sum_{i=0}^n L_{i(x)} f\left(x_i\right)
 \end{matrix}
 $$
@@ -190,7 +190,7 @@ Q. 연산량이 기존 방법과 비교했을 때 늘어나는가, 줄어드는�
 
 $$
 \begin{matrix}P_n(x)=a_0+a_1\left(x-x_0\right)
-+a_2\left(x-x_0\right)\left(x-x_1\right)+\\
++a_2\left(x-x_0\right)\left(x-x_1\right)+\\\\\\
 \ldots+a_n\left(x-x_0\right)\left(x-x_1\right) \ldots\left(x-x_{n-1}\right)\end{matrix}
 $$
 
@@ -199,8 +199,8 @@ $$
 ### $a_0, a_1$ 도출 과정
 
 $$
-a_0 = f\left(x_0\right)\\
-f(x_1) = a_0 + a_1(x_1-x_0),\\
+a_0 = f\left(x_0\right)\\\\\\
+f(x_1) = a_0 + a_1(x_1-x_0),\\\\\\
 \therefore a_1 =  {f\left(x_1\right) - f(x_0)\over x_1-x_0}
 $$
 
@@ -222,8 +222,8 @@ $$
 
 $$
 \begin{matrix}
-f(x_2) &=& a_0 + a_1(x_2 - x_0) + a_2(x_2-x_0)(x_2-x_1)\\
-&=& f(x_0) + (x_2 - x_0)(a_1 + a_2(x_2 - x_1)),\\
+f(x_2) &=& a_0 + a_1(x_2 - x_0) + a_2(x_2-x_0)(x_2-x_1)\\\\\\
+&=& f(x_0) + (x_2 - x_0)(a_1 + a_2(x_2 - x_1)),\\\\\\
 f(x_2) - f(x_0) &=& (x_2-x_0)(a_1 + a_2(x_2 - x_1))
 \end{matrix}
 $$
@@ -239,8 +239,8 @@ $$
 여기서, $a_1$과 $a_2$에서 반복되는 형태를 $f[x_a,x_b]$로 치환하자.
 
 $$
-f[x_0,x_2] = f[x_0,x_1] + a_2(x_2 - x_1)\\
-\frac{f[x_0,x_2] - f[x_0,x_1]}{x_2 - x_1} = a_2\\
+f[x_0,x_2] = f[x_0,x_1] + a_2(x_2 - x_1)\\\\\\
+\frac{f[x_0,x_2] - f[x_0,x_1]}{x_2 - x_1} = a_2\\\\\\
 $$
 
 위 식은 $f[x_0,x_1,x_2]$로 치환하며, **Second order Divided Difference**라고 부른다.
@@ -262,11 +262,11 @@ $$
 이와 같은 형태로 나머지 $a_n$에 대해서도 정리할 수 있고, 최종적으로 기존의 뉴턴 형은 다음과 같은 형태가 된다.
 
 $$
-\begin{aligned}& P_1(x)=f\left(x_0\right)+\left(x-x_0\right) f\left[x_0, x_1\right] \\
-& \begin{aligned}P_2(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right] \\
+\begin{aligned}& P_1(x)=f\left(x_0\right)+\left(x-x_0\right) f\left[x_0, x_1\right] \\\\\\
+& \begin{aligned}P_2(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right] \\\\\\
 & +\left(x-x_0\right)\left(x-x_1\right) f\left[x_0, x_1, x_2\right]\end{aligned}\\
-&\ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
-&\begin{aligned}P_n(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right]+\cdots \\
+&\ \ \ \ \ \ \ \ \ \ \ \ \vdots\\\\\\
+&\begin{aligned}P_n(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right]+\cdots \\\\\\
 & +\left(x-x_0\right)\left(x-x_1\right) \cdots\left(x-x_{n-1}\right) f\left[x_0, x_1, \ldots, x_n\right]\end{aligned}\end{aligned}
 $$
 
@@ -277,9 +277,9 @@ $$
 최종적으로 뉴턴 공식을 일반화하여 정리하면 다음과 같은 형태가 된다.
 
 $$
-\begin{aligned}P_n(x) & =f\left[x_0\right]+f\left[x_0, x_1\right]\left(x-x_0\right)+\cdots\\
-&\ \ \ \ \ \ \ \ \ \ \ \ \ \ +f\left[x_0, \cdots, x_n\right]\left(x-x_0\right) \cdots\left(x-x_{n-1}\right) \\
-& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right]\left(x-x_0\right) \cdots\left(x-x_{k-1}\right) \\
+\begin{aligned}P_n(x) & =f\left[x_0\right]+f\left[x_0, x_1\right]\left(x-x_0\right)+\cdots\\\\\\
+&\ \ \ \ \ \ \ \ \ \ \ \ \ \ +f\left[x_0, \cdots, x_n\right]\left(x-x_0\right) \cdots\left(x-x_{n-1}\right) \\\\\\
+& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right]\left(x-x_0\right) \cdots\left(x-x_{k-1}\right) \\\\\\
 & =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right] \prod_{i=0}^{k-1}\left(x-x_i\right)\end{aligned}
 $$
 
@@ -298,7 +298,7 @@ $$
 앞에서 $P_n(x)$를 다음과 같이 정리했다.
 
 $$
-\begin{matrix}P_n(x)&=&L_0(x) f\left(x_0\right)+L_1(x) f\left(x_1\right)+\cdots L_n(x) f\left(x_n\right)\\
+\begin{matrix}P_n(x)&=&L_0(x) f\left(x_0\right)+L_1(x) f\left(x_1\right)+\cdots L_n(x) f\left(x_n\right)\\\\\\
 &=&\sum_{i=0}^n L_{i(x)} f\left(x_i\right)
 \end{matrix}
 $$
@@ -379,7 +379,7 @@ $$
 
 $$
 \begin{aligned}
-& p_{n+1}\left(x_i\right)=f\left(x_i\right), \quad i=0,1,2, \cdots, n \\
+& p_{n+1}\left(x_i\right)=f\left(x_i\right), \quad i=0,1,2, \cdots, n \\\\\\
 & p_{n+1}(\bar{x})=f(\bar{x})
 \end{aligned}
 $$
