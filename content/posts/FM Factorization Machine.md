@@ -42,8 +42,7 @@ $X:$ (유저, 아이템) → $Y:$ (rating)으로 이루어진 데이터에 대�
 ### FM 공식
 
 $$
-\hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i\blue{+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle x_i x_j} \\
-
+\hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i\blue{+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle x_i x_j}\\\\\\
 w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}, \quad \mathrm{v}_i \in \mathbb{R}^k
 $$
 
@@ -60,8 +59,7 @@ $$
     - Logistic Regression
         
         $$
-        \hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i\\
-        
+        \hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i\\\\\\
         w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}
         $$
         

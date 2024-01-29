@@ -90,7 +90,7 @@ D가 넘겨준 guiding signal은 scalar 보상 값으로도 쓰이고, 문장 �
 
 # 구체적 방법론
 
-![leakgan](leakgan.png)
+![leakgan](/imgs/leakgan.png)
 
 텍스트 생성 문제 → Sequential Decision Making Process
 
@@ -116,7 +116,8 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
     $f_t$를 LSTM에 입력한 후 goal vector $g_t$를 생성한다.
     
     $$
-    \begin{aligned}\hat{g}_t, h_t^M & =\mathcal{M}\left(f_t, h_{t-1}^M ; \theta_m\right) \\g_t & =\hat{g}_t /\left\|\hat{g}_t\right\|\end{aligned}
+    \begin{aligned}\hat{g}_t, h_t^M & =\mathcal{M}\left(f_t, h_{t-1}^M ; \theta_m\right) \\\
+    g_t & =\hat{g}_t /\left\|\hat{g}_t\right\|\end{aligned}
     $$
     
     - $M:$ LSTM 모델
@@ -187,7 +188,8 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
     
     $$
     \begin{aligned}O_t, h_t^W & =\mathcal{W}\left(x_t, h_{t-1}^W ; \theta_w\right)
-    \\G_\theta\left(\cdot \mid s_t\right) & =\operatorname{softmax}\left(O_t \cdot w_t / \alpha\right)
+    \\\
+    G_\theta\left(\cdot \mid s_t\right) & =\operatorname{softmax}\left(O_t \cdot w_t / \alpha\right)
     \end{aligned}
     $$
     
@@ -543,7 +545,7 @@ ex) 1 epoch 지도 학습 + 15 epoch 적대적 학습
 
 ## Pseudo Code
 
-![leakgan](leakgan1.png)
+![leakgan](/imgs/leakgan1.png)
 
 ### **필요한 요소**
 
