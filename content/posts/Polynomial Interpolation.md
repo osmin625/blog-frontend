@@ -69,8 +69,11 @@ $$
     \left[\begin{array}{ccccc}1 & x_0 & x_0^2 & \cdots & x_0^n \\\\\\
     1 & x 1 & x_1^2 & \cdots & x_1^n \\\\\\
     & & & \cdots & \\\\\\
-    1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\a 1 \\\\\\
-    \cdots \\a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\f\left(x_1\right) \\\\\\
+    1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\\\\\
+    a 1 \\\\\\
+    \cdots \\\\\\
+    a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\\\\\
+    f\left(x_1\right) \\\\\\
     \cdots \\\\\\
     f\left(x_n\right)\end{array}\right]
     $$
