@@ -103,7 +103,7 @@ $G_\theta:$ 파라미터가 $\theta$인 생성망
 
 1. **$s_t$를 전체 어휘 분포와 매핑시킨다.**
     
-    ex) $x_{t+1}$에서 &G_\theta(\sdot | s_t)& 학습
+    ex) `$x_{t+1}$`에서 `$G_\theta( \cdot | s_t)$` 학습
     
 2. **분별망이 유출해준 정보를 계층 구조를 통해 효과적으로 포함하여 문장을 생성한다.**
 
@@ -114,11 +114,13 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
 - **MANAGER**: $t$시점마다 추출된 $f_t$를 활용해 $g_t$ 생성
     
     $f_t$를 LSTM에 입력한 후 goal vector $g_t$를 생성한다.
-    
-    $$
-    \begin{aligned}\hat{g}_t, h_t^M & =\mathcal{M}\left(f_t, h_{t-1}^M ; \theta_m\right) \\\
-    g_t & =\hat{g}_t /\left\|\hat{g}_t\right\|\end{aligned}
-    $$
+
+    `$$
+    \begin{aligned}
+    \hat{g}_t, h_t^M & = \mathcal{M}\left(f_t, h_{t-1}^M; \theta_m \right)\\
+    g_t & =\hat{g}_t /\left|\hat{g}_t\right|
+    \end{aligned}
+    $$`
     
     - $M:$ LSTM 모델
     - $\mathcal{M}:$ MANAGER 모듈
@@ -186,12 +188,12 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
     
     - $\psi:$ 선형 변환(행렬 곱셈)
     
-    $$
+    `$$
     \begin{aligned}O_t, h_t^W & =\mathcal{W}\left(x_t, h_{t-1}^W ; \theta_w\right)
-    \\\
+    \\
     G_\theta\left(\cdot \mid s_t\right) & =\operatorname{softmax}\left(O_t \cdot w_t / \alpha\right)
     \end{aligned}
-    $$
+    $$`
     
     - $\mathcal W:$ WORKER 모듈
     - $x_t:$ input. (t 시점의 단어)
