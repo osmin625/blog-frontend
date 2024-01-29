@@ -55,11 +55,20 @@ $$
     모두 다 대입하면 아래와 같이 방데르몽드 행렬식 형태를 얻을 수 있다.
     
     $$
-    \begin{array}{cc}p\left(x_0\right)=f\left(x_0\right) & a_0+a_1 x_0+a_2 x_0^2+\cdots+a_n x_0^n=f\left(x_0\right) \\p\left(x_1\right)=f\left(x_1\right) & a_0+a_1 x_1+a_2 x_1^2+\cdots+a_n x_1^n=f\left(x_1\right) \\\vdots & \vdots \\p\left(x_n\right)=f\left(x_n\right) & a_0+a_1 x_n+a_2 x_n^2+\cdots+a_n x_n^n+\left(x_n\right)\end{array}
+    \begin{array}{cc}p\left(x_0\right)=f\left(x_0\right) & a_0+a_1 x_0+a_2 x_0^2+\cdots+a_n x_0^n=f\left(x_0\right)\\
+    p\left(x_1\right)=f\left(x_1\right) & a_0+a_1 x_1+a_2 x_1^2+\cdots+a_n x_1^n=f\left(x_1\right)\\
+    \vdots & \vdots \\
+    p\left(x_n\right)=f\left(x_n\right) & a_0+a_1 x_n+a_2 x_n^2+\cdots+a_n x_n^n+\left(x_n\right)\end{array}
     $$
     
     $$
-    \left[\begin{array}{ccccc}1 & x_0 & x_0^2 & \cdots & x_0^n \\1 & x 1 & x_1^2 & \cdots & x_1^n \\& & & \cdots & \\1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\a 1 \\\cdots \\a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\f\left(x_1\right) \\\cdots \\f\left(x_n\right)\end{array}\right]
+    \left[\begin{array}{ccccc}1 & x_0 & x_0^2 & \cdots & x_0^n \\
+    1 & x 1 & x_1^2 & \cdots & x_1^n \\
+    & & & \cdots & \\
+    1 & x_n & x_n^2 & \cdots & x_n^n\end{array}\right]\left[\begin{array}{l}a 0 \\a 1 \\
+    \cdots \\a n\end{array}\right]=\left[\begin{array}{c}f\left(x_0\right) \\f\left(x_1\right) \\
+    \cdots \\
+    f\left(x_n\right)\end{array}\right]
     $$
     
 2. **가우스 소거법 등으로 연립 방정식의 해를 구한다.**
@@ -177,9 +186,8 @@ Q. 연산량이 기존 방법과 비교했을 때 늘어나는가, 줄어드는�
 
 $$
 \begin{matrix}P_n(x)=a_0+a_1\left(x-x_0\right)
-+a_2\left(x-x_0\right)\left(x-x_1\right)
-+\\\ldots
-+a_n\left(x-x_0\right)\left(x-x_1\right) \ldots\left(x-x_{n-1}\right)\end{matrix}
++a_2\left(x-x_0\right)\left(x-x_1\right)+\\
+\ldots+a_n\left(x-x_0\right)\left(x-x_1\right) \ldots\left(x-x_{n-1}\right)\end{matrix}
 $$
 
 식이 복잡하게 생겼다. $P_n(x) = f(x)$라 정의하고, 식을 상수 항 기준으로 정리해보자.
@@ -188,8 +196,7 @@ $$
 
 $$
 a_0 = f\left(x_0\right)\\
-f(x_1) = a_0 + a_1(x_1-x_0),
-\\
+f(x_1) = a_0 + a_1(x_1-x_0),\\
 \therefore a_1 =  {f\left(x_1\right) - f(x_0)\over x_1-x_0}
 $$
 
@@ -251,9 +258,12 @@ $$
 이와 같은 형태로 나머지 $a_n$에 대해서도 정리할 수 있고, 최종적으로 기존의 뉴턴 형은 다음과 같은 형태가 된다.
 
 $$
-\begin{aligned}& P_1(x)=f\left(x_0\right)+\left(x-x_0\right) f\left[x_0, x_1\right] \\& \begin{aligned}P_2(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right] \\& +\left(x-x_0\right)\left(x-x_1\right) f\left[x_0, x_1, x_2\right]\end{aligned}\\
-&\ \ \ \ \ \ \ \ \ \ \ \ \vdots\\&
-\begin{aligned}P_n(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right]+\cdots \\& +\left(x-x_0\right)\left(x-x_1\right) \cdots\left(x-x_{n-1}\right) f\left[x_0, x_1, \ldots, x_n\right]\end{aligned}\end{aligned}
+\begin{aligned}& P_1(x)=f\left(x_0\right)+\left(x-x_0\right) f\left[x_0, x_1\right] \\
+& \begin{aligned}P_2(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right] \\
+& +\left(x-x_0\right)\left(x-x_1\right) f\left[x_0, x_1, x_2\right]\end{aligned}\\
+&\ \ \ \ \ \ \ \ \ \ \ \ \vdots\\
+&\begin{aligned}P_n(x)=f\left(x_0\right) & +\left(x-x_0\right) f\left[x_0, x_1\right]+\cdots \\
+& +\left(x-x_0\right)\left(x-x_1\right) \cdots\left(x-x_{n-1}\right) f\left[x_0, x_1, \ldots, x_n\right]\end{aligned}\end{aligned}
 $$
 
 여기에서 중요한 점은, 기호화를 함으로써 값을 재활용할 수 있게 되었다는 것이다.
@@ -264,7 +274,9 @@ $$
 
 $$
 \begin{aligned}P_n(x) & =f\left[x_0\right]+f\left[x_0, x_1\right]\left(x-x_0\right)+\cdots\\
-&\ \ \ \ \ \ \ \ \ \ \ \ \ \ +f\left[x_0, \cdots, x_n\right]\left(x-x_0\right) \cdots\left(x-x_{n-1}\right) \\& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right]\left(x-x_0\right) \cdots\left(x-x_{k-1}\right) \\& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right] \prod_{i=0}^{k-1}\left(x-x_i\right)\end{aligned}
+&\ \ \ \ \ \ \ \ \ \ \ \ \ \ +f\left[x_0, \cdots, x_n\right]\left(x-x_0\right) \cdots\left(x-x_{n-1}\right) \\
+& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right]\left(x-x_0\right) \cdots\left(x-x_{k-1}\right) \\
+& =f\left[x_0\right]+\sum_{k=1}^n f\left[x_0, \cdots, x_k\right] \prod_{i=0}^{k-1}\left(x-x_i\right)\end{aligned}
 $$
 
 이를 점화식의 형태로 정리하면 다음과 같다.
@@ -461,7 +473,8 @@ n+1개의 점을 연결하는 n개의 2차 다항식을 추정하고자 한다.
     
     이로부터 2개의 조건을 얻을 수 있다.
     
-    $\begin{aligned}& f\left(x_0\right)=a_1 x_0^2+b_1 x_0+c_1 \\& f\left(x_n\right)=a_n x_n^2+b_n x_n+c_n\end{aligned}$
+    $\begin{aligned}& f\left(x_0\right)=a_1 x_0^2+b_1 x_0+c_1 \\
+    & f\left(x_n\right)=a_n x_n^2+b_n x_n+c_n\end{aligned}$
     
     이제 나머지 n개의 조건을 얻으면 된다.
     
