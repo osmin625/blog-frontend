@@ -75,11 +75,20 @@ table th {
 
 code,
 pre {
-  background-color: var(--dark-secondary-color) !important;
+  background-color: var(--dark-secondary-color);
 }
 
 :not(pre) > code {
-  background-color: var(--dark-tertiary-color) !important;
+  background-color: var(--dark-tertiary-color);
+  color: var(--dark-text-color);
+}
+
+code.has-jax {
+  font: inherit;
+  font-size: 100%;
+  background: inherit;
+  background-color: rgb(var(--dark-primary-color));
+  border: inherit;
   color: var(--dark-text-color);
 }
 
@@ -99,3 +108,4 @@ video {
   -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%);
 } 
 */
+

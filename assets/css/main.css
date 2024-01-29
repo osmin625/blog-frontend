@@ -319,8 +319,17 @@
     font-size: 0.8em;
   }
   
+  code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    background-color: var(--light-primary-color);
+    border: inherit;
+    color: var(--light-text-color);
+  }
+
   :not(pre) > code {
-    background-color: var(--light-secondary-color) !important;
+    background-color: var(--light-secondary-color);
     color: var(--light-text-color);
     padding: 1px 4px;
   }
@@ -667,12 +676,4 @@
     #btt-button {
         visibility: hidden;
     }
-  }
-
-  code.has-jax {
-    font: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    color: #000000;
   }
