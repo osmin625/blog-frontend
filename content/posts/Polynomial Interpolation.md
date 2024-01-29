@@ -28,10 +28,10 @@ $$
     각 행의 초항이 1인 등비수열로 이루어진 행렬
     
     $$
-    V=\left(\begin{array}{ccccc}1 & \alpha_1 & \alpha_1^2 & \cdots & \alpha_1^{n-1} \\
+    V=\left(\begin{array}{ccccc}1 & \alpha_1 & \alpha_1^2 & \cdots & \alpha_1^{n-1} \\\\\\\
     1 & \alpha_2 & \alpha_2^2 & \cdots & \alpha_2^{n-1} \\\\\\
-    1 & \alpha_3 & \alpha_3^2 & \cdots & \alpha_3^{n-1} \\
-    \vdots & \vdots & \vdots & & \vdots \\
+    1 & \alpha_3 & \alpha_3^2 & \cdots & \alpha_3^{n-1} \\\\\\\
+    \vdots & \vdots & \vdots & & \vdots \\\\\\\
     1 & \alpha_m & \alpha_m^2 & \cdots & \alpha_m^{n-1}\end{array}\right)
     $$
     
