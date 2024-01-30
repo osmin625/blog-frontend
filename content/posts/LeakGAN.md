@@ -17,7 +17,7 @@ type: post
 >     - 중재자 역할
 >     - D로부터 고수준 feature representation을 받음 → *Leakage*
 > - WORKER (LSTM)
->     - $s_t$를 인코딩한 후, MANAGER가 넘겨준 Goal 임베딩과 결합한다. (내적)
+>     - `$s_t$`를 인코딩한 후, MANAGER가 넘겨준 Goal 임베딩과 결합한다. (내적)
 >     
 >     D가 넘겨준 guiding signal은 scalar 보상 값으로도 쓰이고, 문장 생성 과정에서 Goal 임베딩으로도 쓰인다.
 {: .prompt-info }
@@ -94,16 +94,16 @@ D가 넘겨준 guiding signal은 scalar 보상 값으로도 쓰이고, 문장 �
 
 텍스트 생성 문제 → Sequential Decision Making Process
 
-- $s_t : t$ 시점까지 생성된 단어들. $(x_1,\dots,  x_i, \dots, x_t)$
-    - $x_i:$ 단어(token)
+- `$s_t : t$` 시점까지 생성된 단어들. `$(x_1,\dots,  x_i, \dots, x_t)$`
+    - `$x_i:$` 단어(token)
 
-## 생성망 $G_\theta$
+## 생성망 `$G_\theta$`
 
-$G_\theta:$ 파라미터가 $\theta$인 생성망
+`$G_\theta:$` 파라미터가 `$\theta$`인 생성망
 
-1. **$s_t$를 전체 어휘 분포와 매핑시킨다.**
+1. **`$s_t$`를 전체 어휘 분포와 매핑시킨다.**
     
-    ex) `$x_{t+1}$`에서 `$G_\theta( \cdot | s_t)$` 학습
+    ex) ``$x_{t+1}$``에서 ``$G_\theta( \cdot | s_t)$`` 학습
     
 2. **분별망이 유출해준 정보를 계층 구조를 통해 효과적으로 포함하여 문장을 생성한다.**
 
@@ -111,21 +111,21 @@ $G_\theta:$ 파라미터가 $\theta$인 생성망
 
 D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
 
-- **MANAGER**: $t$시점마다 추출된 $f_t$를 활용해 $g_t$ 생성
+- **MANAGER**: `$t$`시점마다 추출된 `$f_t$`를 활용해 `$g_t$` 생성
     
-    $f_t$를 LSTM에 입력한 후 goal vector $g_t$를 생성한다.
+    `$f_t$`를 LSTM에 입력한 후 goal vector `$g_t$`를 생성한다.
 
-    `$$
+    ``$$`
     \begin{aligned}
     \hat{g}_t, h_t^M & = \mathcal{M}\left(f_t, h_{t-1}^M; \theta_m \right)\\
     g_t & =\hat{g}_t /\left|\hat{g}_t\right|
     \end{aligned}
-    $$`
+    `$$``
     
-    - $M:$ LSTM 모델
-    - $\mathcal{M}:$ MANAGER 모듈
-    - $\theta_m :$  $\mathcal M$의 파라미터
-    - $h_t:$ t시점의 hidden state
+    - `$M:$` LSTM 모델
+    - `$\mathcal{M}:$` MANAGER 모듈
+    - `$\theta_m :$`  `$\mathcal M$`의 파라미터
+    - `$h_t:$` t시점의 hidden state
 	- <details markdown="block">
 		<summary>class Manager(nn.Module):</summary>
 
@@ -176,40 +176,40 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
 		</details>
             
         
-- **WORKER**: MANAGER의 $g_t$를 토대로 보상을 높이는 다음 단어 생성
+- **WORKER**: MANAGER의 `$g_t$`를 토대로 보상을 높이는 다음 단어 생성
     
-    MANAGER의 $g_t$를 포함하기 위해 가중치 행렬 $W_\psi$로 최근 c개의 목표들에 대한 선형 변환을 수행한다.
+    MANAGER의 `$g_t$`를 포함하기 위해 가중치 행렬 `$W_\psi$`로 최근 c개의 목표들에 대한 선형 변환을 수행한다.
     
-    이를 통해 k차원의 goal embedding vector $w_t$를 얻는다.
+    이를 통해 k차원의 goal embedding vector `$w_t$`를 얻는다.
     
-    $$
+    ``$$`
     w_t=\psi\left(\sum_{i=1}^c g_{t-i}\right)=W_\psi\left(\sum_{i=1}^c g_{t-i}\right)
-    $$
+    `$$``
     
-    - $\psi:$ 선형 변환(행렬 곱셈)
+    - `$\psi:$` 선형 변환(행렬 곱셈)
     
-    `$$
+    ``$$`
     \begin{aligned}O_t, h_t^W & =\mathcal{W}\left(x_t, h_{t-1}^W ; \theta_w\right)
     \\
     G_\theta\left(\cdot \mid s_t\right) & =\operatorname{softmax}\left(O_t \cdot w_t / \alpha\right)
     \end{aligned}
-    $$`
+    `$$``
     
-    - $\mathcal W:$ WORKER 모듈
-    - $x_t:$ input. (t 시점의 단어)
-    - $\theta_w :$  $\mathcal W$의 파라미터
-    - $O_t :$ 행렬 내적으로 $w_t$와 추가로 결합된 행렬. $\|V\| \times k$
+    - `$\mathcal W:$` WORKER 모듈
+    - `$x_t:$` input. (t 시점의 단어)
+    - `$\theta_w :$`  `$\mathcal W$`의 파라미터
+    - `$O_t :$` 행렬 내적으로 `$w_t$`와 추가로 결합된 행렬. `$\|V\| \times k$`
         
         모든 단어에 대한 벡터 집합을 의미한다.
         
-        따라서, $O_t \cdot w_t$ 는 모든 단어에 대해 logit을 계산한다.
+        따라서, `$O_t \cdot w_t$` 는 모든 단어에 대해 logit을 계산한다.
         
-    - $\alpha :$  generation entropy를 조절하기 위한 temperature parameter
+    - `$\alpha :$`  generation entropy를 조절하기 위한 temperature parameter
         
         즉, 생성되는 문장의 참신함을 조절한다.
         
     
-    softmax를 통해 현재까지 생성된 단어 집합 $s_t$에서 최종 action space 분포를 결정한다.
+    softmax를 통해 현재까지 생성된 단어 집합 `$s_t$`에서 최종 action space 분포를 결정한다.
     
     - <details markdown='block'> 
 		<summary>class Worker(nn.Module):</summary>
@@ -269,49 +269,49 @@ LeakGAN 모델이 유의미한 의미 패턴을 찾을 수 있도록 MANAGER와 
     
     MANAGER의 gradient
     
-    $$
+    ``$$`
     \nabla_{\theta_m}^{\mathrm{adv}} g_t=-Q_{\mathcal{F}}\left(s_t, g_t\right) \nabla_{\theta_m} d_{\cos }\left(f_{t+c}-f_t, g_t\left(\theta_m\right)\right)
-    $$
+    `$$``
     
-    - $Q_{\mathcal{F}}\left(s_t, g_t\right)=Q\left(\mathcal{F}\left(s_t\right), g_t\right)=Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$
+    - ``$Q_{\mathcal{F}}\left(s_t, g_t\right)=Q\left(\mathcal{F}\left(s_t\right), g_t\right)=Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$``
         
         몬테 카를로 탐색으로 추정한 현재 정책에 대한 보상 기댓값
         
-    - $d_{\cos }:$ cosine similarity(similarity인지 distance인지 확인해보기)
+    - ``$d_{\cos }:$`` cosine similarity(similarity인지 distance인지 확인해보기)
         
-        $c$번의 전환 후 feature representation의 변화$(f_{t+c} - f_t)$와 목적 벡터 $g_t$의 차이
+        `$c$`번의 전환 후 feature representation의 변화`$(f_{t+c} - f_t)$`와 목적 벡터 `$g_t$`의 차이
         
     
-    손실 함수에서는 높은 보상을 달성하기 위해 $g_t$가 특징 공간의 전환과 일치하도록 강제한다.
+    손실 함수에서는 높은 보상을 달성하기 위해 `$g_t$`가 특징 공간의 전환과 일치하도록 강제한다.
     
-    $$
+    ``$$`
     \begin{aligned}& \nabla_{\theta_w} \mathbb{E}_{s_{t-1} \sim G}\left[\sum_{x_t} r_t^I \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]\\
     = & \mathbb{E}_{s_{t-1} \sim G, x_t \sim \mathcal{W}\left(x_t \mid s_{t-1}\right)}\left[r_t^I \nabla_{\theta_w} \log \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]\end{aligned}
-    $$
+    `$$``
     
 - **WORKER — MANAGER의 지시를 따르도록 보상이 주어진다.**
     
     REINFORCE 알고리즘을 활용하여 보상을 최대화한다.
     
-    이는 $s_{t-1}$ 상태와 함께 WORKER가 취한 $x_t$ 작업을 샘플링하여 근사할 수 있다.
+    이는 `$s_{t-1}$` 상태와 함께 WORKER가 취한 `$x_t$` 작업을 샘플링하여 근사할 수 있다.
     
     WORKER에 제공되는 보상은 다음과 같이 정의된다.
     
-    $$
+    ``$$`
     r_t^I=\frac{1}{c} \sum_{i=1}^c d_{\cos }\left(f_t-f_{t-i}, g_{t-i}\right)
-    $$
+    `$$``
     
-- **실제로는 $G_\theta$는 적대적 학습 전에 사전 학습이 필요하다.**
+- **실제로는 `$G_\theta$`는 적대적 학습 전에 사전 학습이 필요하다.**
     
     사전 학습 시 일관성을 유지하기 위해 MANAGER의 기울기를 통한 별도의 훈련 체계를 사용한다.
     
-    $$
+    ``$$`
     \nabla_{\theta_m}^{\mathrm{pre}} g_t=-\nabla_{\theta_m} d_{\cos }\left(\hat{f}_{t+c}-\hat{f}_t, g_t\left(\theta_m\right)\right)
-    $$
+    `$$``
     
-    - $\hat{f}_t=\mathcal{F}\left(\hat{s}_t\right), \hat s_t, \hat s_{t + c}:$ 실제 텍스트의 상태
+    - ``$\hat{f}_t=\mathcal{F}\left(\hat{s}_t\right), \hat s_t, \hat s_{t + c}:$`` 실제 텍스트의 상태
     
-    해당 수식은 앞에서 정의한 MANAGER 미분식에서 $Q_{\mathcal{F}}\left(s_t, g_t\right)$가 $1$인 상태이다.
+    해당 수식은 앞에서 정의한 MANAGER 미분식에서 `$Q_{\mathcal{F}}\left(s_t, g_t\right)$`가 `$1$`인 상태이다.
     
     사전 학습에 사용된 데이터는 모두 실제 문장이기 때문이다.
     
@@ -320,38 +320,38 @@ LeakGAN 모델이 유의미한 의미 패턴을 찾을 수 있도록 MANAGER와 
     MLE(Maximum Likelihood Estimation)를 통해 훈련된다.
     
 
-학습 과정에서 $G_\theta$와 $D_\phi$는 번갈아가며 훈련된다.
+학습 과정에서 `$G_\theta$`와 `$D_\phi$`는 번갈아가며 훈련된다.
 
 생성망에서도 MANAGER와 WORKER는 번갈아가며 서로를 고정한 채 훈련된다.
 
-## 분별망 $D_\phi$
+## 분별망 `$D_\phi$`
 
-$D_\phi:$ 파라미터가 $\phi$인 분별망
+`$D_\phi:$` 파라미터가 `$\phi$`인 분별망
 
-### 1. **Scalar Guiding Signal $D_\phi(s)$ 제공**
+### 1. **Scalar Guiding Signal `$D_\phi(s)$` 제공**
 
-전체 문장 $s_T$가 생성된 후 생성망이 파라미터를 조정할 때 가이드 역할을 한다.
+전체 문장 `$s_T$`가 생성된 후 생성망이 파라미터를 조정할 때 가이드 역할을 한다.
 
-이 때, $D_\phi(s)$는 문장이 길어질수록 정보량이 적어지므로, 이를 해결하기 위해 추가적인 정보 $f_t$를 제공한다.
+이 때, `$D_\phi(s)$`는 문장이 길어질수록 정보량이 적어지므로, 이를 해결하기 위해 추가적인 정보 `$f_t$`를 제공한다.
 
 ### Guiding Signal(Leaked Features)
 
-$$
+``$$`
 D_\phi(s)=\operatorname{sigmoid}\left(\phi_l^{\top} \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l^{\top} f\right)
-$$
+`$$``
 
-- $s:$ input. 생성된 문장.
-- $\mathcal F:$ CNN (특징맵 추출기)
-- $f : D_\phi(s)$ 의 마지막 Layer에서의 feature vector(유출된 정보)
-- $\phi_l^{\top}:$ 가중치 벡터
+- `$s:$` input. 생성된 문장.
+- `$\mathcal F:$` CNN (특징맵 추출기)
+- `$f : D_\phi(s)$` 의 마지막 Layer에서의 feature vector(유출된 정보)
+- `$\phi_l^{\top}:$` 가중치 벡터
 
-즉, $f$에 의해 Reward Value가 결정되기 때문에, 보상을 높이도록 feature(특징맵)을 뽑아야 한다.
+즉, `$f$`에 의해 Reward Value가 결정되기 때문에, 보상을 높이도록 feature(특징맵)을 뽑아야 한다.
 
 LeakGAN에서는 Feature Extractor로 CNN을 활용하지만, LSTM이나 다른 신경망을 활용하여 구현할 수도 있다.
 
-### 2. **$f_t = s_t$에서의 features**
+### 2. **`$f_t = s_t$`에서의 features**
 
-$f_t$는 분별망이 분별을 위해서 쓰이는 정보이기도 하다.
+`$f_t$`는 분별망이 분별을 위해서 쓰이는 정보이기도 하다.
 
 따라서, 전역적으로 관리된다.
 
@@ -495,24 +495,24 @@ Black Box인 기존 RL 모델들과 대비된다.
 
 - 배경
     
-    SeqGAN의 적대적 훈련 과정에서, $D$가 $G$보다 너무 강한 경우 심각한 gradient 소멸 문제가 발생한다.
+    SeqGAN의 적대적 훈련 과정에서, `$D$`가 `$G$`보다 너무 강한 경우 심각한 gradient 소멸 문제가 발생한다.
     
-    즉, 파라미터를 갱신하기에 보상이 너무 작기 때문에 $G$에게 값을 넘기기 전에 스케일 조정이 필요하다.
+    즉, 파라미터를 갱신하기에 보상이 너무 작기 때문에 `$G$`에게 값을 넘기기 전에 스케일 조정이 필요하다.
     
 
 RankGAN로부터 영감을 받은 rank 기반 방법
 
-보상 행렬 : $R_{B\times T}$
+보상 행렬 : `$R_{B\times T}$`
 
-- 다음 수식으로 $t$번째 열 벡터 $R^t$의 스케일을 재조정한다.
+- 다음 수식으로 `$t$`번째 열 벡터 `$R^t$`의 스케일을 재조정한다.
     
-    $$
+    ``$$`
     R_i^t=\sigma\left(\delta \cdot\left(0.5-\frac{\operatorname{rank}(i)}{B}\right)\right)
-    $$
+    `$$``
     
-- $\text {rank}(i):$ 열 벡터에서 i번째 원소의 ranking
-- $\delta :$ rescale 작업의 smoothness를 조정하는 하이퍼 파라미터
-- $\sigma(\cdot) :$  활성 함수(논문에서는 sigmoid)
+- `$\text {rank}(i):$` 열 벡터에서 i번째 원소의 ranking
+- `$\delta :$` rescale 작업의 smoothness를 조정하는 하이퍼 파라미터
+- `$\sigma(\cdot) :$`  활성 함수(논문에서는 sigmoid)
     
     등간격 점수를 rank 기반으로 보다 효과적인 분포로 재구성한다.
     
@@ -538,7 +538,7 @@ ex) 1 epoch 지도 학습 + 15 epoch 적대적 학습
 
 ### Temperature Control
 
-볼츠만 temperature $\alpha$.
+볼츠만 temperature `$\alpha$`.
 
 탐험와 탐사의 균형을 맞추는 데 사용할 수 있는 요소
 
@@ -551,70 +551,70 @@ ex) 1 epoch 지도 학습 + 15 epoch 적대적 학습
 
 ### **필요한 요소**
 
-- **계층 구조 생성망 $G(θ_m, θ_w)$**
+- **계층 구조 생성망 `$G(θ_m, θ_w)$`**
     
     MANAGER와 WORKER로 구성
     
-- **분별망 $D(φ)$**
+- **분별망 `$D(φ)$`**
     
     이진 분류기
     
 - **훈련 데이터 셋**
     
-    시퀀스 데이터 집합 $S = {X_1:T}$
+    시퀀스 데이터 집합 `$S = {X_1:T}$`
     
 
 ### **알고리즘 단계**
 
 1. **파라미터 초기화**
     
-    $G(θ_m, θ_w), D(φ)$를 랜덤 가중치 $θ_m, θ_w, φ$로 초기화
+    `$G(θ_m, θ_w), D(φ)$`를 랜덤 가중치 `$θ_m, θ_w, φ$`로 초기화
     
 2. **사전 학습**
-    1. $**D(φ)$ 사전 학습**
+    1. `$**D(φ)$` 사전 학습**
         
-        $D(φ)$를 시퀀스 데이터 집합 $S$를 양성 샘플로, 
-        $G$에서 생성된 시퀀스를 음성 샘플로 사용하여 사전 학습한다.
+        `$D(φ)$`를 시퀀스 데이터 집합 `$S$`를 양성 샘플로, 
+        `$G$`에서 생성된 시퀀스를 음성 샘플로 사용하여 사전 학습한다.
         
-        이때, $D(φ)$는 특징 추출기($\mathcal F$)와 출력 레이어(sigmoid)로 구성된다.
+        이때, `$D(φ)$`는 특징 추출기(`$\mathcal F$`)와 출력 레이어(sigmoid)로 구성된다.
         
-        $$
+        `$$`
         D_\phi(s)=\operatorname{sigmoid}\left(\phi_l^{\top} \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l^{\top} f\right)
-        $$
+        `$$`
         
-    2. $**G(θ_m, θ_w)$ 사전 학습**
+    2. `$**G(θ_m, θ_w)$` 사전 학습**
         
-        $D(φ)$로부터 유출된 정보를 사용하여 학습한다.
+        `$D(φ)$`로부터 유출된 정보를 사용하여 학습한다.
         
 3. **사전 학습을 수렴할 때까지 번갈아 수행한다.**
 4. **적대적 학습**
     - **생성망 단계 (g-steps)**
-        - $G(θ)$를 사용하여 시퀀스 $Y_1:T$를 생성
-        - 각 $t$에 대해 $D(φ)$로부터 유출된 정보 $f_t$를 저장
-        - $Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$을 통해 Monte Carlo Search를 사용하여 $Q(f_t, g_t)$를 얻어낸다.
-        - MANAGER로부터 계산된 방향 $g_t$를 얻는다.
-        - WORKER 매개변수 $θ_w, ψ$, softmax를 갱신한다.
+        - `$G(θ)$`를 사용하여 시퀀스 `$Y_1:T$`를 생성
+        - 각 `$t$`에 대해 `$D(φ)$`로부터 유출된 정보 `$f_t$`를 저장
+        - `$Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$`을 통해 Monte Carlo Search를 사용하여 `$Q(f_t, g_t)$`를 얻어낸다.
+        - MANAGER로부터 계산된 방향 `$g_t$`를 얻는다.
+        - WORKER 매개변수 `$θ_w, ψ$`, softmax를 갱신한다.
             
-            $$
+            `$$`
             \begin{aligned}
 			& \nabla_{\theta_w} \mathbb{E}_{s_{t-1} \sim G}\left[\sum_{x_t} r_t^I \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right] \\
 			= & \mathbb{E}_{s_{t-1} \sim G, x_t \sim \mathcal{W}\left(x_t \mid s_{t-1}\right)}\left[r_t^I \nabla_{\theta_w} \log \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]
 			\end{aligned}
-            $$
+            `$$`
             
-        - MANAGER 매개변수 $θ_m$을 갱신한다.
+        - MANAGER 매개변수 `$θ_m$`을 갱신한다.
             
-            $$
+            `$$`
             \nabla_{\theta_m}^{\mathrm{adv}} g_t=-Q\left(f_t, g_t\right) \nabla_{\theta_m} d_{\cos }\left(\mathcal{F}\left(s_{t+c}\right)-\mathcal{F}\left(s_t\right), g_t\left(\theta_m\right)\right)
-            $$
+            `$$`
             
     - **분별망 단계 (d-steps)**
-        - 현재 $G(θ_m, θ_w)$를 사용하여 음성 예제를 생성하고 주어진 양성 예제 S와 결합한다.
-        - k-epoch 동안 $D(φ)$를 훈련한다.
+        - 현재 `$G(θ_m, θ_w)$`를 사용하여 음성 예제를 생성하고 주어진 양성 예제 S와 결합한다.
+        - k-epoch 동안 `$D(φ)$`를 훈련한다.
             
-            $$
+            `$$`
             D_\phi(s)=\operatorname{sigmoid}\left(\phi_l \cdot \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l, f\right)
-            $$
+            `$$`
             
 5. **LeakGAN이 수렴할 때까지 반복한다.**
 

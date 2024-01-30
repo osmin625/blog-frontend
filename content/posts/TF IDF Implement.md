@@ -120,9 +120,9 @@ for doc in dic.values():
 
 이후, 해당 raw term frequency들을 log frequency weighting으로 바꿔주기 위해 함수를 선언했다.
 
-$$
+`$$
 w_{t, d}=\left\{\begin{array}{cc}1+\log _{10} \mathrm{tf}_{t, d}, & \text { if } \mathrm{tf}_{t, d}>0 \\0, & \text { otherwise }\end{array}\right.
-$$
+$$`
 
 단어의 빈도가 크지 않기 때문에, 나는 log의 base를 **2**로 설정했다.
 
@@ -151,11 +151,11 @@ for doc in dic.values():
 
 📌 **idf weight**
 
-- $df_{term}$는 term를 포함하는 **문서**의 빈도이다.
+- `$df_{term}$`는 term를 포함하는 **문서**의 빈도이다.
 - 우리는 df가 작은 term의 점수를 더 높게 주고 싶기 때문에, df을 뒤집어서 분모로 사용하자.
 - **idf(inverse document frequency)**
     
-    $idf_t=log_{10}(N/df_t)$
+    `$idf_t=log_{10}(N/df_t)$`
     
     - N = 전체 document 수
     - idf값을 완화 시키기 위해 log를 취해준다.
@@ -222,9 +222,9 @@ def idf_cal(x):
 
 - term의 tf-idf 가중치는 tf 가중치와 idf 가중치의 곱이다.
     
-    $$
+    `$$`
     W_{t,d}=(1+log_{10}tf_{t,d}) \times log_{10}(N/df_t)
-    $$
+    `$$`
     
 - IR에서 가장 핵심적인 가중치 공식이다.
     
@@ -257,9 +257,9 @@ while (1):
 
 ### 7. **Score 계산하기**
 
-$$
+`$$
 \operatorname{Score}(q, d)=\sum_{t \in q\urcorner d} t f . i d f_{t, d}
-$$
+$$`
 
 위 수식은 q(query)와 d(document)에서 공통되는 term을 가진 document의 score만 계산한다는 의미이다.
 

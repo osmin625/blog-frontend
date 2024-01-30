@@ -41,11 +41,11 @@ Wide & Deep Learning for Recommender Systems
 
 Generalized Linear Model
 
-$**\tt y = w^Tx + b**$
+`$**\tt y = w^Tx + b**$`
 
-- ${\tt w = [w_1,...,w_n]}$
-- $\tt x = [x_1,...,x_n]$
-- $b \in \R$
+- `${\tt w = [w_1,...,w_n]}$`
+- `$\tt x = [x_1,...,x_n]$`
+- `$b \in \R$`
 
 ![WDN](/imgs/WDN1.png)
 
@@ -55,9 +55,9 @@ $**\tt y = w^Tx + b**$
 
 서로다른 두 변수의 관계를 학습하기 위해 Cross-Product Term을 추가해준다.
 
-$$
+`$$
 \tt \phi_k(x) = \Pi^d_{i=1}x_i^{c_{ki}}, \quad c_{ki} \in \{0,1\}
-$$
+$$`
 
 이 때, 가능한 모든 변수들 간의 내적을 표현하면 학습해야 할 파라미터가 너무 많아지게 된다.
 
@@ -65,11 +65,11 @@ $$
 
 위의 모델링은 Polynomial Logistic Regression과 거의 동일하다.
 
-$$
+`$$
 \hat y(x)=\left(w_0+\sum_{i=1}^n w_i x_i{+\sum_{i=1}^n \sum_{j=i+1}^n w_{i j} x_i x_j}\right), \quad w_i, w_{i j} \in \mathbb{R}
-$$
+$$`
 
-이 모델로는 $n^2$만큼 학습 파라미터가 늘어나게 된다.
+이 모델로는 `$n^2$`만큼 학습 파라미터가 늘어나게 된다.
 
 즉, Wide Component만으로는 표현할 수 있는 상호작용의 한계가 명확하다.
 
@@ -88,13 +88,13 @@ $$
 
 ### **전체 구조 및 손실 함수**
 
-$$
+`$$
 P(Y=1|x) = \tt\sigma(w^T_{wide}[x,\phi(x)] + w^T_{deep}a^{(lf)} + b)
-$$
+$$`
 
-$\tt x:$ 주어진 n개의 변수
+`$\tt x:$` 주어진 n개의 변수
 
-$\tt \phi(x):$ n개 변수간의 상호작용(Cross-Product)
+`$\tt \phi(x):$` n개 변수간의 상호작용(Cross-Product)
 
 ![WDN](/imgs/WDN3.png)
 

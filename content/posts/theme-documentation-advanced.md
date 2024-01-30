@@ -233,8 +233,8 @@ Katex is a math typesetting library for the web which lets you write beautiful e
           // customised options
           // • auto-render specific keys, e.g.:
           delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false},
+            {left: '`$$`', right: '`$$`', display: true},
+            {left: '`$', right: '$`', display: false},
           ],
           // • rendering keys, e.g.:
           throwOnError : false
@@ -246,11 +246,11 @@ Katex is a math typesetting library for the web which lets you write beautiful e
 
 > Note: Make sure you use the latest version of katex and use the correct script tags as described in [their documentation](https://katex.org/docs/browser.html)
 
-Then the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` wrapped by double `$$` would be displayed as:
+Then the equation ``$$`y_t = \beta_0 + \beta_1 x_t + \epsilon_t`$$`` wrapped by double ``$$`` would be displayed as:
 
-   $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
+   `$$`y_t = \beta_0 + \beta_1 x_t + \epsilon_t`$$`
 
-The equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` wrapped by single `$` would be displayed inline as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$.
+The equation `$`y_t = \beta_0 + \beta_1 x_t + \epsilon_t`$` wrapped by single `$`` would be displayed inline as `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$`.
 
 ### Comments
 

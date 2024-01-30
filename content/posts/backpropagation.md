@@ -30,47 +30,47 @@ type: post
 
 (기울기에 대한 손실 함수의 미분)
 
-특정 가중치 w에 대해, 오차 L 위에서의 기울기는 $\partial L\over \partial w$이다.
+특정 가중치 w에 대해, 오차 L 위에서의 기울기는 `$\partial L\over \partial w$`이다.
 
 ### 연쇄 법칙(chain rule)
 
 **합성 함수의 미분은 합성 함수를 구성하는 각 함수의 미분의 곱으로 나타낼 수 있다.**
 
-$$
+`$$
 {\partial z\over \partial x} = {\partial z\over \partial t}{\partial t\over \partial x}
-$$
+$$`
 
 합성 함수
 
 여러 함수로 구성된 함수
 
-- ex) $z = (x + y)^2$
-    - $z = t^2$
-    - $t = x + y$
+- ex) `$z = (x + y)^2$`
+    - `$z = t^2$`
+    - `$t = x + y$`
 
 ### 순전파, 역전파, 국소적 계산
 
-ex) $f(x) = y$
+ex) `$f(x) = y$`
 
 ![bp](bp1.png)
 
 **f에 x를 집어넣으면 y가 튀어나온다.**
 
-위의 그림처럼 어딘가에서 갑자기 등장한 $L$이라는 함수를 $y$로 미분한 값($\partial L\over \partial y$)이 제공된다면?
+위의 그림처럼 어딘가에서 갑자기 등장한 `$L$`이라는 함수를 `$y$`로 미분한 값(`$\partial L\over \partial y$`)이 제공된다면?
 
-우리는 $L$이라는 함수를 모르지만, $x$로 미분한 값을 알 수 있다.
+우리는 `$L$`이라는 함수를 모르지만, `$x$`로 미분한 값을 알 수 있다.
 
 연쇄법칙을 활용하면 된다.
 
-$$
+`$$
 {\partial L\over \partial x} = {\partial L\over \partial y}{\partial y\over \partial x}
-$$
+$$`
 
-우리는 $\partial L\over \partial y$를 알고 있으니, $\partial y\over \partial x$만 계산하면 된다.
+우리는 `$\partial L\over \partial y$`를 알고 있으니, `$\partial y\over \partial x$`만 계산하면 된다.
 
-${\partial y\over \partial x} = f'(x)$이므로, x에 대한 함수인 $f(x)$를 미분하면 된다.
+`${\partial y\over \partial x} = f'(x)$`이므로, x에 대한 함수인 `$f(x)$`를 미분하면 된다.
 
-ex) $f(x) = x^2 ⇒ f'(x) = 2x$ 
+ex) `$f(x) = x^2 ⇒ f'(x) = 2x$` 
 
 이 때, 위의 예시에서 왼쪽에서 오른쪽으로 진행하는 단계를 **순전파(forward propagation)**,
 
@@ -80,20 +80,20 @@ ex) $f(x) = x^2 ⇒ f'(x) = 2x$
 
 전체에서 어떤 일이 벌어지든 상관없이 자신과 관계된 정보만을 결과로 출력할 수 있다.
 
-위의 예시처럼, 각 단계에서는 그저 $f(x)$의 미분값만 곱해서 하류로 흘러보낸 것이 전부다.
+위의 예시처럼, 각 단계에서는 그저 `$f(x)$`의 미분값만 곱해서 하류로 흘러보낸 것이 전부다.
 
 단순한 국소적 계산이 연결되어 전체를 구성하는 복잡한 계산을 수행하게 된다.
 
 ### 덧셈 노드에서의 역전파
 
-ex) $z = x + y$
+ex) `$z = x + y$`
 
-- $\partial z\over \partial x$ = 1
-- $\partial z\over \partial y$ = 1
+- `$\partial z\over \partial x$` = 1
+- `$\partial z\over \partial y$` = 1
 
 ![bp](bp2.png)
 
-상류에서 내려온 신호인 $\partial L\over \partial z$에 $\partial z\over \partial x$를 곱함으로써 $\partial L\over \partial x$을 구했다.
+상류에서 내려온 신호인 `$\partial L\over \partial z$`에 `$\partial z\over \partial x$`를 곱함으로써 `$\partial L\over \partial x$`을 구했다.
 
 단순한 덧셈 연산이기 때문에 미분값은 1이다.
 
@@ -101,10 +101,10 @@ ex) $z = x + y$
 
 ### 곱셈 노드에서의 역전파
 
-ex) $z = xy$
+ex) `$z = xy$`
 
-- ${\partial z\over \partial x} = y$
-- ${\partial z\over \partial y} = x$
+- `${\partial z\over \partial x} = y$`
+- `${\partial z\over \partial y} = x$`
 
 이므로, 
 
@@ -115,7 +115,7 @@ ex) $z = xy$
 
 하지만 본질은 미분이다.
 
-$z = x^2$의 경우, 미분값은 $2x$가 되는 것을 명심하자.
+`$z = x^2$`의 경우, 미분값은 `$2x$`가 되는 것을 명심하자.
 
 ### 연쇄 법칙과 계산 그래프
 
@@ -123,7 +123,7 @@ $z = x^2$의 경우, 미분값은 $2x$가 되는 것을 명심하자.
 
 ![bp](bp5.png)
 
-처음에 예시로 들었던 함수 $z = (x+y)^2$를 그래프화 한 것이다.
+처음에 예시로 들었던 함수 `$z = (x+y)^2$`를 그래프화 한 것이다.
 
 ### 결론
 

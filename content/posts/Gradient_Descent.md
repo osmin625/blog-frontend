@@ -16,28 +16,28 @@ type: post
 
 1차 근삿값 발견을 위한 최적화 알고리즘
 
-미분 값 $\partial J\over\partial w_1$의 반대 방향이 최적 해에 접근하는 **방향**이다.
+미분 값 `$\partial J\over\partial w_1$`의 반대 방향이 최적 해에 접근하는 **방향**이다.
 
-따라서, 현재 가중치 $w_1$에 $-{\partial J\over\partial w_1}$을 더하면 최적 해에 가까워진다.
+따라서, 현재 가중치 `$w_1$`에 `$-{\partial J\over\partial w_1}$`을 더하면 최적 해에 가까워진다.
 
 - **굳이 가까워질 필요 없이, 손실 함수를 미분해서 바로 극값을 찾으면 되지 않을까?**
     - 일반적으로 손실 함수가 매우 복잡하고 비선형적인 경우가 많기 때문에, 미분을 통해 극값을 계산하기 어렵다.
     - 미분을 구현하는 것보다 경사 하강법으로 최솟값을 찾는 것이 더 효율적이다.
 
 <aside>
-▪️ 방향은 알지만, 최적해까지의 거리에 대한 정보가 없기 때문에 **학습률 $\rho$**를 곱해서 조금씩 이동한다.
+▪️ 방향은 알지만, 최적해까지의 거리에 대한 정보가 없기 때문에 **학습률 `$\rho$`**를 곱해서 조금씩 이동한다.
 
-$$
+`$$
 w_{t+1} = w_t + \rho\left(-{\partial J\over\partial w_t}\right)
-$$
+$$`
 
-$$
+`$$
 w \leftarrow w + \eta \left( -\frac{\partial L}{\partial w}\right)
-$$
+$$`
 
-- $J, L$ : 손실 함수
-- $\rho,\eta \text{(로, 에타)}$ : 학습률
-- $\leftarrow$ : 업데이트를 의미한다.
+- `$J, L$` : 손실 함수
+- `$\rho,\eta \text{(로, 에타)}$` : 학습률
+- `$\leftarrow$` : 업데이트를 의미한다.
 
 표기는 다양하다.
 
@@ -49,11 +49,11 @@ $$
 
 매개변수마다 독립적으로 미분한다.
 
-$$
+`$$
 {\tt{w = w + \rho\left(\tt-\triangledown w\right)}}
 \\
 \tt\triangledown w = \left({\partial J\over\partial w_0},{\partial J\over\partial w_1},{\partial J\over\partial w_2},...,{\partial J\over\partial w_d}\right)
-$$
+$$`
 
 ![GD](gd1.png)
 
@@ -144,8 +144,8 @@ $$
 
 Gradient Descent Algorithm에는 여러 문제점들이 존재하는데, 이를 해결한 [Optimizer](https://osmin625.github.io/posts/Optimizer/)들이 등장한다.
 
-- Quiz. $f(x,y,z)$의 그래디언트 벡터는?
+- Quiz. `$f(x,y,z)$`의 그래디언트 벡터는?
     
-    $f(x,y,z) = 9x^2 + 5y^3 - 3z$
+    `$f(x,y,z) = 9x^2 + 5y^3 - 3z$`
     
-    $\tt ans = (18x, 15y^2, -3)$
+    `$\tt ans = (18x, 15y^2, -3)$`

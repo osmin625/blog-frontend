@@ -323,7 +323,7 @@
     font: inherit;
     font-size: 100%;
     background: inherit;
-    background-color: var(--light-primary-color);
+    background-color: rgb(var(--light-primary-color));
     border: inherit;
     color: var(--light-text-color);
   }

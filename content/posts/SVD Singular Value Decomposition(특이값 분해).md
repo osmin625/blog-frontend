@@ -17,46 +17,46 @@ type: post
 - **행렬을 대각화하는 방법**
 - **모든 m x n 행렬에 대해 적용 가능**
 
-Rating Matrix $R$ 에 대해 유저와 아이템의 잠재 요인을 포함할 수 있는 행렬로 분해한다.
+Rating Matrix `$R$` 에 대해 유저와 아이템의 잠재 요인을 포함할 수 있는 행렬로 분해한다.
 
 ### **Full SVD**
 
 기존 행렬을 온전하게 3개의 행렬로 분해한다.
 
-$$
+`$$
 \tt Full\ \ SVD :R = U\Sigma V^T
-$$
+$$`
 
-- $U$: 유저와 Latent Factor의 관계
+- `$U$`: 유저와 Latent Factor의 관계
     
-    $U$의 열벡터는 $R$의 left singular vector
+    `$U$`의 열벡터는 `$R$`의 left singular vector
     
-- $V$: 아이템과 Latent Factor의 관계
+- `$V$`: 아이템과 Latent Factor의 관계
     
-    $V$의 열벡터는 $R$의 right singular vector
+    `$V$`의 열벡터는 `$R$`의 right singular vector
     
-- $\Sigma$: Latent Factor의 중요도
+- `$\Sigma$`: Latent Factor의 중요도
     
-    $RR^T$을 고유값 분해해서 얻은 직사각 대각 행렬
+    `$RR^T$`을 고유값 분해해서 얻은 직사각 대각 행렬
     
-    대각 원소들은 $R$의 singular value(특이치)
+    대각 원소들은 `$R$`의 singular value(특이치)
     
 
 ### **Truncated SVD**
 
-$\Sigma$를 일부만 사용한다.
+`$\Sigma$`를 일부만 사용한다.
 
-$$
+`$$
 \tt Truncated \ \  SVD: R \approx \widehat{U} \Sigma_k \widehat{V^T}=\hat{R}
-$$
+$$`
 
-$\Sigma$는 중요도로 정렬되어 있기 때문에, 상위 k개만 활용하여 기존의 행렬을 거의 유사하게 나타낼 수 있다.
+`$\Sigma$`는 중요도로 정렬되어 있기 때문에, 상위 k개만 활용하여 기존의 행렬을 거의 유사하게 나타낼 수 있다.
 
 즉, 몇 개의 특이치만을 가지고도 유용한 정보를 유지한다.
 
 분해된 행렬이 부분 복원되면서 가장 중요한 정보로 요약된다.
 
-$\widehat R$은 축소된 $\widehat U, \widehat {V^T}, \Sigma_k$에 의해 계산된다.
+`$\widehat R$`은 축소된 `$\widehat U, \widehat {V^T}, \Sigma_k$`에 의해 계산된다.
 
 각각의 K개의 Latent Factor는 유추할 수 있을 뿐, 정확히 무엇을 의미하는지 알 수 없다.
 

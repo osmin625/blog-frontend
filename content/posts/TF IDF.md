@@ -83,9 +83,9 @@ AND, OR 이렇게 검색하지 않고, 사람에게 말하듯이 검색하고자
 앞에서 단어간 유사도를 확인할 때 사용했었다.
 
 - 일반적으로 쓰여지는 A와 B집합의 관계는 아래와 같이 나타낸다.
-    - jaccard(A,B)=$|A∩B||A∪B|$
+    - jaccard(A,B)=`$|A∩B||A∪B|$`
     - jaccard(A,A)=1
-    - jaccard(A,B)=0 if $A∩B=0$
+    - jaccard(A,B)=0 if `$A∩B=0$`
 - A와 B가 같은 크기일 필요는 없다. 문서의 term 개수보다 query term이 적은 것이 당연하다.
 - 항상 0~1 값을 가진다.
 
@@ -96,7 +96,7 @@ Query: **ides of march** 일 때
 - Document 1: caesar died in march ⇒ 1 / 3 + 4 - 1
 - Document 2: the long march ⇒ 1 / 3 + 3 - 1
 
-doc1 : $1\over6$ doc2 : $1\over5$ 즉 doc2가 점수가 조금 더 높다.
+doc1 : `$1\over6$` doc2 : `$1\over5$` 즉 doc2가 점수가 조금 더 높다.
 
 ### Jaccard coefficient의 문제점
 
@@ -109,15 +109,15 @@ doc1 : $1\over6$ doc2 : $1\over5$ 즉 doc2가 점수가 조금 더 높다.
     <aside>
     ▪️ frequency
     
-    - **term frequency($tf_{term}$)**
+    - **term frequency(`$tf_{term}$`)**
         
         어떤 document 안에서 해당 term이 나타난 횟수
         
-    - **document frequency($df_{term}$)**
+    - **document frequency(`$df_{term}$`)**
         
         어떤 term이 나타나는 document의 개수
         
-    - **collection frequency($cf_{term}$)**
+    - **collection frequency(`$cf_{term}$`)**
         
         collection 전체에서 어떤 term이 나타난 횟수
         
@@ -137,7 +137,7 @@ doc1 : $1\over6$ doc2 : $1\over5$ 즉 doc2가 점수가 조금 더 높다.
     
 - 나중에 이 수식을 사용한다.
     
-    $|A∩B||A∪B|$
+    `$|A∩B||A∪B|$`
     
 
 ### **Recall: Binary term-document incidence matrix**
@@ -146,15 +146,15 @@ doc1 : $1\over6$ doc2 : $1\over5$ 즉 doc2가 점수가 조금 더 높다.
 
 예를 들어 antony and brutus and not(calpurnia)라면
 
-- $110001$
-- $110100$
-- $101111 -> 100000$
+- `$110001$`
+- `$110100$`
+- `$101111 -> 100000$`
 
 위 비트와이즈 연산을 통해 “Antony and Cleopatra”가 만족하는 소설책임을 찾을 수 있다.
 
 - 각 문서를 바이너리 벡터로 표시한다.
     
-    $vector ∈ \{0,1\}^{V}$
+    `$vector ∈ \{0,1\}^{V}$`
     
 ### **Term-document count matrices**
 
@@ -187,7 +187,7 @@ doc1 : $1\over6$ doc2 : $1\over5$ 즉 doc2가 점수가 조금 더 높다.
 
 ### TF: **Term frequency**
 
-term frequency($tf_{t,d}$): 문서 d에서 term t가 발생한 빈도
+term frequency(`$tf_{t,d}$`): 문서 d에서 term t가 발생한 빈도
 
 tf를 query-document가 얼마나 일치하는지 계산하기 위해 쓰고 싶다.
 
@@ -209,9 +209,9 @@ tf 10인 문서가 tf 1인 문서보다 더 연관도가 높다.
 
 이 때, 단어가 하나 있는 것과 아예 없는 것의 차이는 훨씬 크기 때문에, 0과 1은 따로 구분한다.
 
-$$
+`$$
 \tt score = ∑_{t∈q∩d}(1+log tf_{t,d})
-$$
+$$`
 
 문서의 점수를 계산하기 위해선, query와 document에서 공통으로 나타나는 단어의 빈도를 log로 계산하면 된다.
 
@@ -242,7 +242,7 @@ $$
 
 **요약하면, Document frequency가 작은 단어일수록 유용하고, term frequency가 큰 단어일수록 문서를 특정짓는데 유용하다.**
 
-효과적인 검색을 위해 document frequency($df$)에 대한 정보도 활용해야 한다.
+효과적인 검색을 위해 document frequency(`$df$`)에 대한 정보도 활용해야 한다.
 
 ---
 
@@ -260,9 +260,9 @@ $$
 
 ### IDF: Inverse Document Frequency
 
-$$
+`$$
 \tt idf_t=log_{10}(N/df_t)
-$$
+$$`
 
 - N = 전체 document 수
 
@@ -276,7 +276,7 @@ log의 base가 꼭 10일 필요는 없다.
     
     N(문서의 개수) = 1,000,000이고, 
     
-    $idf_t=log_{10}(N/df_t)$인 경우
+    `$idf_t=log_{10}(N/df_t)$`인 경우
     
     | term | df_t | idf_t |
     | --- | --- | --- |
@@ -320,9 +320,9 @@ log의 base가 꼭 10일 필요는 없다.
 
 IR에서 가장 핵심적인 가중치 공식
 
-$$
+`$$
 \tt W_{t,d}=(1+log_{10}tf_{t,d}) \times log_{10}(N/df_t)
-$$
+$$`
 
 term의 tf-idf 가중치는 tf 가중치와 idf 가중치의 곱이다.
 
@@ -334,9 +334,9 @@ term의 tf-idf 가중치는 tf 가중치와 idf 가중치의 곱이다.
 
 ### 쿼리에 대한 문서의 Score 계산
 
-$$
+`$$
 \tt Score(q,d)=∑_{t∈q∩d}tf.idf_{t,d}
-$$
+$$`
 
 위 수식은 q(query)와 d(document)에서 공통되는 term을 가진 document의 score만 계산한다는 의미이다.
 
@@ -371,11 +371,11 @@ $$
 
 즉, 각 문서를 구성하는 Term들을 tf-idf 값으로 전환하여 문서를 벡터화한다.
 
-tf-idf 가중치 행렬 $∈R^{\|V\|}$
+tf-idf 가중치 행렬 `$∈R^{\|V\|}$`
 
-$V$는 문서에 포함된 단어의 개수를 의미한다.
+`$V$`는 문서에 포함된 단어의 개수를 의미한다.
 
-결국 $\|V\|$ 차원의 벡터 공간을 가지게 된다.
+결국 `$\|V\|$` 차원의 벡터 공간을 가지게 된다.
 
 **term은 공간의 차원이 된다.**
 
@@ -447,15 +447,15 @@ tf-idf의 가중치 알고리즘은 선택의 폭이 다양하다.
 
 tf-raw: term의 발생횟수
 
-tf-wt:  $1+log(tf_{t,d})$. 즉, term의 발생빈도를 가중치로 바꾼 것.
+tf-wt:  `$1+log(tf_{t,d})$`. 즉, term의 발생빈도를 가중치로 바꾼 것.
 
-idf: $log{N\over df_t}$
+idf: `$log{N\over df_t}$`
 
-wt: tf-wt * idf : $(1+log(tf_{t,d}))\times log{N\over df_t}$
+wt: tf-wt * idf : `$(1+log(tf_{t,d}))\times log{N\over df_t}$`
 
 n'lize: 문서 길이(wt 제곱 총합의 루트) 로 wt를 나눈 것
 
-문서의 길이: $\sqrt {1^2+0^2+1^2+1.3^2} \simeq 1.92$
+문서의 길이: `$\sqrt {1^2+0^2+1^2+1.3^2} \simeq 1.92$`
 
 **실제 코사인 유사도는 내적값의 합으로 auto에 대한 내적값 0, best에 대한 내적값 0, car에 대한 내적값 0.27(0.52 * 0.52)과 insurance에 대한 내적값 0.53(0.78 * 0.68)을 더한 0.8이다.**
 

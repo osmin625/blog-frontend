@@ -18,9 +18,9 @@ Tensor 객체와 매우 비슷하다.
 
 대부분의 Layer에는 weights 값들이 지정되어 있기 때문에, 직접 지정할 일은 드물다. 그래도 직접 지정하는 법을 알아보자.
 
-nn.Module로 만든 $\tt xw +b$라는 선형 모델을 살펴본다.
+nn.Module로 만든 `$\tt xw +b$`라는 선형 모델을 살펴본다.
 
-### $\tt xw +b$
+### `$\tt xw +b$`
 
 ```python
 class MyLinear(nn.Module):
@@ -38,7 +38,7 @@ class MyLinear(nn.Module):
 
 **ex —  Feature가 7개 있고, 배치가 3인 경우**
 
-데이터는 $3 \times 7$의 형태가 된다.
+데이터는 `$3 \times 7$`의 형태가 된다.
 
 1. 7개의 feature를 넣어서
     
@@ -48,7 +48,7 @@ class MyLinear(nn.Module):
     
     `out_features = 5`
     
-3. $7 \times 5$ 형태의 weight 값이 필요하다.
+3. `$7 \times 5$` 형태의 weight 값이 필요하다.
     
     `nn.Parameter(torch.randn(7, 5)`
     
@@ -56,12 +56,12 @@ class MyLinear(nn.Module):
     
     `nn.Parameter(torch.randn(5))`
     
-5. 이후, `forward`에서 $\tt xw +b$을 return해준다.
+5. 이후, `forward`에서 `$\tt xw +b$`을 return해준다.
     
     `def forward(self, x : Tensor):
          return x @ self.weights + self.bias`
     
-    즉, 모델의 예측 값($\hat y$)을 뱉어낸다.
+    즉, 모델의 예측 값(`$\hat y$`)을 뱉어낸다.
     
 
 이후, `backward()`에서 실제 값과 예측 값의 차이(loss)에 대해 미분을 수행한다.

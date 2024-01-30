@@ -53,10 +53,10 @@ PITF에서는 (user, item, tag) 3개의 필드에 대한 클릭률을 예측하�
 
 ## FFM 공식
 
-$$
+`$$
 \begin{gathered}\hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_{i, f_j}, \mathrm{v}_{j, f_i}\right\rangle x_i x_j \\w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}, \quad \mathrm{v}_{i, f} \in \mathbb{R}^k\end{gathered}
 
-$$
+$$`
 
 ![FFM](/imgs/FFM1.png)
 
@@ -65,15 +65,15 @@ $$
 참고 — FM Formula
 </summary>
 
-$$
+`$$
 \begin{gathered}\hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle x_i x_j \\w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}, \quad \mathrm{v}_i \in \mathbb{R}^k\end{gathered}
-$$
+$$`
 
-FM은 k차원의 파라미터를 $v_i$와 $v_j$가 내적이 된 형태로 상호작용을 표현하는 반면, 
+FM은 k차원의 파라미터를 `$v_i$`와 `$v_j$`가 내적이 된 형태로 상호작용을 표현하는 반면, 
 
-FFM은 $x_i$에 대응되는 파라미터가 $v_i$가 아니라, $v_{i,f_j}$가 된다.
+FFM은 `$x_i$`에 대응되는 파라미터가 `$v_i$`가 아니라, `$v_{i,f_j}$`가 된다.
 
-즉, field $(f_i)$별로 Factorization 파라미터가 정의된다.
+즉, field `$(f_i)$`별로 Factorization 파라미터가 정의된다.
 </details>
 
 ex) 광고 클릭 데이터가 존재하고 사용할 수 있는 feature가 총 세 개(Publisher, Advertiser, Gender)일 때,
@@ -85,26 +85,26 @@ ex) 광고 클릭 데이터가 존재하고 사용할 수 있는 feature가 총 
     
     필드가 존재하지 않는다.
     
-    하나의 변수에 대해 factorization 차원$(k)$ 만큼의 파라미터를 학습한다.
+    하나의 변수에 대해 factorization 차원`$(k)$` 만큼의 파라미터를 학습한다.
     
-    $$
+    `$$`
     \hat{y}(\mathrm{x})
     =w_0+w_{\mathrm{ESPN}}+w_{\mathrm{Nike}}+w_{\text {Male }}+{\mathrm{v}_{\mathrm{ESPN}} \cdot \mathrm{v}_{\mathrm{Nike}}\\
     +\mathrm{v}_{\mathrm{ESPN}} \cdot \mathrm{v}_{\text {Male }}+\mathrm{v}_{\mathrm{Nike}} \cdot \mathrm{v}_{\text {Male }}}
-    $$
+    `$$`
     
 - **FFM**
     
     각각의 feature를 필드 P,A,G로 정의
     
-    하나의 변수에 대해 필드 개수$(f)$와 factorization 차원$(k)$의 곱 $(=fk)$만큼의 파라미터를 학습한다.
+    하나의 변수에 대해 필드 개수`$(f)$`와 factorization 차원`$(k)$`의 곱 `$(=fk)$`만큼의 파라미터를 학습한다.
     
-    $$
+    `$$`
     \hat{y}(\mathrm{x})
     =w_0+w_{\mathrm{ESPN}}+w_{\mathrm{Nike}}+w_{\text {Male }}+{\mathrm{v}_{\mathrm{ESPN}, \mathrm{A}} \cdot \mathrm{v}_{\mathrm{Nike}, \mathrm{P}}\\
     
     +\mathrm{v}_{\mathrm{ESPN}, \mathrm{G}} \cdot \mathrm{v}_{\text {Male,P }}+\mathrm{v}_{\mathrm{Nike}, \mathrm{G}} \cdot \mathrm{v}_{\mathrm{Male}, \mathrm{A}}}
-    $$
+    `$$`
     
 
 ## FFM의 필드 구성

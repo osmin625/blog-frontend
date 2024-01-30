@@ -29,13 +29,13 @@ type: post
     # output : tensor(40.)
     ```
     
-    $$
+    `$$`
     w = 2\\
     y = w^2\\
     z = 10\times y  + 25\\
     z = 10 \times w^2 + 25\\
     {dz\over dw} = 20 \times w = 40
-    $$
+    `$$`
     
     **미분 값이 여러 개인 경우**
     
@@ -54,13 +54,13 @@ type: post
     # output: tensor([-12.,-8.])
     ```
     
-    $$
+    `$$`
     \begin{aligned}
     &Q = 3a^3 - b^2\\
     & \frac{\partial Q}{\partial a}=9 a^2 \\
     & \frac{\partial Q}{\partial b}=-2 b
     \end{aligned}
-    $$
+    `$$`
     
 2. **미분 값을 tensor에 저장한다.**
     
@@ -97,9 +97,9 @@ class LR(nn.Module):
 		self.lr = lr.to(device)
 ```
 
-$$
+`$$
 h_\theta(x)=\frac{1}{1+e^{-\theta^T \mathbf{x}}}
-$$
+$$`
 
 ```python
 
@@ -122,9 +122,9 @@ def backward(self, x, yhat, y):
 
 ```
 
-$$
+`$$
 \begin{aligned}&\frac{\partial}{\partial \theta_j} J(\theta)=\frac{1}{m} \sum_{i=1}^m\left(h_\theta\left(x^i\right)-y^i\right) x_j^i\end{aligned}
-$$
+$$`
 
 ```python
 
@@ -134,11 +134,11 @@ def optimize(self):
 	self.b = self.b - self.lr * self.grads["db"]
 ```
 
-기존의 $\theta$, 즉, $\tt w$ 값에 미분값 만큼의 업데이트를 수행해주는 함수. 
+기존의 `$\theta$`, 즉, `$\tt w$` 값에 미분값 만큼의 업데이트를 수행해주는 함수. 
 
-$$
+`$$
 \begin{aligned}\theta_j & :=\theta_j-\alpha \frac{\partial}{\partial \theta_j} J(\theta) \\& :=\theta_j-\alpha \sum_{i=1}^m\left(h_\theta\left(x^i\right)-y^i\right) x_j^i\end{aligned}
-$$
+$$`
 
 - 전체 코드
     

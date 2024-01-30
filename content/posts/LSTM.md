@@ -18,10 +18,10 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 **가중치**
 
-순환 신경망의 $\{U, V, W\}$에 4개를 추가하여 $\{U, U_i , U_o , W, W_i , W_o , V\}$
+순환 신경망의 `$\{U, V, W\}$`에 4개를 추가하여 `$\{U, U_i , U_o , W, W_i , W_o , V\}$`
 
-- $i$ : 입력 게이트
-- $o$ : 출력 게이트
+- `$i$` : 입력 게이트
+- `$o$` : 출력 게이트
 - 다양한 구조 설계가 가능하다.
     
     ![lstm](lstm1.png)
@@ -65,9 +65,9 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 ### 수식 요약
 
-$$
+`$$
 \begin{aligned}f_t & =\sigma_g\left(W_f x_t+U_f h_{t-1}+b_f\right) \\i_t & =\sigma_g\left(W_i x_t+U_i h_{t-1}+b_i\right) \\o_t & =\sigma_g\left(W_o x_t+U_o h_{t-1}+b_o\right) \\\tilde{c}_t & =\sigma_c\left(W_c x_t+U_c h_{t-1}+b_c\right) \\c_t & =f_t \odot c_{t-1}+i_t \odot \tilde{c}_t \\h_t & =o_t \odot \sigma_h\left(c_t\right)\end{aligned}
-$$
+$$`
 
 ```python
 ft = sigmoid(np.dot(xt, Wf) + np.dot(ht_1, Uf) + bf)  # forget gate
