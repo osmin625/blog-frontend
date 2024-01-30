@@ -12,7 +12,7 @@ type: post
 1. 내가 뽑고자 하는 target값과 실제 모델이 계산한 출력의 차이를 계산한다.
 2. 오차값을 다시 뒤로 전파해가면서 각 노드가 가지고 있는 변수들을 갱신한다.
 
-![bp](bp.png)
+![bp](/imgs/bp.png)
 
 직관적인 이해는 끝났다. 이제 제대로 이해해보자.
 
@@ -52,7 +52,7 @@ $$`
 
 ex) `$f(x) = y$`
 
-![bp](bp1.png)
+![bp](/imgs/bp1.png)
 
 **f에 x를 집어넣으면 y가 튀어나온다.**
 
@@ -91,7 +91,7 @@ ex) `$z = x + y$`
 - `$\partial z\over \partial x$` = 1
 - `$\partial z\over \partial y$` = 1
 
-![bp](bp2.png)
+![bp](/imgs/bp2.png)
 
 상류에서 내려온 신호인 `$\partial L\over \partial z$`에 `$\partial z\over \partial x$`를 곱함으로써 `$\partial L\over \partial x$`을 구했다.
 
@@ -108,7 +108,7 @@ ex) `$z = xy$`
 
 이므로, 
 
-![bp](bp3.png)
+![bp](/imgs/bp3.png)
 이 된다.
 
 즉, 단순한 곱셈 노드는 상류에서 내려온 신호를 교차시켜 곱한 후, 다시 하류로 보낸다.
@@ -119,9 +119,9 @@ ex) `$z = xy$`
 
 ### 연쇄 법칙과 계산 그래프
 
-![bp](bp4.png)
+![bp](/imgs/bp4.png)
 
-![bp](bp5.png)
+![bp](/imgs/bp5.png)
 
 처음에 예시로 들었던 함수 `$z = (x+y)^2$`를 그래프화 한 것이다.
 
@@ -139,7 +139,7 @@ ex) `$z = xy$`
 
 그러므로 수치 미분보다는 당연히 빠르다.
 
-![bp](bp6.png)
+![bp](/imgs/bp6.png)
 
 - 구현 코드
     

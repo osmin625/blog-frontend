@@ -9,7 +9,7 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 - **선별적 게이트**라는 개념으로 선별 기억 능력을 확보한다.
     
-    ![lstm](lstm0.png)
+    ![lstm](/imgs/lstm0.png)
     
     그림은 이해를 돕기위해 O,X로 표현했지만, 실제로는 게이트는 0~1 사이의 실수값으로 열린 정도를 조절한다.
     
@@ -24,8 +24,8 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 - `$o$` : 출력 게이트
 - 다양한 구조 설계가 가능하다.
     
-    ![lstm](lstm1.png)
-    ![lstm](lstm2.png)
+    ![lstm](/imgs/lstm1.png)
+    ![lstm](/imgs/lstm2.png)
     
 
 ## Model Concept
@@ -40,7 +40,7 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
     
     아무런 동작을 추가하지 않는다면, 정보는 전혀 바뀌지 않고 그대로 흐른다.
     
-    ![lstm](lstm3.png)
+    ![lstm](/imgs/lstm3.png)
 
 **Cell State에서 gate에 의해 정보가 추가되거나 삭제된다.**
 
@@ -48,19 +48,19 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 1. **Forget Gate**
     
-    ![lstm](lstm4.png)
+    ![lstm](/imgs/lstm4.png)
     
 2. **Input Gate**
     
-    ![lstm](lstm5.png)
+    ![lstm](/imgs/lstm5.png)
     
 - **Cell State 업데이트**
     
-    ![lstm](lstm6.png)
+    ![lstm](/imgs/lstm6.png)
     
 1. **Output Gate**
     
-    ![lstm](lstm7.png)
+    ![lstm](/imgs/lstm7.png)
     
 
 ### 수식 요약
@@ -79,7 +79,7 @@ ht = ot * np.tanh(Ct)
 
 ### 모델 요약
 
-![lstm](lstm8.png)
+![lstm](/imgs/lstm8.png)
 
 ### Input / Output Shape
 
@@ -96,7 +96,7 @@ output, h = lstm(input)
 output.size()  # => torch.Size([3, 5, 2]), batch_size, seq_len, hidden_size
 ```
 
-![lstm](lstm9.png)
+![lstm](/imgs/lstm9.png)
 
 - LSTM을 활용하여 주식 가격을 예측 — 과거 5일의 종가를 예측하는 경우
     - Seq_len = 5

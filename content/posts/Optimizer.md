@@ -15,15 +15,15 @@ type: post
 
 ### 1. Local minima, Saddle point
 
-![Optimizer](optimizer.png){: w="700" h="400" }
+![Optimizer](/imgs/optimizer.png){: w="700" h="400" }
 
 실제로는 Local Minima보단 안장점(saddle point)이 문제인 경우가 더 많다.
 
 local minima가 되기 위해선 모든 변수 방향에서 loss가 증가해야 하는데, 이는 흔치 않다.
 
-![Optimizer](optimizer1.png){: w="400" h="250" }
+![Optimizer](/imgs/optimizer1.png){: w="400" h="250" }
 
-![Optimizer](optimizer2.png){: w="400" h="250" }
+![Optimizer](/imgs/optimizer2.png){: w="400" h="250" }
 
 대신 위의 상황에서 gradient descent 알고리즘이 평평한 곳에 머물러버리는 문제가 발생할 수 있다.
 
@@ -31,7 +31,7 @@ local minima가 되기 위해선 모든 변수 방향에서 loss가 증가해야
 
 ### 2. 길 헤매기
 
-![Optimizer](optimizer3.png)
+![Optimizer](/imgs/optimizer3.png)
 SGD, Mini-batch GD가 굉장히 헤매면서 길을 찾는다.
 
 헤매는 정도를 줄일 필요가 있다.
@@ -52,17 +52,17 @@ SGD에서 Optimum을 향해 나아갈 때, 위의 예시처럼 방향을 끊임�
 
 ### **Momentum**
 
-![Optimizer](optimizer4.png)
+![Optimizer](/imgs/optimizer4.png)
 
 가중치를 갱신할 때, 이전에 나아갔던 방향도 반영을 해준다.
 
-![Optimizer](optimizer5.png)
+![Optimizer](/imgs/optimizer5.png)
 
 **단점**
 
 학습률에 따라 minimum point에 수렴하지 못하는 경우가 발생한다.
 
-![Optimizer](optimizer6.png)
+![Optimizer](/imgs/optimizer6.png)
 
 ### NAG : Nesterov Accelerated Gradient
 
@@ -72,15 +72,15 @@ Momentum의 단점을 개선한 방법.
 
 Momentum보다 수렴이 더 빠르다.
 
-![Optimizer](optimizer7.png)
+![Optimizer](/imgs/optimizer7.png)
 
-![Optimizer](optimizer8.png)
+![Optimizer](/imgs/optimizer8.png)
 
 ### 2. **거리(학습률)**
 
 ### Adagard
 
-![Optimizer](optimizer9.png)
+![Optimizer](/imgs/optimizer9.png)
 
 현재까지 값이 많이 변한 파라미터에 대해서는 적게 변화시키고, 적게 변한 파라미터는 많이 변화시킨다.
 
@@ -98,24 +98,24 @@ Adagrad의 단점을 개선한 방법.
 
 Learning rate가 없어 변형이 불가능하기 때문에, 잘 쓰지 않는다.
 
-![Optimizer](optimizer10.png)
+![Optimizer](/imgs/optimizer10.png)
 
 ### RMSProp
 
 Adadelta + stepsize.
 
-![Optimizer](optimizer11.png)
+![Optimizer](/imgs/optimizer11.png)
 ### Adam
 
 Momentum + RMSProp
 
-![Optimizer](optimizer12.png)
+![Optimizer](/imgs/optimizer12.png)
 
 가장 많이 쓰인다.
 
 ---
 
-![Optimizer](optimizer13.png)
+![Optimizer](/imgs/optimizer13.png)
 
 [그림으로 보는 다양한 Optimization 기법들](https://hyunw.kim/blog/2017/11/01/Optimization.html)
 

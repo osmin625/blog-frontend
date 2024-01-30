@@ -142,7 +142,7 @@ doc1 : `$1\over6$` doc2 : `$1\over5$` 즉 doc2가 점수가 조금 더 높�
 
 ### **Recall: Binary term-document incidence matrix**
 
-![tf_idf](tf_idf.png)
+![tf_idf](/imgs/tf_idf.png)
 
 예를 들어 antony and brutus and not(calpurnia)라면
 
@@ -163,7 +163,7 @@ doc1 : `$1\over6$` doc2 : `$1\over5$` 즉 doc2가 점수가 조금 더 높�
     
     각 문서는 자연수를 담은 **count vector**로 표시
     
-    ![tf_idf](tf_idf1.png)
+    ![tf_idf](/imgs/tf_idf1.png)
     
     문서에서 단어의 등장횟수가 많은 것들이 중요하다.
     
@@ -205,7 +205,7 @@ tf 10인 문서가 tf 1인 문서보다 더 연관도가 높다.
 
 따라서 단어의 개수에 따라 달라지는 영향력을 표현하기 위해, 단어의 빈도에 log를 취한다.
 
-![tf_idf4](tf_idf4.png)
+![tf_idf4](/imgs/tf_idf4.png)
 
 이 때, 단어가 하나 있는 것과 아예 없는 것의 차이는 훨씬 크기 때문에, 0과 1은 따로 구분한다.
 
@@ -407,7 +407,7 @@ tf-idf의 가중치 알고리즘은 선택의 폭이 다양하다.
 
 가장 많이 쓰이는 것은 붉은 색 표시가 되어있다.
 
-![tf_idf](tf_idf2.png)
+![tf_idf](/imgs/tf_idf2.png)
 
 - 많은 검색 엔진들이 쿼리나 문서에 대해 다양한 가중치 부여방식을 허용한다.
 - 표기법
@@ -443,7 +443,7 @@ tf-idf의 가중치 알고리즘은 선택의 폭이 다양하다.
 - 문서: car insurance auto insurance
 - 쿼리: best car insurance
 
-![tf_idf](tf_idf3.png)
+![tf_idf](/imgs/tf_idf3.png)
 
 tf-raw: term의 발생횟수
 

@@ -41,7 +41,7 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
 
 해결하고자 하는 문제에 맞게 loss function을 설정해 사용해주면 된다.
 
-![Loss](imgs/loss_function.png)
+![Loss](/imgs/imgs/loss_function.png)
 
 신경망 학습을 통해 손실 함수 `$J$`의 최저점을 찾아야 한다.
 
@@ -93,7 +93,7 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     `$$`
     
     
-    ![Loss_function](imgs/loss_function1.png)
+    ![Loss_function](/imgs/imgs/loss_function1.png)
 - **MSE(Mean Squared Error)** — `$(정답 - 예측값)^2$`의 평균
     
     > **간단 요약**
@@ -110,7 +110,7 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     M S E=\frac{1}{n} \sum_{i=1}^n\left({y_i}-\hat y_i\right)^2
     `$$`
     
-    ![Loss_function](imgs/loss_function2.png)
+    ![Loss_function](/imgs/imgs/loss_function2.png)
     
     미니 배치 단위로 처리(샘플의 오차를 평균 낸다.)
     
@@ -135,12 +135,12 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     R M S E=\sqrt{\frac{1}{n} \sum_{i=1}^n\left(\hat{y_i}-y_i\right)^2}
     `$$`
     
-    ![Loss_function](imgs/loss_function3.png)
+    ![Loss_function](/imgs/imgs/loss_function3.png)
     
     MSE와 마찬가지로 각 오차값의 크기에 따라 다른 그래디언트를 가지게 된다.
     
 
-![Loss_function](imgs/loss_function4.png)
+![Loss_function](/imgs/imgs/loss_function4.png)
 
 ### 분류(Classification)
 

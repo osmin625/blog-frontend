@@ -41,7 +41,7 @@ $$`
 
 표기는 다양하다.
 
-![GD](gd.png)
+![GD](/imgs/gd.png)
 
 ---
 
@@ -55,7 +55,7 @@ $$`
 \tt\triangledown w = \left({\partial J\over\partial w_0},{\partial J\over\partial w_1},{\partial J\over\partial w_2},...,{\partial J\over\partial w_d}\right)
 $$`
 
-![GD](gd1.png)
+![GD](/imgs/gd1.png)
 
 </aside>
 
@@ -67,7 +67,7 @@ $$`
 
 학습률이 너무 높다면, 최적해에 수렴하지 못하고 다른곳으로 발산하게 된다.
 
-![GD](gd2.png)
+![GD](/imgs/gd2.png)
 
 학습률을 적절히 조정하는 것이 매우 중요하다.
 ---
@@ -137,7 +137,7 @@ $$`
     
     반대로, 배치사이즈가 작을수록 noise의 영향력이 커지므로 Sharp Minimum에서 탈출할 확률이 높다.
     
-    ![GD](gd3.png)
+    ![GD](/imgs/gd3.png)
     
     **참고 논문 :** [On Large-batch Training for Deep Learning : Generalization Gap and Sharp Minima, 2017](https://arxiv.org/pdf/1609.04836.pdf)
 

@@ -39,7 +39,7 @@ type: post
     
     값을 랜덤하게 찾아서 가장 성능이 잘나오는 것을 선택한다.
     
-![hyperparameter](hyperparameter_tuning.png)
+![hyperparameter](/imgs/hyperparameter_tuning.png)
 
 요즘에는 잘 쓰이지 않고, 베이지안 기반 기법이 많이 쓰인다.
 
@@ -53,7 +53,7 @@ ML/DL의 병렬 처리를 위해 개발된 모듈
 
 Hyperparameter Search를 위한 다양한 모듈 제공
 
-![hyperparameter](hyperparameter_tuning1.png)
+![hyperparameter](/imgs/hyperparameter_tuning1.png)
 
 ```python
 data_dir = os.path.abspath("./data")

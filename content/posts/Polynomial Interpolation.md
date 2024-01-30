@@ -106,7 +106,7 @@ $$`
 
 해당 식은 직관적으로 `$(x_0,0),(x_1,y_1)$`을 지나는 직선의 기울기와 `$(x_0,y_0),(x_1,0)$`을 지나는 직선의 기울기의 합으로 이해할 수 있다.
 
-![Alt text](polynomial_interpolation.png)
+![Alt text](/imgs/polynomial_interpolation.png)
 
 **2차 함수**
 
@@ -117,7 +117,7 @@ y=\left(\frac{\left(x-x_1\right)\left(x-x_2\right)}{\left(x_0-x_1\right)\left(x_
 +\left(\frac{\left(x-x_0\right)\left(x-x_1\right)}{\left(x_2-x_0\right)\left(x_2-x_1\right)}\right) y_2
 $$`
 
-![Alt text](polynomial_interpolation1.png)
+![Alt text](/imgs/polynomial_interpolation1.png)
 
 마찬가지로, `$(x_i,y_i)$`를 지나면서 `$(x_j,0)$`을 지나는 이차 함수의 기울기의 합으로 이해할 수 있다.
 
@@ -432,27 +432,27 @@ $$`
     f(x)=\frac{1}{1+25 x^2}
     $$`
     
-    ![Alt text](polynomial_interpolation3.png)
+    ![Alt text](/imgs/polynomial_interpolation3.png)
     
     
 - **Gibbs 현상**
     불연속 함수를 근사할 때 불연속 값 근처에서 나타나는 불일치 현상
-    ![Alt text](polynomial_interpolation4.png)
+    ![Alt text](/imgs/polynomial_interpolation4.png)
     
-![Alt text](polynomial_interpolation4-1.png)
+![Alt text](/imgs/polynomial_interpolation4-1.png)
 
 ### Piecewise Polynomials Interpolation
 
 여러 개의 데이터를 하나의 추정 함수로 표현하지 않고, 구간 별로 추정 함수를 구하는 것
 
-![Alt text](polynomial_interpolation5.png)
+![Alt text](/imgs/polynomial_interpolation5.png)
 사진은 Interpolation이 아니라 Regression에 해당하지만, Piecewise Polynomial에 대한 이해를 돕기 위해 가져왔다.
 
 다만, 사진처럼 knot에서 불연속이기 때문에, 합리적이지 않은 추정 함수가 나올 수 있다.
 
 ### Continuous Piecewise Polynomials Interpolation
 
-![Alt text](polynomial_interpolation6.png)
+![Alt text](/imgs/polynomial_interpolation6.png)
 
 Piecewise에 연속이라는 제약 조건을 추가했다.
 

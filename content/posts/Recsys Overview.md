@@ -15,7 +15,7 @@ type: post
 
 ### [추천 시스템 평가 패러다임](https://osmin625.github.io/posts/%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8F%89%EA%B0%80-%EC%A7%80%ED%91%9C/)
 
-![recsys](ro.png)
+![recsys](/imgs/ro.png)
 # Rule Base
 
 [인기도 기반 추천](https://osmin625.github.io/posts/%EC%9D%B8%EA%B8%B0%EB%8F%84-%EA%B8%B0%EB%B0%98-%EC%B6%94%EC%B2%9C/)
@@ -108,7 +108,7 @@ type: post
 
     입력값 (rating)을 reconstruction (decoding) 할 수 있게끔 학습함으로써 rating이 가지고 있는 잠재적인 패턴이 latent factor(information bottleneck)에 암호화 (encoding)된다.
 
-    ![recsys](ro1.png)
+    ![recsys](/imgs/ro1.png)
 
     [DAE: Denoising Autoencoder](https://www.notion.so/DAE-Denoising-Autoencoder-d6800d81dced436b8b00911996978dd2?pvs=21)
 

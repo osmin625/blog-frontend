@@ -101,7 +101,7 @@ Something about beaches, **which is *very* important**.
 
 Having the above about section in place, results in the following homepage:
 
-![Markdown about description](/images/theme-documentation-advanced/homepage-markdown-about-description.png "Markdown about description")
+![Markdown about description](/imgs//images/theme-documentation-advanced/homepage-markdown-about-description.png "Markdown about description")
 
 
 ## Icons
@@ -123,7 +123,7 @@ If you want to add more icons, you can download the svg directly from [here](htt
 
 Preview:
 
-![Icons on homepage Preview](/images/theme-documentation-advanced/icons-homepage-preview.png "Icons on homepage Preview")
+![Icons on homepage Preview](/imgs//images/theme-documentation-advanced/icons-homepage-preview.png "Icons on homepage Preview")
 
 
 ### Icons in header
@@ -288,7 +288,7 @@ Gokarna enables you to improve the SEO performance of your website with minimal 
 
 We make sure your pages are social media ready.
 
-![Social Media Preview](/images/theme-documentation-advanced/preview.png "Social Media Preview")
+![Social Media Preview](/imgs//images/theme-documentation-advanced/preview.png "Social Media Preview")
 
 ```markdown
 ---
