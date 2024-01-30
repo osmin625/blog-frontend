@@ -103,7 +103,7 @@ D가 넘겨준 guiding signal은 scalar 보상 값으로도 쓰이고, 문장 �
 
 1. **`$s_t$`를 전체 어휘 분포와 매핑시킨다.**
     
-    ex) ``$x_{t+1}$``에서 ``$G_\theta( \cdot | s_t)$`` 학습
+    ex) `$x_{t+1}$`에서 `$G_\theta( \cdot | s_t)$` 학습
     
 2. **분별망이 유출해준 정보를 계층 구조를 통해 효과적으로 포함하여 문장을 생성한다.**
 
@@ -115,12 +115,12 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
     
     `$f_t$`를 LSTM에 입력한 후 goal vector `$g_t$`를 생성한다.
 
-    ``$$`
+    `$$
     \begin{aligned}
     \hat{g}_t, h_t^M & = \mathcal{M}\left(f_t, h_{t-1}^M; \theta_m \right)\\
     g_t & =\hat{g}_t /\left|\hat{g}_t\right|
     \end{aligned}
-    `$$``
+    $$`
     
     - `$M:$` LSTM 모델
     - `$\mathcal{M}:$` MANAGER 모듈
@@ -182,18 +182,18 @@ D의 유출된 정보를 이용하기 위한 MANAGER-WORKER 계층 구조
     
     이를 통해 k차원의 goal embedding vector `$w_t$`를 얻는다.
     
-    ``$$`
+    `$$
     w_t=\psi\left(\sum_{i=1}^c g_{t-i}\right)=W_\psi\left(\sum_{i=1}^c g_{t-i}\right)
-    `$$``
+    $$`
     
     - `$\psi:$` 선형 변환(행렬 곱셈)
     
-    ``$$`
+    `$$
     \begin{aligned}O_t, h_t^W & =\mathcal{W}\left(x_t, h_{t-1}^W ; \theta_w\right)
     \\
     G_\theta\left(\cdot \mid s_t\right) & =\operatorname{softmax}\left(O_t \cdot w_t / \alpha\right)
     \end{aligned}
-    `$$``
+    $$`
     
     - `$\mathcal W:$` WORKER 모듈
     - `$x_t:$` input. (t 시점의 단어)
@@ -269,25 +269,25 @@ LeakGAN 모델이 유의미한 의미 패턴을 찾을 수 있도록 MANAGER와 
     
     MANAGER의 gradient
     
-    ``$$`
+    `$$
     \nabla_{\theta_m}^{\mathrm{adv}} g_t=-Q_{\mathcal{F}}\left(s_t, g_t\right) \nabla_{\theta_m} d_{\cos }\left(f_{t+c}-f_t, g_t\left(\theta_m\right)\right)
-    `$$``
+    $$`
     
-    - ``$Q_{\mathcal{F}}\left(s_t, g_t\right)=Q\left(\mathcal{F}\left(s_t\right), g_t\right)=Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$``
+    - `$Q_{\mathcal{F}}\left(s_t, g_t\right)=Q\left(\mathcal{F}\left(s_t\right), g_t\right)=Q\left(f_t, g_t\right)=\mathbb{E}\left[r_t\right]$`
         
         몬테 카를로 탐색으로 추정한 현재 정책에 대한 보상 기댓값
         
-    - ``$d_{\cos }:$`` cosine similarity(similarity인지 distance인지 확인해보기)
+    - `$d_{\cos }:$` cosine similarity(similarity인지 distance인지 확인해보기)
         
         `$c$`번의 전환 후 feature representation의 변화`$(f_{t+c} - f_t)$`와 목적 벡터 `$g_t$`의 차이
         
     
     손실 함수에서는 높은 보상을 달성하기 위해 `$g_t$`가 특징 공간의 전환과 일치하도록 강제한다.
     
-    ``$$`
+    `$$
     \begin{aligned}& \nabla_{\theta_w} \mathbb{E}_{s_{t-1} \sim G}\left[\sum_{x_t} r_t^I \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]\\
     = & \mathbb{E}_{s_{t-1} \sim G, x_t \sim \mathcal{W}\left(x_t \mid s_{t-1}\right)}\left[r_t^I \nabla_{\theta_w} \log \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]\end{aligned}
-    `$$``
+    $$`
     
 - **WORKER — MANAGER의 지시를 따르도록 보상이 주어진다.**
     
@@ -297,19 +297,19 @@ LeakGAN 모델이 유의미한 의미 패턴을 찾을 수 있도록 MANAGER와 
     
     WORKER에 제공되는 보상은 다음과 같이 정의된다.
     
-    ``$$`
+    `$$
     r_t^I=\frac{1}{c} \sum_{i=1}^c d_{\cos }\left(f_t-f_{t-i}, g_{t-i}\right)
-    `$$``
+    $$`
     
 - **실제로는 `$G_\theta$`는 적대적 학습 전에 사전 학습이 필요하다.**
     
     사전 학습 시 일관성을 유지하기 위해 MANAGER의 기울기를 통한 별도의 훈련 체계를 사용한다.
     
-    ``$$`
+    `$$
     \nabla_{\theta_m}^{\mathrm{pre}} g_t=-\nabla_{\theta_m} d_{\cos }\left(\hat{f}_{t+c}-\hat{f}_t, g_t\left(\theta_m\right)\right)
-    `$$``
+    $$`
     
-    - ``$\hat{f}_t=\mathcal{F}\left(\hat{s}_t\right), \hat s_t, \hat s_{t + c}:$`` 실제 텍스트의 상태
+    - `$\hat{f}_t=\mathcal{F}\left(\hat{s}_t\right), \hat s_t, \hat s_{t + c}:$` 실제 텍스트의 상태
     
     해당 수식은 앞에서 정의한 MANAGER 미분식에서 `$Q_{\mathcal{F}}\left(s_t, g_t\right)$`가 `$1$`인 상태이다.
     
@@ -336,9 +336,9 @@ LeakGAN 모델이 유의미한 의미 패턴을 찾을 수 있도록 MANAGER와 
 
 ### Guiding Signal(Leaked Features)
 
-``$$`
+`$$
 D_\phi(s)=\operatorname{sigmoid}\left(\phi_l^{\top} \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l^{\top} f\right)
-`$$``
+$$`
 
 - `$s:$` input. 생성된 문장.
 - `$\mathcal F:$` CNN (특징맵 추출기)
@@ -506,9 +506,9 @@ RankGAN로부터 영감을 받은 rank 기반 방법
 
 - 다음 수식으로 `$t$`번째 열 벡터 `$R^t$`의 스케일을 재조정한다.
     
-    ``$$`
+    `$$
     R_i^t=\sigma\left(\delta \cdot\left(0.5-\frac{\operatorname{rank}(i)}{B}\right)\right)
-    `$$``
+    $$`
     
 - `$\text {rank}(i):$` 열 벡터에서 i번째 원소의 ranking
 - `$\delta :$` rescale 작업의 smoothness를 조정하는 하이퍼 파라미터
@@ -578,9 +578,9 @@ ex) 1 epoch 지도 학습 + 15 epoch 적대적 학습
         
         이때, `$D(φ)$`는 특징 추출기(`$\mathcal F$`)와 출력 레이어(sigmoid)로 구성된다.
         
-        `$$`
+        `$$
         D_\phi(s)=\operatorname{sigmoid}\left(\phi_l^{\top} \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l^{\top} f\right)
-        `$$`
+        $$`
         
     2. `$**G(θ_m, θ_w)$` 사전 학습**
         
@@ -595,26 +595,26 @@ ex) 1 epoch 지도 학습 + 15 epoch 적대적 학습
         - MANAGER로부터 계산된 방향 `$g_t$`를 얻는다.
         - WORKER 매개변수 `$θ_w, ψ$`, softmax를 갱신한다.
             
-            `$$`
+            `$$
             \begin{aligned}
 			& \nabla_{\theta_w} \mathbb{E}_{s_{t-1} \sim G}\left[\sum_{x_t} r_t^I \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right] \\
 			= & \mathbb{E}_{s_{t-1} \sim G, x_t \sim \mathcal{W}\left(x_t \mid s_{t-1}\right)}\left[r_t^I \nabla_{\theta_w} \log \mathcal{W}\left(x_t \mid s_{t-1} ; \theta_w\right)\right]
 			\end{aligned}
-            `$$`
+            $$`
             
         - MANAGER 매개변수 `$θ_m$`을 갱신한다.
             
-            `$$`
+            `$$
             \nabla_{\theta_m}^{\mathrm{adv}} g_t=-Q\left(f_t, g_t\right) \nabla_{\theta_m} d_{\cos }\left(\mathcal{F}\left(s_{t+c}\right)-\mathcal{F}\left(s_t\right), g_t\left(\theta_m\right)\right)
-            `$$`
+            $$`
             
     - **분별망 단계 (d-steps)**
         - 현재 `$G(θ_m, θ_w)$`를 사용하여 음성 예제를 생성하고 주어진 양성 예제 S와 결합한다.
         - k-epoch 동안 `$D(φ)$`를 훈련한다.
             
-            `$$`
+            `$$
             D_\phi(s)=\operatorname{sigmoid}\left(\phi_l \cdot \mathcal{F}\left(s ; \phi_f\right)\right)=\operatorname{sigmoid}\left(\phi_l, f\right)
-            `$$`
+            $$`
             
 5. **LeakGAN이 수렴할 때까지 반복한다.**
 
