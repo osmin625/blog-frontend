@@ -7,10 +7,10 @@
     {{else}}
     <ul class="post-categories">
         {{ range $.Site.Taxonomies.categories.ByCount }}
-        <li class="post-categories">
+        <li class="post-category">
             <a href="/categories/{{ .Name | urlize }}/">
-                <span class="category-name">{{ .Name | chomp }}</span>
-                <span class="category-posts-count">{{ .Count }}</span>
+                <div class="category-name">{{ .Name | chomp }}</div>
+                <div class="category-posts-count">{{ .Count }}</div>
             </a>
         </li>
         {{ end }}

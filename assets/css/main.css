@@ -305,22 +305,25 @@
       padding: 0;
     }
     .post-categories .post-category {
-      border: 1.5px solid;
-      border-radius: 4px;
-      box-sizing: border-box;
+      /* border: 1.5px solid; */
+      border-radius: 8px;
       color: inherit;
-      display: inline-block;
-      font-size: 14px;
+      /* display: inline-block; */
+      font-size: 19px;
     }
+
+    
+
     .post-categories .post-category:hover {
       background-color: var(--light-text-color);
       color: rgb(var(--light-primary-color));
     }
     .post-category a {
       color: inherit;
-      display: block;
-      padding: 6px 12px;
+      display: flex;
+      padding: 12px 12px;
       text-decoration: none;
+      justify-content: space-between;
     }
     
 
@@ -521,7 +524,7 @@
   .list-posts .posts-year {
     margin-top: 70px;
   }
-  .list-posts .post-title .category-name {
+  .list-posts .post-title {
     margin: 18px 0 0 15px;
   }
   .list-posts a {
