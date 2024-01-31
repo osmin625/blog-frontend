@@ -8,6 +8,9 @@ enableRobotsTXT = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [params]
   footer = "OMIN"
@@ -35,9 +38,9 @@ pygmentsStyle = "monokai"
     weight = 1
 
   [[menu.main]]
-    name = "Posts"
-    pre = "<span data-feather='book'></span>"
-    url = "/posts/"
+    name = "Categories"
+    pre = "<span data-feather='list'></span>"
+    url = "/categories/"
     weight = 2
 
   [[menu.main]]
@@ -45,7 +48,17 @@ pygmentsStyle = "monokai"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
     weight = 3
+  
+  [[menu.main]]
+    name = "archive"
+    pre = "<span data-feather='book'></span>"
+    url = "/posts/"
+    weight = 4
 
+  
+  
+  
+  
 [markup]
   [markup.tableOfContents]
     startLevel = 1

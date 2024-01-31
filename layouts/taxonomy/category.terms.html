@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="container categories-list">
+    <!-- {{ print $.Site.Taxonomies.categories.ByCount }} -->
+    <h1 class="list-title">{{ i18n "categories" }}</h1>
+    {{if eq (len $.Site.Taxonomies.categories) 0}}
+        {{ i18n "nothing" }}
+    {{else}}
+    <ul class="post-categories">
+        {{ range $.Site.Taxonomies.categories.ByCount }}
+        <li class="post-categories">
+            <a href="/categories/{{ .Name | urlize }}/">
+                <span class="category-name">{{ .Name | chomp }}</span>
+                <span class="category-posts-count">{{ .Count }}</span>
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+
+</div>
+{{ end }}

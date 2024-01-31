@@ -299,6 +299,31 @@
     text-decoration: none;
   }
   
+    /* categories */
+    .post-categories {
+      list-style-type: none;
+      padding: 0;
+    }
+    .post-categories .post-category {
+      border: 1.5px solid;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: inherit;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .post-categories .post-category:hover {
+      background-color: var(--light-text-color);
+      color: rgb(var(--light-primary-color));
+    }
+    .post-category a {
+      color: inherit;
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+    
+
   /* CODE BLOCKS */
   code,
   pre {
