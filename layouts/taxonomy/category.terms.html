@@ -9,7 +9,7 @@
         {{ range $.Site.Taxonomies.categories.ByCount }}
         <li class="post-category">
             <a href="/categories/{{ .Name | urlize }}/">
-                <div class="category-name">{{ .Name | chomp }}</div>
+                <div class="category-name">{{ .Name | humanize }}</div>
                 <div class="category-posts-count">{{ .Count }}</div>
             </a>
         </li>
