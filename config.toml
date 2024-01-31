@@ -22,7 +22,8 @@ pygmentsStyle = "monokai"
   customHeadHTML = ""
   socialIcons = [
     {name = "linkedin", url = "https://www.linkedin.com/in/%EC%8A%B9%EB%AF%BC-%EC%98%A4-406733230/"},
-    {name = "email", url = "mailto:tmdals179@naver.com"}
+    {name = "email", url = "mailto:tmdals179@naver.com"},
+    {name = "github", url = "https://github.com/osmin625"}
   ]
   metaKeywords = ["blog", "gokarna", "hugo"]
 
@@ -44,12 +45,6 @@ pygmentsStyle = "monokai"
     pre = "<span data-feather='tag'></span>"
     url = "/tags/"
     weight = 3
-
-  [[menu.main]]
-    identifier = "github"
-    pre = "<span data-feather='github'></span>"
-    url = "https://github.com/osmin625"
-    weight = 4
 
 [markup]
   [markup.tableOfContents]
