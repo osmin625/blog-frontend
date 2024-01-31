@@ -521,7 +521,7 @@
   .list-posts .posts-year {
     margin-top: 70px;
   }
-  .list-posts .post-title {
+  .list-posts .post-title .category-name {
     margin: 18px 0 0 15px;
   }
   .list-posts a {
