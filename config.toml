@@ -5,6 +5,7 @@ languageCode = "ko"
 defaultContentLanguage = "ko"
 enableEmoji = true
 enableRobotsTXT = true
+disablePathToLower = true
 
 # Choose one of emacs, trac or perldoc
 pygmentsStyle = "monokai"
@@ -19,7 +20,6 @@ pygmentsStyle = "monokai"
   AvatarAltText = "OMIN"
   avatarSize = "size-m"
   showPostsOnHomePage = "recent"
-  disablePathToLower = true
   mathjax = true
   ShowTableOfContents = true
   ShowBackToTopButton = true # true or false for "back to top" button on posts
