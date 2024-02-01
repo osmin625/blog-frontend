@@ -8,19 +8,15 @@
     <ul class="post-categories">
         {{ range $.Site.Taxonomies.categories.ByCount }}
         <li class="post-category">
-            <a href="/categories/{{ .Name }}/">
+            <a href="/categories/{{ .Name | urlize }}/">
                 <div class="category-name">{{ .Name | humanize }}</div>
                 <div class="category-posts-count">{{ .Count }}</div>
             </a>
         </li>
-        {{ end }}
-        {{ range .Data.Pages }}
-            <li>  
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </li>
         {{ end }}
     </ul>
     {{ end }}
 
 </div>
 {{ end }}
+
