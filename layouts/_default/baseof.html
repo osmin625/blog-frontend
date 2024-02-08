@@ -11,6 +11,9 @@
         <script type="text/javascript">
             // Immediately set theme on page load
             setThemeByUserPref();
+            // 세션 ID 가져오기
+            const sessionId = getSessionId();
+            console.log('현재 세션 ID:', sessionId);
         </script>
         {{- partial "header.html" . -}}
         <main id="content">
