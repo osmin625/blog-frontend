@@ -3,7 +3,7 @@
   --dark-secondary-color: #2d333b;
   --dark-tertiary-color: #646464;
   --dark-text-color: rgb(200,200,200);
-  --accent-color: #FF4D4D;
+  --dark-accent-color: #FF4D4D;
 }
   
 
@@ -25,6 +25,11 @@ html {
   color: var(--dark-secondary-color);
 }
 
+a:hover {
+  color: var(--dark-accent-color);
+  fill: var(--dark-accent-color);
+}
+
 a:hover .feather-moon {
   fill: white;
   color: white;
@@ -36,7 +41,7 @@ a:hover .feather-moon {
 }
 
 .social-icons-list .social-icon a:hover {
-  fill: var(--accent-color);
+  fill: var(--dark-accent-color);
 }
 
 .post-tags .post-tag:hover {
@@ -102,6 +107,13 @@ code.has-jax {
   background-color: var(--dark-secondary-color);
 }
 
+.arrow-logo:hover {
+  fill:  var(--dark-accent-color); 
+}
+
+#toc ul li a.active {
+  color: var(--dark-accent-color);
+}
 
 
 /* TODO: Check if this is needed or not */

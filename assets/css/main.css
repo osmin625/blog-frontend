@@ -1,7 +1,7 @@
 :root {
     --content-width: 1120px;
     --container-width: 810px;
-    --accent-color: #2463e0;
+    --light-accent-color: #2463e0;
     --light-primary-color: 255, 255, 255;
     --light-secondary-color: #dddddd;
     --light-tertiary-color: #272822;
@@ -42,10 +42,9 @@
     color: inherit;
   }
   
-  /* This is set in partials/head.html and is populated via config */
   a:hover {
-    color: var(--accent-color);
-    fill: var(--accent-color);
+    color: var(--light-accent-color);
+    fill: var(--light-accent-color);
   }
   
   main#content {
@@ -113,7 +112,7 @@
   }
   
   #toc ul li a.active {
-    color: var(--accent-color);
+    color: var(--light-accent-color);
   }
   
   img {
@@ -697,7 +696,7 @@
   }
   
   .arrow-logo:hover {
-    fill:  var(--accent-color); 
+    fill:  var(--light-accent-color); 
   }
   
   @media screen and (max-width: 600px) {
