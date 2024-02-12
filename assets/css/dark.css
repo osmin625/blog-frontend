@@ -3,7 +3,9 @@
   --dark-secondary-color: #2d333b;
   --dark-tertiary-color: #646464;
   --dark-text-color: rgb(200,200,200);
+  --accent-color: #FF4D4D;
 }
+  
 
 html {
   background-color: rgb(var(--dark-primary-color));
@@ -99,6 +101,8 @@ code.has-jax {
 .arrow-logo { 
   background-color: var(--dark-secondary-color);
 }
+
+
 
 /* TODO: Check if this is needed or not */
 /* 
