@@ -55,7 +55,6 @@ PITF에서는 (user, item, tag) 3개의 필드에 대한 클릭률을 예측하�
 
 `$$
 \begin{gathered}\hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_{i, f_j}, \mathrm{v}_{j, f_i}\right\rangle x_i x_j \\w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}, \quad \mathrm{v}_{i, f} \in \mathbb{R}^k\end{gathered}
-
 $$`
 
 ![FFM](/imgs/FFM1.png)
@@ -87,11 +86,11 @@ ex) 광고 클릭 데이터가 존재하고 사용할 수 있는 feature가 총 
     
     하나의 변수에 대해 factorization 차원`$(k)$` 만큼의 파라미터를 학습한다.
     
-    `$$`
+    `$$
     \hat{y}(\mathrm{x})
     =w_0+w_{\mathrm{ESPN}}+w_{\mathrm{Nike}}+w_{\text {Male }}+{\mathrm{v}_{\mathrm{ESPN}} \cdot \mathrm{v}_{\mathrm{Nike}}\\
     +\mathrm{v}_{\mathrm{ESPN}} \cdot \mathrm{v}_{\text {Male }}+\mathrm{v}_{\mathrm{Nike}} \cdot \mathrm{v}_{\text {Male }}}
-    `$$`
+    $$`
     
 - **FFM**
     
@@ -99,12 +98,11 @@ ex) 광고 클릭 데이터가 존재하고 사용할 수 있는 feature가 총 
     
     하나의 변수에 대해 필드 개수`$(f)$`와 factorization 차원`$(k)$`의 곱 `$(=fk)$`만큼의 파라미터를 학습한다.
     
-    `$$`
+    `$$
     \hat{y}(\mathrm{x})
     =w_0+w_{\mathrm{ESPN}}+w_{\mathrm{Nike}}+w_{\text {Male }}+{\mathrm{v}_{\mathrm{ESPN}, \mathrm{A}} \cdot \mathrm{v}_{\mathrm{Nike}, \mathrm{P}}\\
-    
     +\mathrm{v}_{\mathrm{ESPN}, \mathrm{G}} \cdot \mathrm{v}_{\text {Male,P }}+\mathrm{v}_{\mathrm{Nike}, \mathrm{G}} \cdot \mathrm{v}_{\mathrm{Male}, \mathrm{A}}}
-    `$$`
+    $$`
     
 
 ## FFM의 필드 구성

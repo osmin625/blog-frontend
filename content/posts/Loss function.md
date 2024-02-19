@@ -88,9 +88,9 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     
     (이상치도 오차만큼만 벌점이 쌓이기 때문)
     
-    `$$`
+    `$$
     \frac{1}{n} \sum_{i=1}^n\left|{y_i}-\hat y_i\right|
-    `$$`
+    $$`
     
     
     ![Loss_function](/imgs/imgs/loss_function1.png)
@@ -106,17 +106,17 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     > 정답에서 멀어질수록 그래디언트의 크기가 증가한다.
     > 
     
-    `$$`
+    `$$
     M S E=\frac{1}{n} \sum_{i=1}^n\left({y_i}-\hat y_i\right)^2
-    `$$`
+    $$`
     
     ![Loss_function](/imgs/imgs/loss_function2.png)
     
     미니 배치 단위로 처리(샘플의 오차를 평균 낸다.)
     
-    `$$`
+    `$$
     \begin{aligned}J\left(\mathbf{U}^1, \mathbf{U}^2\right) & =\frac{1}{|M|} \sum_{\mathbf{x} \in M}\|\mathbf{y}-\mathbf{0}\|^2 \\& =\frac{1}{|M|} \sum_{\mathbf{x} \in M}\left\|\mathbf{y}-\tau_2\left(\mathbf{U}^2 \tau_1\left(\mathbf{U}^1 \mathbf{x}^{\mathrm{T}}\right)\right)\right\|^2\end{aligned}
-    `$$`
+    $$`
     
     - 오차값에 제곱을 취하기 때문에 0~1 사이의 값은 상대적으로 작게 반영되고, 1보다 큰 값은 상대적으로 더 크게 반영된다.
     - 학습이 느려지거나 학습이 안되는 상황을 초래할 가능성이 있다.
@@ -131,9 +131,9 @@ ex) 정답과 완전히 동떨어진 대답을 하면 더 많은 벌점을 받�
     > 얼핏 MAE와 동일한 것 아니야? 생각할 수 있지만, 계산 순서에서 차이가 발생하고, `$1\over n$`이 아니라 `$1\over \sqrt n$`을 했다는 점이 MAE와 다르다.
     > 
     
-    `$$`
+    `$$
     R M S E=\sqrt{\frac{1}{n} \sum_{i=1}^n\left(\hat{y_i}-y_i\right)^2}
-    `$$`
+    $$`
     
     ![Loss_function](/imgs/imgs/loss_function3.png)
     
@@ -158,36 +158,36 @@ $$`
     
     두 확률 분포 P와 Q가 다른 정도를 측정하는 함수
     
-    `$$`
+    `$$
     H(P, Q)=-\sum_{i=1, k} P\left(e_i\right) \log Q\left(e_i\right)
-    `$$`
+    $$`
     
     - 공정한 주사위에는 특별한 정보가 존재하지 않는다.
         
-        `$$`
+        `$$
         -\left(\frac{1}{6} \log \frac{1}{6}+\ldots+\frac{1}{6} \log \frac{1}{6}\right)=1.7918
-        `$$`
+        $$`
         
     - 찌그러진 주사위에서는 특정 값이 더 잘나온다는 정보가 추가된다.
         
         공정한 주사위와 찌그러진 주사위의 교차 엔트로피
         
-        `$$`
+        `$$
         -\left(\frac{1}{6} \log \frac{1}{2}+\frac{1}{6} \log \frac{1}{10}+\cdots+\frac{1}{6} \log \frac{1}{10}\right)=2.0343
-        `$$`
+        $$`
         
 - **Binary Cross-Entropy**
     
     `tf.nn.sigmoid_cross_entropy_with_logits( )`
     
-    `$$`
+    `$$
     B C E=-\frac{1}{N} \sum_{i=0}^N y_i \cdot \log \left(\hat{y_i}\right)+\left(1-y_i\right) \cdot \log \left(1-\hat{y_i}\right)
-    `$$`
+    $$`
     
 - **Categorical Cross-Entropy**
     
     `tf.nn.softmax_cross_entropy_with_logits_v2( )`
     
-    `$$`
+    `$$
     C C E=-\frac{1}{N} \sum_{i=0}^N \sum_{j=0}^J y_j \cdot \log \left(\hat{y_j}\right)+\left(1-y_j\right) \cdot \log \left(1-\hat{y_j}\right)
-    `$$`
+    $$`

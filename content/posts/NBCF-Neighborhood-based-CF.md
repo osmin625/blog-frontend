@@ -79,9 +79,9 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
     
     유저의 평점을 그대로 사용하지 않고, 유저의 평균 평점에서의 편차를 사용한다.
     
-    `$$`
+    `$$
     \begin{gathered}\operatorname{dev}(u, i)=r(u, i)-\overline{r_u} \quad \text { for known rating } \\\widehat{\operatorname{dev}}(u, i)=\frac{\sum_{u \Omega^{\prime} \in \Omega_i} \operatorname{dev}\left(u^{\prime}, i\right)}{\left|\Omega_i\right|}=\frac{\sum_{u^{\prime} \in \Omega_i} r\left(u^{\prime}, i\right)-\overline{r_{u^{\prime}}}}{\left|\Omega_i\right|} \\\hat{r}(u, i)=\overline{r_u}+\frac{\sum_{u \prime \in \Omega_i} r\left(u^{\prime}, i\right)-\overline{r_{u^{\prime}}}}{\left|\Omega_i\right|}=\overline{r_u}+\widehat{\operatorname{dev}}(u, i)\end{gathered}
-    `$$`
+    $$`
     
     - ex) 유저 B의 스타워즈에 대한 예측 평점
         
@@ -89,9 +89,9 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
         
         예측 Deviation = 0.23
         
-        `$$`
+        `$$
         {1.6 \times 0.95 + (-1.6) \times (0.6) + 0 \times 0.85\over0.95 + 0.6 + 0.85} = 0.23
-        `$$`
+        $$`
         
         유저 B의 평점 평균 = 3
         
@@ -139,9 +139,9 @@ User based CF에 비해 계산량이 적다.
         
         예측 Deviation = 1.15
         
-        `$$`
+        `$$
         {0.9 \times 0.25 + 0.95 \times2\over0.9 + 0.95} = 1.15
-        `$$`
+        $$`
         
         아이템 B의 평점 평균 = 3
         

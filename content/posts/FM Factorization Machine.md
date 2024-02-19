@@ -48,9 +48,9 @@ $$`
 
 - `$\langle \cdot,\cdot \rangle:$` 두 벡터의 스칼라곱(dot product)
     
-    `$$`
+    `$$
     \left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle:=\sum_{f=1}^k \mathrm{v}_{i, f} \cdot \mathrm{v}_{j, f}
-    `$$`
+    $$`
     
 
 ![FM](/imgs/FM_1.png)
@@ -58,17 +58,17 @@ $$`
 - Logistic Regression에 두 Feature의 상호작용을 나타내는 Term이 추가된 형태
     - Logistic Regression
         
-        `$$`
+        `$$
         \hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i\\\\\\
         w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}
-        `$$`
+        $$`
         
 - Polynomial Model과 상호작용을 모델링하는 Term이 다르다.
     - Polynomial Regression
         
-        `$$`
+        `$$
         \hat y(x)=\left(w_0+\sum_{i=1}^n w_i x_i{+\sum_{i=1}^n \sum_{j=i+1}^n w_{i j} x_i x_j}\right), \quad w_i, w_{i j} \in \mathbb{R}
-        `$$`
+        $$`
         
         ![FM](/imgs/FM_2.png)
         

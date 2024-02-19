@@ -48,9 +48,9 @@ $$`
     
     지수 함수를 활용하여 최근 값의 비중을 기하급수적으로 증가시켰다.
     
-    `$$`
+    `$$
     \begin{gathered}f\left(y_1\right)=y_1 \\f\left(y_1, \ldots, y_{n+1}\right)=\alpha f\left(y_1, \ldots, y_n\right)+(1-\alpha) \cdot y_{n+1}\end{gathered}
-    `$$`
+    $$`
     
 
 ### Learning-based Moving Average

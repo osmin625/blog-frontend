@@ -222,9 +222,9 @@ def idf_cal(x):
 
 - term의 tf-idf 가중치는 tf 가중치와 idf 가중치의 곱이다.
     
-    `$$`
+    `$$
     W_{t,d}=(1+log_{10}tf_{t,d}) \times log_{10}(N/df_t)
-    `$$`
+    $$`
     
 - IR에서 가장 핵심적인 가중치 공식이다.
     

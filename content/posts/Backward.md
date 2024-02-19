@@ -29,13 +29,13 @@ type: post
     # output : tensor(40.)
     ```
     
-    `$$`
+    `$$
     w = 2\\
     y = w^2\\
     z = 10\times y  + 25\\
     z = 10 \times w^2 + 25\\
     {dz\over dw} = 20 \times w = 40
-    `$$`
+    $$`
     
     **미분 값이 여러 개인 경우**
     
@@ -54,13 +54,13 @@ type: post
     # output: tensor([-12.,-8.])
     ```
     
-    `$$`
+    `$$
     \begin{aligned}
     &Q = 3a^3 - b^2\\
     & \frac{\partial Q}{\partial a}=9 a^2 \\
     & \frac{\partial Q}{\partial b}=-2 b
     \end{aligned}
-    `$$`
+    $$`
     
 2. **미분 값을 tensor에 저장한다.**
     

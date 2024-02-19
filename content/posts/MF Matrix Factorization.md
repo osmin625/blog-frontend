@@ -118,40 +118,38 @@ MF 모델에서의 SGD
 
 - **Error `$e_{ui}$`**
     
-    `$$`
+    `$$
     \tt e_{u i}=r_{u i}-p_u^T q_i
     
-    `$$`
+    $$`
     
 - **Loss `$L$`**
     
-    `$$`
+    `$$
     \tt L=\sum\left(r_{u, i}-p_u^T q_i\right)^2+\lambda\left(\left\|p_u\right\|_2^2+\left\|q_i\right\|_2^2\right) \quad
-    
-    `$$`
+    $$`
     
     Loss를 `$p_u$`로 미분하여 최솟값 계산
     
 - **Gradient**
     
-    `$$`
+    `$$
     {\tt{\frac{\partial L}{\partial p_u}=\frac{\partial\left(r_{u i}-p_u^T q_i\right)^2}{\partial p_u}+\frac{\partial \lambda\left\|p_u\right\|_2^2}{\partial p_u}}}\\\tt{
     \\=-2\left(r_{u i}-p_u^T q_i\right) q_i+2 \lambda p_u}
-    
-    `$$`
+    $$`
     
     이를 Error Term을 활용하여 아래와 같이 나타낼 수 있다.
     
-    `$$`
+    `$$
     \tt \frac{\partial L}{\partial p_u}=-2\left(e_{u i} q_i-\lambda p_u\right)
-    `$$`
+    $$`
     
 - **Gradient의 반대 방향으로 `$p_u$`, `$q_i$`를 업데이트**
     
-    `$$`
+    `$$
     {\tt \\p_u \leftarrow p_u+\eta \cdot\left(e_{u i} q_i-\lambda p_u\right)}\\
     \tt q_i \leftarrow q_i+\eta \cdot\left(e_{u i} p_u-\lambda q_i\right)
-    `$$`
+    $$`
     
     부호가 바뀐다.
     
@@ -174,31 +172,31 @@ MF 모델에서의 SGD
     
     - **기존 목적 함수**
         
-        `$$`
+        `$$
         \tt \min _{P, Q} \sum_{\text {observed  }r_{u,i}}\left(r_{u, i}-p_u^T q_i\right)^2+\lambda\left(\left\|p_u\right\|_2^2+\left\|q_i\right\|_2^2\right)
-        `$$`
+        $$`
         
     - **Bias가 추가된 목적 함수**
         
-        `$$`
+        `$$
         {\tt \min _{P, Q} \sum_{\text {observed } r_{u,i}}\left(r_{u, i}-{\mu - b_u-b_i}-p_u^T q_i\right)^2}
         \\+\tt \lambda\left(|| p_u\left\|_2^2+|| q_i\right\|_2^2+{b_u^2+b_i^2}\right)
-        `$$`
+        $$`
         
         마찬가지로 bias가 규제 term에 추가되어 과적합되지 않게 한다.
         
     - **Error**
         
-        `$$`
+        `$$
         \tt e_{u,i} = r_{u,i} - \mu - b_u - b_i - p_u^Tq_i
-        `$$`
+        $$`
         
     - **Gradient의 반대방향으로 `$\tt b_u, b_i, x_u, y_i$`를 업데이트**
         
-        `$$`
+        `$$
         \begin{aligned}& {b_u \leftarrow b_u+\gamma \cdot\left(e_{u i}-\lambda b_u\right)} \\& {b_i \leftarrow b_i+\gamma \cdot\left(e_{u i}-\lambda b_i\right) }
         \\& p_u \leftarrow p_u+\gamma \cdot\left(e_{u i} q_i-\lambda p_u\right) \\& q_i \leftarrow q_i+\gamma \cdot\left(e_{u i} p_u-\lambda q_i\right)\end{aligned}
-        `$$`
+        $$`
         
 - ### Adding Confidence Level
     
@@ -208,15 +206,15 @@ MF 모델에서의 SGD
     - 유저의 아이템에 대한 평점이 정확하지 않은 경우(implicit Feedback)
     - **기존 목적 함수**
         
-        `$$`
+        `$$
         {\tt \min _{P, Q} \sum_{\text {observed } r_{u,i}}\left(r_{u, i}-\mu-b_u-b_i-p_u^T q_i\right)^2} \\+\tt\lambda\left(|| p_u\left\|_2^2+|| q_i\right\|_2^2+b_u^2+b_i^2\right)
-        `$$`
+        $$`
         
     - **Confidence Level이 추가된 목적함수**
         
-        `$$`
+        `$$
         {\tt \min _{P, Q} \sum_{\text {observed } r_{u, i}}  {c_{u, i}}\left(r_{u, i}-\mu-b_u-b_i-p_u^T q_i\right)^2}\\+\tt\lambda\left(|| p_u\left\|_2^2+|| q_i\right\|_2^2+b_u^2+b_i^2\right)
-        `$$`
+        $$`
         
 - ### Adding Temporal Dynamics
     
@@ -230,9 +228,9 @@ MF 모델에서의 SGD
     
     학습 파라미터가 시간을 반영하도록 모델 설계
     
-    `$$`
+    `$$
     \tt \widehat r_{ui}(t) = \mu + b_u(t) + b_i(t) + p^T_uq_i(t)
-    `$$`
+    $$`
     
 
 ## 단점
