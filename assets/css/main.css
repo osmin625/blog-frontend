@@ -314,8 +314,8 @@
     
 
     .post-categories .post-category:hover {
-      background-color: var(--light-accent-color);
-      color: rgb(var(--light-primary-color));
+      background-color: var(--light-secondary-color);
+      color: rgb(var(--light-accent-color));
     }
     .post-category a {
       color: inherit;
