@@ -1,7 +1,7 @@
 ---
 title: 나를 위한 Git Branch 총정리
 date: 2022-10-08T22:49:00+09:00
-categories: [Development, Ops]
+categories: [Development, Git]
 tags: [Git, Github, Git Branch]
 type: post
 ---
