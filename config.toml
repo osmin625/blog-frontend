@@ -1,5 +1,5 @@
 baseURL = "https://osmin625.github.io"
-title = "Robust dev O"
+title = "오뚝이 개발자"
 theme = "gokarna"
 languageCode = "ko"
 defaultContentLanguage = "ko"
@@ -14,7 +14,7 @@ pygmentsStyle = "monokai"
   tag = "tags"
 
 [params]
-  footer = "오뚝이 개발자"
+  footer = "OMIN"
   description = "Interested in ML Engineering, Data Science."
   avatarURL = "/images/from_scratch.webp"
   AvatarAltText = "OMIN"
