@@ -9,7 +9,6 @@ type: post
 > Naver BoostCamp AI Tech에서 학습한 내용을 재구성했습니다.  
 > 해당 게시글은 지속적으로 업데이트할 예정입니다.  
 > 노션에 정리했던 내용을 복습하며 블로그에 조금씩 업로드하고 있습니다.  
-{: .prompt-info }
 
 ### [추천 시스템](https://osmin625.github.io/posts/%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C/)
 
