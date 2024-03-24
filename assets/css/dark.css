@@ -44,9 +44,14 @@ a:hover .feather-moon {
   fill: var(--dark-accent-color);
 }
 
+.post-categories .post-category:hover {
+  background-color: var(--dark-secondary-color);
+  color: rgb(var(--dark-accent-color));
+}
+
 .post-tags .post-tag:hover {
-  background-color: var(--dark-accent-color);
-  color: rgb(var(--dark-primary-color));
+  background-color: var(--dark-secondary-color);
+  color: rgb(var(--dark-accent-color));
 }
 
 .tags-list .post-tags .post-tag a .tag-posts-count {
@@ -54,8 +59,8 @@ a:hover .feather-moon {
 }
 
 .tags-list .post-tags .post-tag:hover a .tag-posts-count {
-  background-color: var(--dark-accent-color);
-  color: rgb(var(--dark-primary-color));
+  background-color: var(--dark-secondary-color);
+  color: rgb(var(--dark-accent-color));
 }
 
 .footer {
