@@ -21,11 +21,11 @@ Hugo 블로그를 사용하며 분명이 업로드한 포스팅이 보이지 않
 
 - jekyll에서의 urlize — 대문자는 그대로 유지, 띄어쓰기는 ‘-’로 변경
     
-    `**/DL-Algorithm/**` → 정상 동작
+    **`/DL-Algorithm/`** → 정상 동작
     
 - hugo에서의 urlize — 대문자는 소문자로, 띄어쓰기는 ‘-’로 변경
     
-    `**/dl-algorithm/**` ≠ `/DL-Algorithm/` → 인덱싱 오류 발생
+    **`/dl-algorithm/`** ≠ `/DL-Algorithm/` → 인덱싱 오류 발생
     
 
 ### 공식 문서의 지침
@@ -34,7 +34,7 @@ Hugo 블로그를 사용하며 분명이 업로드한 포스팅이 보이지 않
 
 - `preserveTaxonomyNames = true`옵션을 주면?
     
-    `**/DL%20Algorithm/**` ≠ `/DL-Algorithm/` → 인덱싱 오류 발생
+    **`/DL%20Algorithm/`** ≠ `/DL-Algorithm/` → 인덱싱 오류 발생
     
 
 띄어쓰기가 유니코드 그대로 url에 삽입되기 때문에 여전히 page not found가 발생한다.
