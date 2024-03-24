@@ -288,7 +288,7 @@
     font-size: 14px;
   }
   .post-tags .post-tag:hover {
-    background-color: var(--light-text-color);
+    background-color: var(--light-accent-color);
     color: rgb(var(--light-primary-color));
   }
   .post-tag a {
@@ -314,7 +314,7 @@
     
 
     .post-categories .post-category:hover {
-      background-color: var(--light-text-color);
+      background-color: var(--light-accent-color);
       color: rgb(var(--light-primary-color));
     }
     .post-category a {
