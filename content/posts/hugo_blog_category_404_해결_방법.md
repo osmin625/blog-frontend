@@ -13,7 +13,7 @@ Hugo 블로그를 사용하며 분명이 업로드한 포스팅이 보이지 않
 
 ### category → 404 found
 
-![hugo_blog_category_404_해결_방법](/imgs/hugo_blog_category_404_해결_방법0.png)
+![hugo_blog_category_404_해결_방법](/imgs/hugo_blog_category_404_해결_방법1.png)
 
 기존에 Jekyll에서는 front-matter에 categories로 대문자를 마음껏 사용했었는데, Hugo 블로그로 옮기고 나니 대문자가 인식이 되지 않는다.
 
@@ -51,7 +51,7 @@ config.toml에 `disablePathToLower = true` 추가하기.
 
 참고로 Site의 Parameter이기 때문에 [Params] 내부가 아닌, 최상단에 추가해주어야 한다.
 
-![hugo_blog_category_404_해결_방법](/imgs/hugo_blog_category_404_해결_방법1.png)
+![hugo_blog_category_404_해결_방법](/imgs/hugo_blog_category_404_해결_방법0.png)
 
 이제 제대로 뜨는 것을 확인할 수 있다.
 

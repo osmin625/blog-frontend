@@ -72,7 +72,7 @@ type: post
 
 ### Docker use case
 
-![docker](/imgs/docker0.png)
+![docker](/imgs/docker1.png)
 
 ## 기존 이미지 활용하기
 
@@ -270,7 +270,7 @@ options
 
 **Settings > Builders > desktop-linux**
 
-![docker](/imgs/docker1.png)
+![docker](/imgs/docker0.png)
 
 1. VS Code에서 새 터미널 열기
 
