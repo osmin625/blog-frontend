@@ -5,9 +5,9 @@
     {{if eq (len $.Site.Taxonomies.categories) 0}}
         {{ i18n "nothing" }}
     {{else}}
-    <ul class="post-categories">
+    <ul class="list-categories">
         {{ range $.Site.Taxonomies.categories.ByCount }}
-        <li class="post-category">
+        <li class="list-category">
             <a href="/categories/{{ .Name | urlize }}/">
                 <div class="category-name">{{ .Name }}</div>
                 <div class="category-posts-count">{{ .Count }}</div>

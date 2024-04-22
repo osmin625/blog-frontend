@@ -2,10 +2,9 @@
   --dark-primary-color: 27, 27, 30;
   --dark-secondary-color: #2d333b;
   --dark-tertiary-color: #646464;
-  --dark-text-color: rgb(200,200,200);
-  --dark-accent-color: #FF4D4D;
+  --dark-text-color: rgb(200, 200, 200);
+  --dark-accent-color: #ff4d4d;
 }
-  
 
 html {
   background-color: rgb(var(--dark-primary-color));
@@ -36,7 +35,7 @@ a:hover .feather-moon {
 }
 
 .social-icons-list .social-icon,
-.social-icons-list .social-icon a:visited  {
+.social-icons-list .social-icon a:visited {
   fill: var(--dark-text-color);
 }
 
@@ -44,23 +43,41 @@ a:hover .feather-moon {
   fill: var(--dark-accent-color);
 }
 
-.post-categories .post-category:hover {
+.list-categories .list-category:hover {
   background-color: var(--dark-secondary-color);
-  color: rgb(var(--dark-accent-color));
+  color: var(--dark-accent-color);
 }
 
-.post-tags .post-tag:hover {
+.post-category a:hover {
   background-color: var(--dark-secondary-color);
-  color: rgb(var(--dark-accent-color));
+  color: var(--dark-accent-color);
 }
 
-.tags-list .post-tags .post-tag a .tag-posts-count {
+.post-icon {
+  color: var(--dark-tertiary-color);
+}
+
+.post-icon-text {
+  color: var(--dark-tertiary-color);
+}
+
+.post-tag a:hover {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-accent-color);
+}
+
+.list-tags .list-tag:hover {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-accent-color);
+}
+
+.tags-list .list-tags .list-tag a .tag-posts-count {
   background-color: var(--dark-secondary-color);
 }
 
-.tags-list .post-tags .post-tag:hover a .tag-posts-count {
+.tags-list .list-tags .list-tag:hover a .tag-posts-count {
   background-color: var(--dark-secondary-color);
-  color: rgb(var(--dark-accent-color));
+  color: var(--dark-accent-color);
 }
 
 .footer {
@@ -73,7 +90,9 @@ blockquote {
 }
 
 hr {
-  color: var(--dark-secondary-color);
+  height: 1px;
+  border: 0px solid var(--dark-secondary-color);
+  border-top-width: 1px;
 }
 
 table thead {
@@ -108,18 +127,17 @@ code.has-jax {
   box-shadow: rgb(33, 38, 45) 0px -1px 0px 0px inset;
 }
 
-.arrow-logo { 
+.arrow-logo {
   background-color: var(--dark-secondary-color);
 }
 
 .arrow-logo:hover {
-  fill:  var(--dark-accent-color); 
+  fill: var(--dark-accent-color);
 }
 
 #toc ul li a.active {
   color: var(--dark-accent-color);
 }
-
 
 /* TODO: Check if this is needed or not */
 /* 
@@ -129,4 +147,3 @@ video {
   -webkit-filter: hue-rotate(180deg) contrast(100%) invert(100%);
 } 
 */
-
