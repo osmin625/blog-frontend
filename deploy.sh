@@ -26,7 +26,7 @@ cd ..
 # blog 저장소 Commit & Push
 git add .
 
-msg="rebuilding site `date`"
+msg="Chore: rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
