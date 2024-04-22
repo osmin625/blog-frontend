@@ -40,7 +40,7 @@ pygmentsStyle = "monokai"
 
   [[menu.main]]
     name = "Categories"
-    pre = "<span data-feather='list'></span>"
+    pre = "<span data-feather='folder'></span>"
     url = "/categories/"
     weight = 2
 
@@ -52,7 +52,7 @@ pygmentsStyle = "monokai"
   
   [[menu.main]]
     name = "archive"
-    pre = "<span data-feather='book'></span>"
+    pre = "<span data-feather='archive'></span>"
     url = "/posts/"
     weight = 4
 
