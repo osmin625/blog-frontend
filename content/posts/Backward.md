@@ -11,7 +11,7 @@ type: post
 > **동작 과정**  
 > 1. tensor(loss에 해당)가 포함된 식을 미분한다.  
 > 2. 미분 값을 tensor에 저장한다.  
-{: .prompt-info }
+
 > Autograd, loss, optimizer, nn.Module  
 
 1. **tensor(loss에 해당)가 포함된 식을 미분한다.**

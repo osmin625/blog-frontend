@@ -8,7 +8,7 @@ type: post
 > ✔️ 간단 요약  
 > 신경망의 학습 중 받는 벌점의 기준  
 > 회귀와 분류 문제에서 다른 loss function을 사용한다.  
-{: .prompt-info }
+
 > Gradient, MAE, MSE, RMSE
 
 **Loss : 예측 값과 실제 값의 차이**

@@ -20,7 +20,7 @@ type: post
 >     - `$s_t$`를 인코딩한 후, MANAGER가 넘겨준 Goal 임베딩과 결합한다. (내적)
 >     
 >     D가 넘겨준 guiding signal은 scalar 보상 값으로도 쓰이고, 문장 생성 과정에서 Goal 임베딩으로도 쓰인다.
-{: .prompt-info }
+
 > logit, temperature parameter, highway network(gate), leakgan의 3가지 학습 방법, CNN for text classification, truncated normalization
 
 

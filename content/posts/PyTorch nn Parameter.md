@@ -10,7 +10,7 @@ type: post
 > 간단 요약  
 > **학습의 대상이 되는 Weight를 정의한다.**  
 > Tensor 객체의 상속 객체
-{: .prompt-info }
+
 
 Tensor 객체와 매우 비슷하다.
 

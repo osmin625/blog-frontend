@@ -9,7 +9,7 @@ type: post
 > Loss의 미분값을 파라미터에 어떻게 반영할 지에 대한 방법  
 > - 반영 방법 : loss의 미분 값을 파라미터에 어떻게 반영할 것인가?  
 > - Learning rate : 한 번에 얼마나 반영할 것인가?  
-{: .prompt-info }
+
 
 ## Background: **Gradient Descent(GD)에서의 Issue**
 

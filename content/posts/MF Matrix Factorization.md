@@ -11,7 +11,7 @@ type: post
 > 행렬을 인수분해 후 재생성하여 결측치를 예측하는 방법
 > 
 > 인수분해를 다양하게 시도하여 대상 행렬을 가장 잘 복구하는 최적의 하위행렬을 찾는 과정
-{: .prompt-info }
+
 > Latent Factors, Matrix Factorization, SGD
 
 **행렬을 인수분해 후 재생성하여 결측치를 예측하는 방법**

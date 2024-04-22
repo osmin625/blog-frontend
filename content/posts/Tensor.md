@@ -11,7 +11,7 @@ type: post
 > - reshape보다 view를 쓰는 것이 좋다.  
 > - squeeze와 unsqueeze의 차이  
 > - mm, dot, matmul 차이  
-{: .prompt-info }
+
 
 **신경망의 가중치(매개변수)를 텐서로 표현한다.**
 
