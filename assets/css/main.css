@@ -314,6 +314,7 @@ a:hover .feather-sun {
   padding: 6px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .post-tag {

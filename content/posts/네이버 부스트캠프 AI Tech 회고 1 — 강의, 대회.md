@@ -5,7 +5,7 @@ tags: [BoostCampAITech]
 categories: [Review, BoostCamp AI Tech]
 type: post
 ---
-![boostcamp](/imgs/boostcamp_logo.png){: lqip="/imgs/boostcamp_logo.png" }
+![boostcamp](/imgs/boostcamp_logo.png)
 
 
 드디어! 최종 프로젝트를 제출하면서, 길고 길었던 부스트캠프 AI Tech 5기의 모든 일정이 종료됐다.
