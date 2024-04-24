@@ -1,5 +1,4 @@
-from os import path, listdir, makedirs, rename, remove, getenv
-import fileinput
+from os import path, listdir
 import logging
 
 logging.basicConfig(filename="category_gen.log", encoding='utf-8', level=logging.INFO)
