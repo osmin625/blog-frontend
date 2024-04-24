@@ -3,7 +3,8 @@ title: 'NBCF: Neighborhood-based CF(이웃 기반 협업 필터링)'
 description: '이웃 기반 협업 필터링'
 date: 2023-03-29T14:03:00+09:00
 type: post
-tags: ["NBCF","UBCF", "IBCF", "Collaborative Filtering"]
+tags: ["Recommendation System", "NBCF","UBCF", "IBCF", "Collaborative Filtering"]
+categories: [AI, Algorithm & Concept]
 showTableOfContents: true
 ---
 

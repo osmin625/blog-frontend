@@ -1,10 +1,8 @@
 ---
 title: PyTorch에서 weight를 저장하는 객체 - nn.Parameter
 date: 2023-03-13T22:09:00+09:00
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 tags: [PyTorch, Parameter, weight]
-# img_path: /imgs/
-# image:lqip: image_filename
 type: post
 ---
 > 간단 요약  

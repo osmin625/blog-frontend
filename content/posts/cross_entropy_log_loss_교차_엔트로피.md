@@ -1,7 +1,7 @@
 ---
 title: Cross-Entropy(=Log loss, 교차 엔트로피)
 date: 2023-09-22T06:54:00+09:00
-categories: [AI Math, Statistics]
+categories: [Data Science, Information Theory]
 tags: [Cross Entropy, Entropy]
 type: post
 ---

@@ -1,7 +1,7 @@
 ---
 title: 나를 위한 Git Flow 총정리
 date: 2022-09-28T11:41:00+09:00
-categories: [Development, Git]
+categories: [Tools, Project Management]
 tags: [Git, Git Branch, Git Flow, Github]
 type: post
 ---

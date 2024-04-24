@@ -1,8 +1,8 @@
 ---
 title: 'FM: Factorization Machine'
 date: 2023-04-03T2:17:00+09:00
-categories: [DL Algorithm, Recommendation System]
-tags: [Context-aware Recsys, Factorization Machine, Latent Factor Model]
+categories: [AI, Model]
+tags: [Recommendation System, Context-aware Recsys, Factorization Machine, Latent Factor Model]
 type: post
 ---
 > **General Predictor에 Latent Factor Model을 추가한 모델.**

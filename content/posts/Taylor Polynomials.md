@@ -2,6 +2,7 @@
 title: Taylor polynomials
 date: 2023-11-11T18:04:00+09:00
 tags: [Taylor Approximation, Polynomial Form]
+categories: [Data Science, Numerical Analysis]
 type: post
 ---
 

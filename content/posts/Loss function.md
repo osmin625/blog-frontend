@@ -1,7 +1,7 @@
 ---
 title: 손실 함수(Loss Function)에 대해 알아보자.
 date: 2022-11-19T00:04:00+09:00
-categories: ['AI Knowledge', 'Loss Function' ]
+categories: [AI, Algorithm & Concept]
 tags: ['Loss Function', 'MAE', 'MSE', 'RMSE', 'Cross-Entropy', 'Regression','Classification']
 type: post
 ---

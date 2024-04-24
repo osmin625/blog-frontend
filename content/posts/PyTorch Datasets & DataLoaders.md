@@ -1,7 +1,7 @@
 ---
 title: 모델에 데이터를 먹이는 방법(PyTorch Datasets & DataLoaders)
 date: 2023-03-14T10:13:00+09:00
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 tags: [Dataset, DataLoader, PyTorch]
 type: post
 ---

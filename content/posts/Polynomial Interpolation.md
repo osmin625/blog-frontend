@@ -1,7 +1,7 @@
 ---
 title: Polynomial Interpolation(보간 다항식)
 date: 2023-09-12T23:39:00+09:00
-categories: [AI Math, Numerical Analysis]
+categories: [Data Science, Numerical Analysis]
 tags: [Interpolation, Lagrange Interpolation, Newton Polynomial interpolation]
 type: post
 ---

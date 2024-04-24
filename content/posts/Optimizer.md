@@ -1,7 +1,7 @@
 ---
 title: Optimizer란?
 date: 2022-12-03T13:05:00+09:00
-categories: ['AI Knowledge', 'Optimizer' ]
+categories: [AI, Algorithm & Concept]
 tags: ['Optimizer', 'Adam', 'Local minima', 'Saddle point','Gradient Descent']
 type: post
 ---

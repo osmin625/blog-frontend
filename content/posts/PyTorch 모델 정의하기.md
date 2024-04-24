@@ -1,7 +1,7 @@
 ---
 title: PyTorch 모델 정의하기 - nn.Module
 date: 2023-03-13T22:09:00+09:00
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 tags: [PyTorch, Module]
 type: post
 ---

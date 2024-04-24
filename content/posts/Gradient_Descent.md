@@ -1,7 +1,7 @@
 ---
 title: '손실 함수에서 최적 해를 찾는 방법: Gradient Descent(경사 하강법)'
 date: 2022-04-22T23:21:00+09:00
-categories: ['AI Knowledge', 'Loss Function' ]
+categories: [AI, Algorithm & Concept]
 tags: ['Loss Function', 'Gradient Descent', 'Stochastic Gradient Descent','Batch Mode','Mini Batch Mode','Pattern Mode' ]
 type: post
 ---

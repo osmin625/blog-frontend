@@ -1,7 +1,7 @@
 ---
-title: Tensor에 대해 알아보자.
+title: PyTorch의 Tensor에 대해 알아보자.
 tags: [Tensor, mm, matmul, dot, squeeze, unsqueeze, view, reshape, PyTorch]
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 date: 2023-03-13T10:44:00+09:00
 type: post
 ---

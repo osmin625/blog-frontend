@@ -1,7 +1,8 @@
 ---
 title: 'LSTM: Long Short Term Memory'
 date: 2022-12-04T02:11:00+09:00
-tags: [LSTM, Long-Short-Term-Memory, RNN, Sequential Model]
+categories: [AI, Model]
+tags: [Natural Language Processing, LSTM, Long-Short-Term-Memory, RNN, Sequential Model]
 type: post
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 나를 위한 Docker 총정리
 date: 2023-02-13T13:00:00+09:00
-categories: [Development, Ops]
+categories: [Tools, Ops]
 tags: [Docker, Docker Compose]
 type: post
 ---

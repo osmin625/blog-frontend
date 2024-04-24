@@ -1,8 +1,8 @@
 ---
 title: DeepFM
 date: 2023-04-04T17:38:00+09:00
-tags: [Deep Model, Factorization Machine, Neural Network, CTR Prediction]
-categories: [DL Algorithm, Recommendation System]
+tags: [Recommendation System, Deep Model, Factorization Machine, Neural Network, CTR Prediction]
+categories: [AI, Model]
 type: post
 ---
 DeepFM: A Factorization-Machine based Neural Network for CTR Prediction

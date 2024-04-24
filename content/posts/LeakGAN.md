@@ -1,8 +1,8 @@
 ---
 title: '[논문 리뷰] LeakGAN: Long Text Generation via Adversarial Training with Leaked Information'
 date: 2023-10-07T02:40:00+09:00
-categories: [DL Algorithm, Natural Language Processing]
-tags: [LeakGAN, GAN, Reinforcement Learning, Temperature Parameter, Highway Network, Paper Review]
+categories: [AI, Model]
+tags: [Generative, Natural Language Processing, LeakGAN, GAN, Reinforcement Learning, Temperature Parameter, Highway Network, Paper Review]
 type: post
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: '문서의 순위를 매기는 방법, TF-IDF'
 date: 2022-02-28T20:41:00+09:00
-categories: [Data, Information Retrieval]
+categories: [Data Science, Information Retrieval]
 tags: [TF-IDF, Term Frequency, Inverse Document Frequency, Ranked Retrieval]
 type: post
 ---

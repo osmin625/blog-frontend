@@ -2,7 +2,7 @@
 title: 'CBOW: Continous Bag of Word'
 date: 2023-03-31T06:05:00+09:00
 tags: [Word2Vec, CBOW, Multi Classification]
-categories: [DL Algorithm,Natural Language Processing]
+categories: [AI, Algorithm & Concept]
 type: post
 ---
 - Word2Vec을 학습하는 방법 중 하나.

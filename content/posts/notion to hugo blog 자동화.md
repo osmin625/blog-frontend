@@ -1,7 +1,7 @@
 ---
 title: Notion2Hugo blog 자동화
 date: 2024-03-18T05:59:00+09:00
-categories: [Code, Review]
+categories: [Review, Code]
 tags: [Github Blog, Hugo, Latex, Notion]
 type: post
 ---

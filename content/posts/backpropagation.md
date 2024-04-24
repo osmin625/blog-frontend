@@ -1,7 +1,7 @@
 ---
 title: Back Propagation(오차 역전파 알고리즘)
 date: 2022-04-22T23:21:00+09:00
-categories: ['AI Knowledge', 'Loss Function' ]
+categories: ['AI', 'Algorithm & Concept' ]
 tags: ['Loss Function', 'Gradient Descent', 'Back Propagation']
 type: post
 ---

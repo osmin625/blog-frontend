@@ -1,7 +1,7 @@
 ---
 title: 모델의 성능이 더이상 오르지 않을 때 (Hyper-Parameter Tuning)
 date: 2023-03-13T09:58:00+09:00
-categories: [AI Knowledge, Hyperparameter]
+categories: [AI, Algorithm & Concept]
 tags: [Hyperparameter Tuning]
 type: post
 ---

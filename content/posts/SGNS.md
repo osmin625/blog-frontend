@@ -1,8 +1,8 @@
 ---
 title: 'SGNS: Skip-Gram with Negative Sampling'
 date: 2023-03-31T06:05:00+09:00
-categories: [DL Algorithm, Natural Language Processing]
-tags: [Word2Vec, Skip-Gram, Binary Classification]
+categories: [AI, Algorithm & Concept]
+tags: [Natural Language Processing, Word2Vec, Skip-Gram, Binary Classification]
 type: post
 ---
 

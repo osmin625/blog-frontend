@@ -1,7 +1,7 @@
 ---
 title: 'Ranked Retreival 모델 구현(TF-IDF)'
 date: 2022-03-01T12:37:00+09:00
-# categories: [Data, Information Retrieval]
+categories: [Data Science, Information Retrieval]
 tags: [TF-IDF, Ranked Retrieval, Konlpy, ]
 type: post
 ---

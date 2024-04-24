@@ -1,8 +1,8 @@
 ---
 title: Alexnet 모델의 파라미터 수 계산
-categories: ['DL Algorithm','Computer Vision']
+categories: [AI, Model]
 date: 2023-01-13T15:15:00+09:00
-tags: ['Convolution Neural Network', 'Alex-Net']
+tags: ['CV', 'Convolution Neural Network', 'Alex-Net']
 type: post
 ---
 ![Alex-net](/imgs/Alex_struc.png)

@@ -1,7 +1,7 @@
 ---
 title: PyTorch의 Backward에 대해 알아보자.
 date: 2023-03-13T22:13:00+09:00
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 tags: [PyTorch, Backward, Autograd]
 type: post
 ---

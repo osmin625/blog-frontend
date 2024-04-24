@@ -1,7 +1,7 @@
 ---
 title: PyTorch 개요
 date: 2023-03-13T09:58:00+09:00
-categories: [DL Framework, PyTorch]
+categories: [AI, Framework & Library]
 tags: [PyTorch, Overview]
 pin: true
 type: post

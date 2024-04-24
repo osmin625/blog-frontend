@@ -1,7 +1,7 @@
 ---
 title: Kullback-Leibler (KL) Divergence
 date: 2022-12-12T12:34:00+09:00
-categories: [AI Math, Statistics]
+categories: [Data Science, Information Theory]
 tags: [Cross Entropy, Entropy, KL Divergence]
 type: post
 ---

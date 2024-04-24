@@ -1,8 +1,8 @@
 ---
 title: '1 x 1 Convolution'
-categories: ['DL Algorithm','Computer Vision']
+categories: [AI, Algorithm & Concept]
 date: 2023-01-13T15:39:00+09:00
-tags: ['Convolution Neural Network', 'Bottle-neck']
+tags: ['CV', 'Convolution Neural Network', 'Bottle-neck']
 type: post
 ---
 

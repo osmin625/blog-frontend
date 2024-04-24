@@ -1,8 +1,8 @@
 ---
 title: 추천 시스템 개요
 date: 2023-09-27T13:53:00+09:00
-categories: [DL Algorithm, Recommendation System]
-tags: [Recsys, Overview]
+categories: [AI, Algorithm & Concept]
+tags: [Recommendation System, Overview]
 pin: true
 type: post
 ---

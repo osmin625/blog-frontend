@@ -1,7 +1,7 @@
 ---
 title: Entropy(엔트로피)
 date: 2023-09-22T07:11:00+09:00
-categories: [AI Math, Statistics]
+categories: [Data Science, Information Theory]
 tags: [Entropy, Information Theory]
 type: post
 ---
