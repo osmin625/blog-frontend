@@ -1,7 +1,7 @@
 ---
 title: 'SVD: Singular Value Decomposition(특이값 분해)'
 date: 2023-03-30T00:19:00+09:00
-categories: [Data Science, 선형 대수]
+categories: [Data Science, Linear Algebra]
 tags: [Collaborative Filtering, Matrix Decomposition, Singular Value Decomposition]
 type: post
 ---
