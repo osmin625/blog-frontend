@@ -4,10 +4,11 @@
     {{if eq (len $.Site.Taxonomies.categories) 0}}
     {{ i18n "nothing" }}
     {{else}}
+
     <ul class="list-categories">
         {{ range $category, $subLists := $.Site.Data.category_hierarchy }}
-        <div class="list-category">
-            <a href="/categories/{{ $category | urlize }}/">
+        <div class="card-categories">
+            <a class="card-category" href="/categories/{{ $category | urlize }}/">
                 <div class="category-name">{{ $category }}</div>
                 {{ $categoryUrl := $category | urlize }}
                 <div class="category-posts-count">
@@ -16,26 +17,19 @@
             </a>
             {{ range $subLists }}
             <li>
-                <a href="/categories/{{ . | urlize }}/">
+                <a class="list-category" href="/categories/{{ . | urlize }}/">
                     {{ $subListUrl := . | urlize }}
                     <div class="category-name">{{ $subListUrl }}</div>
-                    {{ index $.Site.Taxonomies.categories $subListUrl | len }}
+                    <div class="category-posts-count">
+                        {{ index $.Site.Taxonomies.categories $subListUrl | len }}
+                    </div>
                 </a>
             </li>
             {{ end }}
         </div>
         {{ end}}
     </ul>
-    <ul class="list-categories">
-        {{ range $.Site.Taxonomies.categories.ByCount }}
-        <li class="list-category">
-            <a href="/categories/{{ .Name | urlize }}/">
-                <div class="category-name">{{ .Name }}</div>
-                <div class="category-posts-count">{{ .Count }}</div>
-            </a>
-        </li>
-        {{ end }}
-    </ul>
+
     {{ end }}
 
 </div>

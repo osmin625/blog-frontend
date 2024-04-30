@@ -366,24 +366,41 @@ a:hover .feather-sun {
   text-decoration: none;
 }
 
-.list-categories {
-  list-style-type: none;
-  padding: 0;
-}
-.list-categories .list-category {
-  /* border: 1.5px solid; */
-  border-radius: 8px;
-  color: inherit;
-  /* display: inline-block; */
+.card-categories {
   font-size: 19px;
+  color: inherit;
+  padding: 12px;
+  border: solid 1px var(--light-secondary-color);
+  border-radius: 8px;
+  margin-bottom: 25px;
 }
-
-.list-categories .list-category:hover {
+.card-category {
+  font-size: 19px;
+  color: inherit;
+  background-color: var(--light-secondary-color);
+  display: flex;
+  padding: 12px;
+  text-decoration: none;
+  justify-content: space-between;
+}
+.card-category:hover {
   background-color: var(--light-secondary-color);
   color: var(--light-accent-color);
 }
 
-.list-category a {
+.list-categories {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-category:hover {
+  background-color: var(--light-secondary-color);
+  color: var(--light-accent-color);
+}
+
+.list-category {
+  border-radius: 8px;
+  font-size: 19px;
   color: inherit;
   display: flex;
   padding: 12px;
