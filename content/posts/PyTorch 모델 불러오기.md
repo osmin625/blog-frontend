@@ -1,7 +1,7 @@
 ---
 title: PyTorch 모델 저장하고 불러오기
 date: 2023-03-13T9:58:00+09:00
-categories: [AI, Framework & Library]
+categories: [Framework & Library, PyTorch]
 tags: [PyTorch, save]
 # math: true
 # img_path: /imgs/

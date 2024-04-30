@@ -1,7 +1,6 @@
 AI:
 - Model
 - Algorithm & Concept
-- Framework & Library
 Data Science:
 - Information Theory
 - 선형 대수
@@ -10,10 +9,13 @@ Data Science:
 - Statistics
 Computer Science & Engineering:
 - Software Engineering
-- Framework & Library
 Tools:
 - Ops
 - Project Management
+Framework & Library:
+- PyTorch
+- Etc.
+
 Review:
 - Code
 - Troubleshooting

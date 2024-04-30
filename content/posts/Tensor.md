@@ -1,7 +1,7 @@
 ---
 title: PyTorch의 Tensor에 대해 알아보자.
 tags: [Tensor, mm, matmul, dot, squeeze, unsqueeze, view, reshape, PyTorch]
-categories: [AI, Framework & Library]
+categories: [Framework & Library, PyTorch]
 date: 2023-03-13T10:44:00+09:00
 type: post
 ---
