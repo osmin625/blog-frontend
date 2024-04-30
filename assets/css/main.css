@@ -383,6 +383,7 @@ a:hover .feather-sun {
   text-decoration: none;
   justify-content: space-between;
 }
+
 .card-category:hover {
   background-color: var(--light-secondary-color);
   color: var(--light-accent-color);
