@@ -43,7 +43,20 @@ a:hover .feather-moon {
   fill: var(--dark-accent-color);
 }
 
-.list-categories .list-category:hover {
+.card-category {
+  background-color: var(--dark-secondary-color);
+}
+
+.card-category:hover {
+  background-color: var(--dark-secondary-color);
+  color: var(--dark-accent-color);
+}
+
+.card-categories {
+  border: solid 1px var(--dark-secondary-color);
+}
+
+.list-category:hover {
   background-color: var(--dark-secondary-color);
   color: var(--dark-accent-color);
 }
