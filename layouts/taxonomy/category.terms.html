@@ -1,10 +1,31 @@
 {{ define "main" }}
 <div class="container categories-list">
-    <!-- {{ print $.Site.Taxonomies.categories.ByCount }} -->
     <h1 class="list-title">{{ i18n "categories" }}</h1>
     {{if eq (len $.Site.Taxonomies.categories) 0}}
-        {{ i18n "nothing" }}
+    {{ i18n "nothing" }}
     {{else}}
+    <ul class="list-categories">
+        {{ range $category, $subLists := $.Site.Data.category_hierarchy }}
+        <div class="list-category">
+            <a href="/categories/{{ $category | urlize }}/">
+                <div class="category-name">{{ $category }}</div>
+                {{ $categoryUrl := $category | urlize }}
+                <div class="category-posts-count">
+                    {{ index $.Site.Taxonomies.categories $categoryUrl | len}}
+                </div>
+            </a>
+            {{ range $subLists }}
+            <li>
+                <a href="/categories/{{ . | urlize }}/">
+                    {{ $subListUrl := . | urlize }}
+                    <div class="category-name">{{ $subListUrl }}</div>
+                    {{ index $.Site.Taxonomies.categories $subListUrl | len }}
+                </a>
+            </li>
+            {{ end }}
+        </div>
+        {{ end}}
+    </ul>
     <ul class="list-categories">
         {{ range $.Site.Taxonomies.categories.ByCount }}
         <li class="list-category">
@@ -19,4 +40,3 @@
 
 </div>
 {{ end }}
-
