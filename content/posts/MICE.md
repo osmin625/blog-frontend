@@ -1,7 +1,7 @@
 ---
 title: 'MICE : Multiple Imputation Chained Equation'
 date: 2022-10-18T07:41:00+09:00
-categories: [Framework & Library, Etc.]
+categories: [Framework & Library, Etc]
 tags: [Missing Data Analysis, Imputation, Missing Data, MICE]
 type: post
 ---
