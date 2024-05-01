@@ -369,24 +369,27 @@ a:hover .feather-sun {
 .card-categories {
   font-size: 19px;
   color: inherit;
-  padding: 12px;
   border: solid 1px var(--light-secondary-color);
   border-radius: 8px;
   margin-bottom: 25px;
 }
-.card-category {
+.card-header {
   font-size: 19px;
   color: inherit;
   background-color: var(--light-secondary-color);
+  border: solid 1px var(--light-secondary-color);
   display: flex;
   padding: 12px;
   text-decoration: none;
   justify-content: space-between;
 }
 
-.card-category:hover {
+.card-header:hover {
   background-color: var(--light-secondary-color);
   color: var(--light-accent-color);
+  border: solid 1px var(--light-accent-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
 }
 
 .list-categories {
@@ -395,18 +398,20 @@ a:hover .feather-sun {
 }
 
 .list-category:hover {
-  background-color: var(--light-secondary-color);
   color: var(--light-accent-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  border: solid 1px var(--light-accent-color);
 }
 
 .list-category {
-  border-radius: 8px;
   font-size: 19px;
   color: inherit;
   display: flex;
-  padding: 12px;
+  padding: 12px 12px 12px 36px;
   text-decoration: none;
   justify-content: space-between;
+  border: solid 1px var(--light-secondary-color);
 }
 
 /* CODE BLOCKS */

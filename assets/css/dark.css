@@ -43,22 +43,28 @@ a:hover .feather-moon {
   fill: var(--dark-accent-color);
 }
 
-.card-category {
+.card-header {
   background-color: var(--dark-secondary-color);
+  border: solid 1px var(--dark-secondary-color);
 }
 
-.card-category:hover {
+.card-header:hover {
   background-color: var(--dark-secondary-color);
   color: var(--dark-accent-color);
+  border: solid 1px var(--dark-accent-color);
 }
 
 .card-categories {
   border: solid 1px var(--dark-secondary-color);
 }
 
+.list-category {
+  border: solid 1px var(--dark-secondary-color);
+}
+
 .list-category:hover {
-  background-color: var(--dark-secondary-color);
   color: var(--dark-accent-color);
+  border: solid 1px var(--dark-accent-color);
 }
 
 .post-category a:hover {

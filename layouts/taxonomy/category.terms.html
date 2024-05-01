@@ -8,7 +8,7 @@
     <ul class="list-categories">
         {{ range $category, $subLists := $.Site.Data.category_hierarchy }}
         <div class="card-categories">
-            <a class="card-category" href="/categories/{{ $category | urlize }}/">
+            <a class="card-header" href="/categories/{{ $category | urlize }}/">
                 <div class="category-name">{{ $category }}</div>
                 {{ $categoryUrl := $category | urlize }}
                 <div class="category-posts-count">
