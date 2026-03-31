@@ -1,4 +1,4 @@
-baseURL = "https://osmin625.github.io"
+baseURL = "https://osmin625.github.io/hugo_recsys_blog/"
 title = "오뚝이 개발자"
 theme = "gokarna"
 languageCode = "ko"

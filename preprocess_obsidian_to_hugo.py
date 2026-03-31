@@ -38,7 +38,7 @@ def process_markdown(content: str, filename: str) -> str:
         from datetime import datetime
         title = filename.replace('.md', '').replace('_', ' ')
         date_str = datetime.now().strftime('%Y-%m-%d')
-        frontmatter = f"---\ntitle: \"{title}\"\ndate: {date_str}\ndraft: false\n---\n\n"
+        frontmatter = f"---\ntitle: \"{title}\"\ndate: {date_str}\ntype: post\ndraft: false\n---\n\n"
         content = frontmatter + content
 
     return content
