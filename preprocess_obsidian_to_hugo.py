@@ -28,7 +28,7 @@ def process_markdown(content: str, filename: str) -> str:
             page, alias = inner, inner
         
         # Standardize page name to valid markdown filename
-        link = page.replace(' ', '_') + ".md"
+        link = page.replace(' ', '-') + ".md"
         return f"[{alias}]({link})"
         
     content = re.sub(r'\[\[(.*?)\]\]', link_replacer, content)
@@ -36,7 +36,7 @@ def process_markdown(content: str, filename: str) -> str:
     # Ensure YAML frontmatter exists
     if not content.strip().startswith('---'):
         from datetime import datetime
-        title = filename.replace('.md', '').replace('_', ' ')
+        title = filename.replace('.md', '').replace('_', ' ').replace('-', ' ')
         date_str = datetime.now().strftime('%Y-%m-%d')
         frontmatter = f"---\ntitle: \"{title}\"\ndate: {date_str}\ntype: post\ndraft: false\n---\n\n"
         content = frontmatter + content
@@ -64,8 +64,8 @@ def main():
                 content = filepath.read_text(encoding='utf-8')
                 new_content = process_markdown(content, filepath.name)
                 
-                # Copy to destination, preserving name or converting spaces to underscores
-                filename = filepath.name.replace(' ', '_')
+                # Copy to destination, preserving name or converting spaces to hyphens
+                filename = filepath.name.replace(' ', '-')
                 dest_path = dest_dir / filename
                 dest_path.write_text(new_content, encoding='utf-8')
                 logging.info(f"Processed {filepath.name} -> {dest_path}")
