@@ -7,9 +7,9 @@ from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 
-def process_markdown(content: str) -> str:
+def process_markdown(content: str, filename: str) -> str:
     """
-    Replaces Obsidian wikilinks with standard markdown links.
+    Replaces Obsidian wikilinks with standard markdown links and ensures frontmatter exists.
     """
     # 1. Replace image wikilinks ![[image.png]] or ![[image.png|alias]]
     # to ![image.png](/images/image.png)
@@ -33,6 +33,14 @@ def process_markdown(content: str) -> str:
         
     content = re.sub(r'\[\[(.*?)\]\]', link_replacer, content)
     
+    # Ensure YAML frontmatter exists
+    if not content.strip().startswith('---'):
+        from datetime import datetime
+        title = filename.replace('.md', '').replace('_', ' ')
+        date_str = datetime.now().strftime('%Y-%m-%d')
+        frontmatter = f"---\ntitle: \"{title}\"\ndate: {date_str}\ndraft: false\n---\n\n"
+        content = frontmatter + content
+
     return content
 
 def main():
@@ -54,7 +62,7 @@ def main():
         for filepath in src_dir.rglob('*.md'):
             try:
                 content = filepath.read_text(encoding='utf-8')
-                new_content = process_markdown(content)
+                new_content = process_markdown(content, filepath.name)
                 
                 # Copy to destination, preserving name or converting spaces to underscores
                 filename = filepath.name.replace(' ', '_')
