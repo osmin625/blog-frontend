@@ -1,0 +1,7 @@
+{{- $src := .Destination -}}
+{{- if strings.HasPrefix $src "static/imgs/" -}}
+  {{- $src = replace $src "static/imgs/" "/imgs/" -}}
+{{- else if strings.HasPrefix $src "/imgs/" -}}
+  {{- /* Fallback just in case some are missed */ -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />

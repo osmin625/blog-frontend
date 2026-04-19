@@ -46,4 +46,4 @@ class LinearRegression(torch.nn.Module):
         return out
 ```
 
-![module](/imgs/module.png)
+![module](static/imgs/module.png)

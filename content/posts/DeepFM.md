@@ -37,15 +37,15 @@ Wide & Deep 모델은 이 둘을 통합하여 문제 해결
 
 FM 구조
 
-`$$
+$$
 \hat{y}(\mathrm{x})=w_0+\sum_{i=1}^n w_i x_i{+\sum_{i=1}^n \sum_{j=i+1}^n\left\langle\mathrm{v}_i, \mathrm{v}_j\right\rangle x_i x_j} \\
 
 w_0 \in \mathbb{R}, \quad w_i \in \mathbb{R}, \quad \mathrm{v}_i \in \mathbb{R}^k
-$$`
+$$
 
 order-2 feature interaction을 효과적으로 잡는다.
 
-![DeepFM](/imgs/DeepFM-1.png)
+![DeepFM](static/imgs/DeepFM-1.png)
 
 각 field가 하나의 feature를 의미한다.
 
@@ -57,19 +57,19 @@ order-2 feature interaction을 효과적으로 잡는다.
     
 - 각각의 Feature은 동일한 차원으로 임베딩된 후, 내적을 통해 feature간 interaction을 학습한다.
 
-![DeepFM](/imgs/DeepFM-2.png)
+![DeepFM](static/imgs/DeepFM-2.png)
 
 ### **DNN for high-order feature interaction**
 
 모든 feature들은 동일한 차원(k)의 임베딩으로 치환된다.
 
-이 때, 임베딩에 사용되는 가중치는 FM Component의 가중치(`$v_{ij}$`)와 동일하다.
+이 때, 임베딩에 사용되는 가중치는 FM Component의 가중치($v_{ij}$)와 동일하다.
 
-![DeepFM](/imgs/DeepFM-3.png)
+![DeepFM](static/imgs/DeepFM-3.png)
 
-`$$
+$$
 \begin{aligned}& a^0=\left[e_1, e_2, \ldots, e_m\right] \\& a^{(l+1)}=\sigma\left(W^l a^l+b^l\right) \\& y_{D N N}=W^{|H|+1} a^{|H|}+b^{|H|+1}\end{aligned}
-$$`
+$$
 
 각 Embedding은 모두 연결되어 가로로 붙게 된다.
 
@@ -79,16 +79,16 @@ $$`
 
 ### 전체 구조
 
-`$$
+$$
 \tt \hat y = sigmoid(y_{FM} + y_{DNN})
-$$`
+$$
 
-![DeepFM](/imgs/DeepFM-4.png)
+![DeepFM](static/imgs/DeepFM-4.png)
 FM과 Deep의 장점을 모두 가진다.
 
 ## 타 모델과의 비교
 
-![DeepFM](/imgs/DeepFM-5.png)
+![DeepFM](static/imgs/DeepFM-5.png)
 ### FNN
     
 FM 모델을 사용하지만, End-to-End 학습이 아니다.
@@ -102,7 +102,7 @@ FM모델을 활용한 이후, 그 임베딩을 다시 가지고 와서 활용한
 DeepFM과 흡사하지만, Low-order Interaction(Memorization부분)이 빠져있다.
     
 
-![DeepFM](/imgs/DeepFM-6.png)
+![DeepFM](static/imgs/DeepFM-6.png)
 ### 성능
 
-![DeepFM](/imgs/DeepFM-7.png)
+![DeepFM](static/imgs/DeepFM-7.png)

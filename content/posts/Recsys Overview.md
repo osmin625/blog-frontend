@@ -14,7 +14,7 @@ type: post
 
 ### [추천 시스템 평가 패러다임](https://osmin625.github.io/posts/%EC%B6%94%EC%B2%9C-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8F%89%EA%B0%80-%EC%A7%80%ED%91%9C/)
 
-![recsys](/imgs/ro.png)
+![recsys](static/imgs/ro.png)
 # Rule Base
 
 [인기도 기반 추천](https://osmin625.github.io/posts/%EC%9D%B8%EA%B8%B0%EB%8F%84-%EA%B8%B0%EB%B0%98-%EC%B6%94%EC%B2%9C/)
@@ -107,7 +107,7 @@ type: post
 
     입력값 (rating)을 reconstruction (decoding) 할 수 있게끔 학습함으로써 rating이 가지고 있는 잠재적인 패턴이 latent factor(information bottleneck)에 암호화 (encoding)된다.
 
-    ![recsys](/imgs/ro1.png)
+    ![recsys](static/imgs/ro1.png)
 
     [DAE: Denoising Autoencoder](https://www.notion.so/DAE-Denoising-Autoencoder-d6800d81dced436b8b00911996978dd2?pvs=21)
 
@@ -152,19 +152,19 @@ type: post
     <br>
     비지도학습 모델들 중, User-free 모델로 활용되는 경우가 많다.
 
-    **User-free 모델의 장점 (`$=\gamma_u$`를 사용하지 않을 때의 장점)**
+    **User-free 모델의 장점 ($=\gamma_u$를 사용하지 않을 때의 장점)**
 
     1. **새로운 사용자에 대해 inference가 가능하다.**
         
-        `$\gamma_u$`는 새로운 사용자가 발생할 때마다 재학습을 필요로 한다.
+        $\gamma_u$는 새로운 사용자가 발생할 때마다 재학습을 필요로 한다.
         
     2. **이력이 거의 없는 사용자에 대한 대응이 가능하다.**
         
-        MF 계열의 모델은 이런 상황에서 `$\gamma_u$`가 제대로 학습되지 않으므로 성능이 좋지 않다.
+        MF 계열의 모델은 이런 상황에서 $\gamma_u$가 제대로 학습되지 않으므로 성능이 좋지 않다.
         
     3. **CF 모델에서 종종 무시되곤 하는 sequential 시나리오에 대해 대응이 가능하다.**
         
-        MF의 `$\gamma_u$`는 sequence를 고려하지 않는다.
+        MF의 $\gamma_u$는 sequence를 고려하지 않는다.
         
     - 실제 추천 시스템의 deployment를 고려하면, 새로운 사용자가 발생할 때마다 재학습이 필요한 점은 큰 단점이다.
     - 따라서, user-free 모델은 전통적인 MF 계열의 모델보다 실용적이라고 볼 수 있다.

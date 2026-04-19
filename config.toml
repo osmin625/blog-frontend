@@ -65,3 +65,25 @@ pygmentsStyle = "monokai"
     startLevel = 1
     endLevel = 4
     ordered = false
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
+
+[related]
+  includeNewer = true
+  threshold = 50
+  toLower = true
+
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+
+  [[related.indices]]
+    name = "tags"
+    weight = 50
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

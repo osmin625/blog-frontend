@@ -33,11 +33,11 @@ type: post
     2. 👤 소비자와 관련된 정보를 저장한 데이터셋 (users.csv) - 68,092명의 데이터
     3. 🔢 소비자가 실제로 부여한 평점을 저장한 데이터셋 (ratings.csv) - 306,795건의 데이터
     
-    ![BRP Report](/imgs/BRP_report0.png)
+    ![BRP Report](static/imgs/BRP_report0.png)
     
     사용 데이터셋의 구조
     
-    ![BRP Report](/imgs/BRP_report1.png)
+    ![BRP Report](static/imgs/BRP_report1.png)
     
     train_ratings의 rating 분포
     
@@ -54,14 +54,14 @@ type: post
 
 ## 3. 프로젝트 수행 절차 및 방법
 
-![BRP Report](/imgs/BRP_report2.png)
+![BRP Report](static/imgs/BRP_report2.png)
 
 ## 4. 프로젝트 수행 결과
 - **순위 -** 최종 순위 Public 7위 (RMSE: 2.1207) / Private 7위 (RMSE: 2.1159)
     
-    ![BRP Report](/imgs/BRP_report3.png)
+    ![BRP Report](static/imgs/BRP_report3.png)
     
-    ![BRP Report](/imgs/BRP_report4.png)
+    ![BRP Report](static/imgs/BRP_report4.png)
     
 
 ---
@@ -130,13 +130,13 @@ type: post
 - **앙상블 (simple-weighted ensemble사용)**
     - Train의 분포와 결과 비교하며 weighted sum을 적용하였습니다.
         
-        ![BRP Report](/imgs/BRP_report5.png)
+        ![BRP Report](static/imgs/BRP_report5.png)
         
         CatBoostRegressor, DeepCoNN, FM 모델의 결과 분포
         
     - 최종적으로, CatBoostRegressor +Deep_CoNN + FM 을 7:1:2의 비율로 가중치를 주어 앙상블함 → RMSE 2.1159(private 기준)으로 7등을 달성하였습니다.
     
-    ![BRP Report](/imgs/BRP_report6.png)
+    ![BRP Report](static/imgs/BRP_report6.png)
     
     최종 Architecture - CatBoostRegressor + DeepCoNN + FM
     
@@ -151,7 +151,7 @@ type: post
         
         RMSE가 내리는 상황에 데이터의 분포를 파악한 후, 데이터의 분포를 고려하여 개선 방향을 효과적으로 판단할 수 있었습니다.
         
-        ![BRP Report](/imgs/BRP_report7.png)
+        ![BRP Report](static/imgs/BRP_report7.png)
         
     - **Post Processing**
         
@@ -161,7 +161,7 @@ type: post
 
 2. **시연 결과**
     
-    ![BRP Report](/imgs/BRP_report8.png)
+    ![BRP Report](static/imgs/BRP_report8.png)
     
     프로젝트 진행 흐름에 따른 성능 추이
     

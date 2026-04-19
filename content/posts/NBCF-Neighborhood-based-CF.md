@@ -54,7 +54,7 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
 
 - ex) 영화 평점
     
-    ![NBCF](/imgs/NBCF1.png)
+    ![NBCF](static/imgs/NBCF1.png)
     
     - User A가 User B와 선호도가 비슷하므로, User B의 스타워즈 평점은 높을 것이라고 예상한다.
 
@@ -80,19 +80,19 @@ Similarity를 계산하기 위한 Metric으로 Jaccard, Cosine, Pearson 등을 �
     
     유저의 평점을 그대로 사용하지 않고, 유저의 평균 평점에서의 편차를 사용한다.
     
-    `$$
+    $$
     \begin{gathered}\operatorname{dev}(u, i)=r(u, i)-\overline{r_u} \quad \text { for known rating } \\\widehat{\operatorname{dev}}(u, i)=\frac{\sum_{u \Omega^{\prime} \in \Omega_i} \operatorname{dev}\left(u^{\prime}, i\right)}{\left|\Omega_i\right|}=\frac{\sum_{u^{\prime} \in \Omega_i} r\left(u^{\prime}, i\right)-\overline{r_{u^{\prime}}}}{\left|\Omega_i\right|} \\\hat{r}(u, i)=\overline{r_u}+\frac{\sum_{u \prime \in \Omega_i} r\left(u^{\prime}, i\right)-\overline{r_{u^{\prime}}}}{\left|\Omega_i\right|}=\overline{r_u}+\widehat{\operatorname{dev}}(u, i)\end{gathered}
-    $$`
+    $$
     
     - ex) 유저 B의 스타워즈에 대한 예측 평점
         
-        ![NBCF](/imgs/NBCF2.png)
+        ![NBCF](static/imgs/NBCF2.png)
         
         예측 Deviation = 0.23
         
-        `$$
+        $$
         {1.6 \times 0.95 + (-1.6) \times (0.6) + 0 \times 0.85\over0.95 + 0.6 + 0.85} = 0.23
-        $$`
+        $$
         
         유저 B의 평점 평균 = 3
         
@@ -111,7 +111,7 @@ User based CF에 비해 계산량이 적다.
 
 - ex) 영화 평점
     
-    ![NBCF](/imgs/NBCF3.png)
+    ![NBCF](static/imgs/NBCF3.png)
     
     - 헐크와 스타워즈의 유저별 평점 분포가 비슷하므로, 유저 B의 스타워즈 평점이 높을 것이라 예측한다.
 
@@ -134,15 +134,15 @@ User based CF에 비해 계산량이 적다.
     
     - ex) 유저 B의 스타워즈에 대한 예측 평점
         
-        ![NBCF](/imgs/NBCF4.png)
+        ![NBCF](static/imgs/NBCF4.png)
         코사인 유사도 사용. 2-NN 기준 아이언맨 0.9, 헐크 0.95, 스타워즈 평균 3.0
 
         
         예측 Deviation = 1.15
         
-        `$$
+        $$
         {0.9 \times 0.25 + 0.95 \times2\over0.9 + 0.95} = 1.15
-        $$`
+        $$
         
         아이템 B의 평점 평균 = 3
         

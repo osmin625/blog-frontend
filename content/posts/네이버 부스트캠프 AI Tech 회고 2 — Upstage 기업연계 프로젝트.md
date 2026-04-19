@@ -6,7 +6,7 @@ categories: [Review,BoostCamp AI Tech]
 type: post
 ---
 
-![bc](/imgs/boostcamp_logo.png)
+![bc](static/imgs/boostcamp_logo.png)
 
 최종 프로젝트는 변성윤 마스터님(유튜버 카일스쿨)의 Product Serving 강좌와 함께 진행됐다.
 
@@ -16,7 +16,7 @@ type: post
 
 ## **업스테이지 기업연계 프로젝트**
 
-![bc](/imgs/upstage_logo.png)
+![bc](static/imgs/upstage_logo.png)
 
 전체 트랙에서 지원을 받아 최종적으로 뽑힌 팀이 기업이 제안한 주제로 프로젝트를 진행할 수 있다.
 

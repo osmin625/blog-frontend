@@ -94,7 +94,7 @@ type: post
 
 1. `git reflog` : branch 사용 이력 출력하기
     
-    ![git_branch](/imgs/git_branch0.png)
+    ![git_branch](static/imgs/git_branch0.png)
     
 2. 복구하고자 하는 branch의 `HEAD@{번호}` 기억하기
 3. `git checkout -b '<branch name>' HEAD@{번호}`

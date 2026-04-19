@@ -198,7 +198,7 @@ logging 모듈을 이용하여 동작 과정에서의 이슈를 추적하도록 
     ```python
     elif '![Untitled](' in line:
         indent_ = line.split('![Untitled]')[0]
-        line = f'{indent_}![{fname}](/imgs/{imgList[imgIdx]})\n'
+        line = f'{indent_}![{fname}](static/imgs/{imgList[imgIdx]})\n'
         imgIdx += 1
     ```
     
@@ -271,12 +271,12 @@ logging 모듈을 이용하여 동작 과정에서의 이슈를 추적하도록 
     elif '$$' in line and len(line.lstrip()) <= 3: # 블럭 수식
         indent_ = line.split('$$')[0]
         if not insideOfLatexBlock:
-            line = indent_ + '`$$\n'
+            line = indent_ + '$$\n'
             insideOfLatexBlock = True
         else:
-            line = indent_ + '$$`\n'
+            line = indent_ + '$$\n'
             insideOfLatexBlock = False
-    elif '$' in line and '`$' not in line and '$`' not in line: # 인라인 수식
+    elif '$' in line and '$' not in line and '$' not in line: # 인라인 수식
         tokens = line.split('$')
         insideOfLatexInline = False
         while len(tokens) > 1: # token들이 하나의 문장으로 합쳐질 때까지 반복.
@@ -530,7 +530,7 @@ def updatePostContent(path_):
                 # image path 재설정하기
                 elif '![Untitled](' in line:
                     indent_ = line.split('![Untitled]')[0]
-                    line = f'{indent_}![{fname}](/imgs/{imgList[imgIdx]})\n'
+                    line = f'{indent_}![{fname}](static/imgs/{imgList[imgIdx]})\n'
                     imgIdx += 1
                 
                 # hugo에서 latex 인식 가능하도록 latex 구문 변경하기
@@ -538,14 +538,14 @@ def updatePostContent(path_):
                 elif '$$' in line and len(line.lstrip()) <= 3: # 블럭 수식
                     indent_ = line.split('$$')[0]
                     if not insideOfLatexBlock:
-                        line = indent_ + '`$$\n'
+                        line = indent_ + '$$\n'
                         insideOfLatexBlock = True
                     else:
-                        line = indent_ + '$$`\n'
+                        line = indent_ + '$$\n'
                         insideOfLatexBlock = False
                 
-                # 수식이 끝나자마자 시작하는 경우 때문에 `$$`가 없다를 예외 조건으로 추가하면 안됨.
-                elif '$' in line and '`$' not in line and '$`' not in line: # 인라인 수식
+                # 수식이 끝나자마자 시작하는 경우 때문에 $$가 없다를 예외 조건으로 추가하면 안됨.
+                elif '$' in line and '$' not in line and '$' not in line: # 인라인 수식
                     tokens = line.split('$')
                     insideOfLatexInline = False
                     while len(tokens) > 1: # token들이 하나의 문장으로 합쳐질 때까지 반복.
@@ -575,13 +575,13 @@ if __name__ == '__main__':
 
 ## 사용 방법
 
-1. 블로그로 옮기고자 하는 노션 페이지에서 우측 상단의  `$\cdots$`을 누른다.
+1. 블로그로 옮기고자 하는 노션 페이지에서 우측 상단의  $\cdots$을 누른다.
     
-    ![자동화](/imgs/Notion2Hugo_blog_자동화1.png)
+    ![자동화](static/imgs/Notion2Hugo_blog_자동화1.png)
     
 2. 내보내기를 누르고, 아래 이미지처럼 설정한 후 내보내기 버튼을 클릭한다.
     
-    ![자동화](/imgs/Notion2Hugo_blog_자동화0.png)
+    ![자동화](static/imgs/Notion2Hugo_blog_자동화0.png)
     
 3. default로 download 폴더에 저장되기 때문에, 경로나 파일명을 변경할 필요 없이 그대로 저장한다.
 4. post_upload코드를 동작시킨다.

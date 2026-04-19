@@ -10,7 +10,7 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 - **선별적 게이트**라는 개념으로 선별 기억 능력을 확보한다.
     
-    ![lstm](/imgs/lstm0.png)
+    ![lstm](static/imgs/lstm0.png)
     
     그림은 이해를 돕기위해 O,X로 표현했지만, 실제로는 게이트는 0~1 사이의 실수값으로 열린 정도를 조절한다.
     
@@ -19,14 +19,14 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 **가중치**
 
-순환 신경망의 `$\{U, V, W\}$`에 4개를 추가하여 `$\{U, U_i , U_o , W, W_i , W_o , V\}$`
+순환 신경망의 $\{U, V, W\}$에 4개를 추가하여 $\{U, U_i , U_o , W, W_i , W_o , V\}$
 
-- `$i$` : 입력 게이트
-- `$o$` : 출력 게이트
+- $i$ : 입력 게이트
+- $o$ : 출력 게이트
 - 다양한 구조 설계가 가능하다.
     
-    ![lstm](/imgs/lstm1.png)
-    ![lstm](/imgs/lstm2.png)
+    ![lstm](static/imgs/lstm1.png)
+    ![lstm](static/imgs/lstm2.png)
     
 
 ## Model Concept
@@ -41,7 +41,7 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
     
     아무런 동작을 추가하지 않는다면, 정보는 전혀 바뀌지 않고 그대로 흐른다.
     
-    ![lstm](/imgs/lstm3.png)
+    ![lstm](static/imgs/lstm3.png)
 
 **Cell State에서 gate에 의해 정보가 추가되거나 삭제된다.**
 
@@ -49,26 +49,26 @@ RNN의 장기문맥 의존성을 해결하기 위해 탄생한 모델
 
 1. **Forget Gate**
     
-    ![lstm](/imgs/lstm4.png)
+    ![lstm](static/imgs/lstm4.png)
     
 2. **Input Gate**
     
-    ![lstm](/imgs/lstm5.png)
+    ![lstm](static/imgs/lstm5.png)
     
 - **Cell State 업데이트**
     
-    ![lstm](/imgs/lstm6.png)
+    ![lstm](static/imgs/lstm6.png)
     
 1. **Output Gate**
     
-    ![lstm](/imgs/lstm7.png)
+    ![lstm](static/imgs/lstm7.png)
     
 
 ### 수식 요약
 
-`$$
+$$
 \begin{aligned}f_t & =\sigma_g\left(W_f x_t+U_f h_{t-1}+b_f\right) \\i_t & =\sigma_g\left(W_i x_t+U_i h_{t-1}+b_i\right) \\o_t & =\sigma_g\left(W_o x_t+U_o h_{t-1}+b_o\right) \\\tilde{c}_t & =\sigma_c\left(W_c x_t+U_c h_{t-1}+b_c\right) \\c_t & =f_t \odot c_{t-1}+i_t \odot \tilde{c}_t \\h_t & =o_t \odot \sigma_h\left(c_t\right)\end{aligned}
-$$`
+$$
 
 ```python
 ft = sigmoid(np.dot(xt, Wf) + np.dot(ht_1, Uf) + bf)  # forget gate
@@ -80,7 +80,7 @@ ht = ot * np.tanh(Ct)
 
 ### 모델 요약
 
-![lstm](/imgs/lstm8.png)
+![lstm](static/imgs/lstm8.png)
 
 ### Input / Output Shape
 
@@ -97,7 +97,7 @@ output, h = lstm(input)
 output.size()  # => torch.Size([3, 5, 2]), batch_size, seq_len, hidden_size
 ```
 
-![lstm](/imgs/lstm9.png)
+![lstm](static/imgs/lstm9.png)
 
 - LSTM을 활용하여 주식 가격을 예측 — 과거 5일의 종가를 예측하는 경우
     - Seq_len = 5

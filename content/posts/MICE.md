@@ -60,7 +60,7 @@ MICE algorithm에는 FCS(Fully Conditional Specification)을 구현했다.
 
 **md.pattern(x, plot = TRUE, rotate.names = FALSE)**
 
-![MICE](/imgs/MICE0.png)
+![MICE](static/imgs/MICE0.png)
 
 표 보는 방법
 
@@ -80,4 +80,4 @@ MICE algorithm에는 FCS(Fully Conditional Specification)을 구현했다.
 
 m은 Missing됨을 의미하고, r은 response, 존재함을 의미한다.
 
-![MICE](/imgs/MICE1.png)
+![MICE](static/imgs/MICE1.png)

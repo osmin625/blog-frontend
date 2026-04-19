@@ -5,7 +5,7 @@ date: 2023-01-13T15:15:00+09:00
 tags: ['CV', 'Convolution Neural Network', 'Alex-Net']
 type: post
 ---
-![Alex-net](/imgs/Alex_struc.png)
+![Alex-net](static/imgs/Alex_struc.png)
 
 ### **Conv Layer**
 

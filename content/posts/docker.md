@@ -5,10 +5,10 @@ categories: [Tools, Ops]
 tags: [Docker, Docker Compose]
 type: post
 ---
-| 눈송이 서버 | 가상화 |
-| --- | --- |
-| VM(Virtual Machine) | Container |
-| Docker Image | Docker Container |
+| 눈송이 서버              | 가상화              |
+| ------------------- | ---------------- |
+| VM(Virtual Machine) | Container        |
+| Docker Image        | Docker Container |
 
 ### **Background —** 왜 도커를 써야하나?
 
@@ -72,7 +72,7 @@ type: post
 
 ### Docker use case
 
-![docker](/imgs/docker1.png)
+![docker](static/imgs/docker1.png)
 
 ## 기존 이미지 활용하기
 
@@ -270,7 +270,7 @@ options
 
 **Settings > Builders > desktop-linux**
 
-![docker](/imgs/docker0.png)
+![docker](static/imgs/docker0.png)
 
 1. VS Code에서 새 터미널 열기
 

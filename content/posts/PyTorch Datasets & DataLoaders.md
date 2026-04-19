@@ -7,7 +7,7 @@ type: post
 ---
 모델에 데이터를 먹이는 방법
 
-![dataset](/imgs/dataset_dataloader.png)
+![dataset](static/imgs/dataset_dataloader.png)
 
 ### 1. Dataset
 

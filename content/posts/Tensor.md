@@ -91,7 +91,7 @@ x = torch.rand(3, 20, 128)
 x = x.unsqueeze(dim=1) #[3, 20, 128] -> [3, 1, 20, 128]
 ```
 
-![tensor](/imgs/tensor.png)
+![tensor](static/imgs/tensor.png)
 
 다른 기본적인 연산은 Tensor와 Numpy가 거의 동일하다.
 
@@ -111,7 +111,7 @@ x = x.unsqueeze(dim=1) #[3, 20, 128] -> [3, 1, 20, 128]
 
 ### Tensor의 구조
 
-![tensor](/imgs/tensor1.png)
+![tensor](static/imgs/tensor1.png)
 
 - 1차원: iris 샘플 하나
 - 2차원: iris 샘플 여러 개, 명암 영상 한 장

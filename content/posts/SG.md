@@ -10,7 +10,7 @@ type: post
 
     CBOW와 입력층과 출력층이 반대로 구성되어 있다.
     
-    ![SG](/imgs/SG-2.png)
+    ![SG](static/imgs/SG-2.png)
     
 
 - 벡터의 평균을 구하는 과정이 없다.
@@ -21,4 +21,4 @@ type: post
 
 - CBOW와 마찬가지로 Multi-Classification Model에 해당한다.  
     
-    ![SG](/imgs/SG-1.png)
+    ![SG](static/imgs/SG-1.png)

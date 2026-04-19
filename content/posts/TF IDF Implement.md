@@ -11,16 +11,16 @@ type: post
 한글로 작성되었으며, 제목과 문서 내용으로 구성되어있는 것을 확인했다.
 
 
-![tfi](/imgs/tfi.png)
+![tfi](static/imgs/tfi.png)
 일단 데이터를 처리하기 위해 코드에서 파일을 열어야 하는데, 문서가 한글파일로 제공되었기 때문에 한글 문서를 txt 문서로 변환해주었다.
 
-![tfi](/imgs/tfi1.png){: w="200" h="100" }
+![tfi](static/imgs/tfi1.png){: w="200" h="100" }
 
 언어는 파이썬을 선택했다.
 
 처음 프로젝트를 시작했을 때, 나는 colab 환경에서 파이썬 코드를 실행시키고자 했으므로 Google Drive에 corpus 파일을 업로드하고, 코드 작성을 시작했다.
 
-![tfi](/imgs/tfi2.png)
+![tfi](static/imgs/tfi2.png)
 
 수업 내용에서는 영어를 기준으로 다뤄왔었는데 한글을 토큰화하는 방법이 떠오르지 않았다.
 
@@ -36,7 +36,7 @@ type: post
 
 하지만 결국 이 과정은 학습에 도움이 되지 않는다고 판단해 colab 환경을 pycharm 환경으로 바꿔서 다시 한번 해보자고 마음먹었고, 시행착오 끝에 라이브러리를 사용할 수 있게 되었다.
 
-![tfi](/imgs/tfi3.png)
+![tfi](static/imgs/tfi3.png)
 
 라이브러리 활용을 포기하고 직접 문서의 단어를 추출하고 있었다.
 
@@ -44,7 +44,7 @@ type: post
 
 한글 단어를 직접 추출하던 코드다. 나의 고통의 흔적이 보인다.
 
-![tfi](/imgs/tfi4.png)
+![tfi](static/imgs/tfi4.png)
 
 라이브러리 실행을 성공시킨 마지막 명령어.
 
@@ -120,9 +120,9 @@ for doc in dic.values():
 
 이후, 해당 raw term frequency들을 log frequency weighting으로 바꿔주기 위해 함수를 선언했다.
 
-`$$
+$$
 w_{t, d}=\left\{\begin{array}{cc}1+\log _{10} \mathrm{tf}_{t, d}, & \text { if } \mathrm{tf}_{t, d}>0 \\0, & \text { otherwise }\end{array}\right.
-$$`
+$$
 
 단어의 빈도가 크지 않기 때문에, 나는 log의 base를 **2**로 설정했다.
 
@@ -151,11 +151,11 @@ for doc in dic.values():
 
 📌 **idf weight**
 
-- `$df_{term}$`는 term를 포함하는 **문서**의 빈도이다.
+- $df_{term}$는 term를 포함하는 **문서**의 빈도이다.
 - 우리는 df가 작은 term의 점수를 더 높게 주고 싶기 때문에, df을 뒤집어서 분모로 사용하자.
 - **idf(inverse document frequency)**
     
-    `$idf_t=log_{10}(N/df_t)$`
+    $idf_t=log_{10}(N/df_t)$
     
     - N = 전체 document 수
     - idf값을 완화 시키기 위해 log를 취해준다.
@@ -222,9 +222,9 @@ def idf_cal(x):
 
 - term의 tf-idf 가중치는 tf 가중치와 idf 가중치의 곱이다.
     
-    `$$
+    $$
     W_{t,d}=(1+log_{10}tf_{t,d}) \times log_{10}(N/df_t)
-    $$`
+    $$
     
 - IR에서 가장 핵심적인 가중치 공식이다.
     
@@ -257,9 +257,9 @@ while (1):
 
 ### 7. **Score 계산하기**
 
-`$$
+$$
 \operatorname{Score}(q, d)=\sum_{t \in q\urcorner d} t f . i d f_{t, d}
-$$`
+$$
 
 위 수식은 q(query)와 d(document)에서 공통되는 term을 가진 document의 score만 계산한다는 의미이다.
 
@@ -293,4 +293,4 @@ score 계산은 위 수식처럼, 쿼리에 포함되는 단어 중 문서에 �
             print(i, "검색 결과가 없습니다.")
 ```
 
-![tfi](/imgs/tfi5.png)
+![tfi](static/imgs/tfi5.png)

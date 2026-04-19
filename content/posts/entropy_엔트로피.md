@@ -17,17 +17,17 @@ type: post
 
 **확률 분포의 무작위성(불확실성)을 측정하는 함수**
 
-`$$
+$$
 H(X)=\sum_{i=1}^n p_i\left(\log \frac{1}{p_i}\right)=-\sum_{i=1}^n p_i \log p_i
-$$`
+$$
 
 - entropy 공식은 왜 이렇게 생겼을까?
     
     스무 고개로 정답 맞추기를 진행할 때 확률 분포가 불확실할수록 필요한 질문의 개수가 늘어난다.
     
-    이 때, 전체 경우를 양분하는 질문의 개수는 `$log_2$`를 통해 파악할 수 있다.
+    이 때, 전체 경우를 양분하는 질문의 개수는 $log_2$를 통해 파악할 수 있다.
     
-    즉, 위의 수식은 각 경우`$(p_i)$`에 도달하기까지 전체 경우의 수를 이분하는 질문`$(-\log_2(p_i))$` 이 얼마나 많이 필요한 지와 동일하게 생각할 수 있다.
+    즉, 위의 수식은 각 경우$(p_i)$에 도달하기까지 전체 경우의 수를 이분하는 질문$(-\log_2(p_i))$ 이 얼마나 많이 필요한 지와 동일하게 생각할 수 있다.
     
 
 **ex) 1이 나올 확률이 매우 높은 찌그러진 주사위인 경우**
@@ -44,55 +44,55 @@ $$`
 
 - 엔트로피 계산 예제
     
-    `$$
+    $$
     X = \{ a=\frac{1}{2},b=\frac{1}{4},c=\frac{1}{8},d=\frac{1}{8}\}
-    $$`
+    $$
     
-    `$$
+    $$
     \begin{matrix}
     H(X) &=& -(\frac{1}{2}\log\frac{1}{2} + \frac{1}{4}\log{\frac{1}{4}} + \frac{1}{8}\log{\frac{1}{8}} + \frac{1}{8}\log{\frac{1}{8}})\\\\
     &=& (\frac{1}{2} + \frac{1}{2} + \frac{3}{4})\log 2\\\\
     &=& 0.52680249241
     \end{matrix}
-    $$`
+    $$
     
     - 동전의 엔트로피
         
-        `$$
+        $$
         H_{\text {coin }}(x)=-\left(\frac{1}{2} \log \frac{1}{2}+\frac{1}{2} \log \frac{1}{2}\right)=0.3010
-        $$`
+        $$
         
     - 주사위의 엔트로피
         
-        `$$
+        $$
         H_{\text {dice }}(x)=-\left(\frac{1}{6} \log \frac{1}{6}+
         \cdots+
         \frac{1}{6} \log \frac{1}{6}\right)=0.7782
-        $$`
+        $$
         
 
 ### **엔트로피의 특성**
 
-- `$H(X)$`는 오목하다.
-- `$H\left(p_{\max }, 1-p_{\max }\right) \leq H(P)$`.
-- `$H\left(p_1 q_1, \ldots, p_1 q_m, p_2 q_1, \ldots, p_2 q_m, \ldots p_n q_1, \ldots, p_n q_m\right)\\= H\left(p_1, \ldots, p_n\right)+\mathcal{S}\left(q_1, \ldots, q_m\right)$`
+- $H(X)$는 오목하다.
+- $H\left(p_{\max }, 1-p_{\max }\right) \leq H(P)$.
+- $H\left(p_1 q_1, \ldots, p_1 q_m, p_2 q_1, \ldots, p_2 q_m, \ldots p_n q_1, \ldots, p_n q_m\right)\\= H\left(p_1, \ldots, p_n\right)+\mathcal{S}\left(q_1, \ldots, q_m\right)$
 
 ### (Shannon) Entropy
 
 - X를 확률 질량 함수가 P(.)인 랜덤 이산 변수라고 할 때,
     
-    X의 Entropy `$H(X)$`는 다음과 같이 정의할 수 있다.
+    X의 Entropy $H(X)$는 다음과 같이 정의할 수 있다.
     
-    `$$
+    $$
     H(X) = -\sum_xP(x)\log_bP(x)
-    $$`
+    $$
     
 
 엔트로피는 자신의 정보(최적화된 전략 하에서의 질문 개수)에 대한 기댓값으로 해석될 수 있다.
 
-`$$
+$$
 H(X) = -E[\log_bP(X)]
-$$`
+$$
 
 b = 2의 경우, 엔트로피의 단위를 bit라고 한다.
 
@@ -102,41 +102,41 @@ b = 2의 경우, 엔트로피의 단위를 bit라고 한다.
 
 ### Joint Entropy
 
-`$$
+$$
 H(X, Y)=-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x, y) \log p(x, y)
-$$`
+$$
 
 ex)
 
-![entropy_엔트로피](/imgs/entropy_엔트로피0.png)
+![entropy_엔트로피](static/imgs/entropy_엔트로피0.png)
 
-`$$
+$$
 \begin{aligned}H(X, Y) & =-\sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p(x, y) \log p(x, y) \\& =-5\left[\frac{1}{10} \log \frac{1}{10}+\frac{1}{20} \log \frac{1}{20}+\frac{1}{40} \log \frac{1}{40}+\frac{1}{80} \log \frac{1}{80}+\frac{1}{80} \log \frac{1}{80}\right] \\& =\log 5\left[\frac{1}{2} \log \frac{1}{2}+\frac{1}{4} \log \frac{1}{4}+\frac{1}{8} \log \frac{1}{8}+\frac{1}{16} \log \frac{1}{16}+\frac{1}{16} \log \frac{1}{16}\right] \\& =\frac{15}{8} \log 5\end{aligned}
-$$`
+$$
 
 ### Theorem — Independent Random Variable X,Y
 
-`$$
+$$
 \mathrm{H}(\mathbf{X, Y})=\mathrm{H}(\mathbf{X})+\mathrm{H}(\mathbf{Y})
-$$`
+$$
 
 증명
 
-`$$
+$$
 \begin{aligned}p\left(x_i, y_j\right) & =p\left(x_i\right) p\left(y_j\right) \\H(X, Y) & =-\sum_{i=1}^N \sum_{j=1}^M p\left(x_i, y_j\right) \log \left\{p\left(x_i, y_j\right)\right\} \\& =-\sum_{i=1}^N \sum_{j=1}^M p\left(x_i\right) p\left(y_j\right) \log \left\{p\left(x_i\right) p\left(y_j\right)\right\} \\& =-\sum_{i=1}^N \sum_{j=1}^M p\left(x_i\right) p\left(y_j\right)\left[\log \left\{p\left(x_i\right)\right\}+\log \left\{p\left(y_i\right)\right\}\right] \\& =-\sum_{i=1}^N \sum_{j=1}^M p\left(x_i\right) p\left(y_j\right) \log \left\{p\left(x_i\right)\right\}-\sum_{i=1}^N \sum_{j=1}^M p\left(x_i\right) p\left(y_j\right) \log \left\{p\left(y_i\right)\right\} \\& =-\sum_{i=1}^N p\left(x_i\right) \log \left\{p\left(x_i\right)\right\}-\sum_{j=1}^M p\left(y_j\right) \log \left\{p\left(y_i\right)\right\} \\& =H(X)+H(Y)\end{aligned}
-$$`
+$$
 
 ### [**Cross-Entropy(=Log loss, 교차 엔트로피)**](https://www.notion.so/Cross-Entropy-Log-loss-8be927e10cdf40be9eacf0de4f3cffd7?pvs=21)
 
 ### Von Neumann Entropy(폰 노이만 엔트로피)
 
-The von Neumann entropy of a density matrix `$\boldsymbol{\rho}$`, denoted by `$\mathbf{H}(\boldsymbol{\rho})$`, is defined as
+The von Neumann entropy of a density matrix $\boldsymbol{\rho}$, denoted by $\mathbf{H}(\boldsymbol{\rho})$, is defined as
 
-`$$
+$$
 \mathbf{H}(\rho)=-\operatorname{tr}(\rho \ln \rho)=-\sum_{i=1}^n \lambda_i \ln \lambda_i
-$$`
+$$
 
-where `$\lambda_1, \ldots, \lambda_n$` are eigen values of `$\rho$`. It is conventional to define `$0 \ln 0=0$`.
+where $\lambda_1, \ldots, \lambda_n$ are eigen values of $\rho$. It is conventional to define $0 \ln 0=0$.
 
 This definition is a proper extension of both the Gibbs entropy and the Shannon entropy to the quantum case.
 
