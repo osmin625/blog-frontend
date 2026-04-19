@@ -63,6 +63,19 @@
         {{ end }}
     </div>
 
+    <!-- Related Content -->
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <div class="related-posts" style="margin-top: 2em; padding: 1.5em; background: rgba(128,128,128,0.05); border-radius: 8px;">
+        <h3 style="margin-top: 0; font-size: 1.3em;">추천하는 다른 글</h3>
+        <ul style="margin-bottom: 0; padding-left: 1.5em;">
+            {{ range . }}
+            <li style="margin-bottom: 0.5em;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+
     <div class="prev-next">
         {{ if eq .Site.Params.TogglePreviousAndNextButtons "true" }}
         {{ if or .PrevInSection .NextInSection }}
